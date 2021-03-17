@@ -1,0 +1,34 @@
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: xx-large;
+        line-height:  50px;
+        font-family: 'Montserrat-Bold', sans-serif;
+        color: $color1;
+        text-align: center;
+        span{
+            color:#50E3C2;
+        }
+    }
+}
+
+.formulario {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    width: 38.3%;
+    border: ( 1px solid #572EE5);
+    margin-top: 1%;
+
+    
+
+}
+
+ .search {
+    width: 100%
+ }

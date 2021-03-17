@@ -1,5 +1,4 @@
-let apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb"
- 
+
  let trending = () => {
     
     let traer = ()=> {
@@ -21,10 +20,8 @@ let apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb"
    traer();
     }
            
-
-  trending()          
-  trending()          
-  trending()          
+trending();
+     
 
     // accedo al objeto, recorro sus propiedades y accedo a una en particular
     //.then(gif=> console.log(gif.data[0].url))  ===>>> accedo a la URL del giff

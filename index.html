@@ -2,45 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/trendings.js"></script>
     <script src="./scripts/searchbtn.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
+
     <title>Gifos</title>
 </head>
 <body>
     <header>
-        <img src="./assets/logo-desktop.svg" alt="logo">
+        <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
             <ul>
-                <li><a href="#">MODO NOCTURNO</a></li>
-                <li><a href="#">FAVORITOS</a></li>
-                <li><a href="#">MIS GIFOS</a></li>
-                <li><a href="#"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></li>
-              
+                <li><a class="anav"  href="#">MODO NOCTURNO</a></li>
+                <li><a class="anav" href="#">FAVORITOS</a></li>
+                <li><a class="anav" href="#">MIS GIFOS</a></li>                           
             </ul>
-
+            <div class="oval"><a href="#"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
         </nav>
     </header>
     <main >
-        <section id="first">
-            <h2>Inspirate,busca,guarda, y crea los mejores GIFOS</h2>
+        <section class="first">
+            <h2>Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS   </span></h2>
             <img src="./assets/ilustra_header.svg" alt="dibujo">
-            <form>
-                <input id="search" type="search" />
+            <form class="formulario">
+                <input id="search" class="search" type="search" />
                 <button id="btnSearch">Go</button>
             </form>
                 <!-- <img src="./assets/icon-search.svg" alt="lupa"> -->
-                <div class="out"></div>
+            <div id="out"></div>
                        
         </section>            
-        <section>
-            <p>Trending:</p>
-            <p>Reactions, Entretainment, Sports, Stickers, Artist</p>
+        <section class="second">
+            <h2>Trending:</h2>
+            <p class="themes">Reactions, Entretainment, Sports, Stickers, Artist</p>
         </section>
          <section>
-            <h2>Trending GIFOS</h2>
-            <p>Mira los últimos Gifo de nuestra comunidad.</p>
+             <div class="trending">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los últimos Gifo de nuestra comunidad.</p>
+            </div>
             <div class="grilla">
                 <img src="./assets/numeropixeles.jpg" alt="foto">
                 <img src="./assets/numeropixeles.jpg" alt="foto">
