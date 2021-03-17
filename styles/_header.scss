@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 50%;
+}
+
+nav{
+    width: 50%;
+    display: flex;    
+    justify-content: center;  
+    ul{
+        display: flex;  
+        margin-right: 5%;         
+         li{
+               list-style: none; 
+               margin: 5px;
+               font-family: 'Montserrat-Bold', sans-serif;;
+            }
+     } 
+}
+
+ .anav{
+     text-decoration: none;
+
+ }
