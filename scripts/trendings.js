@@ -30,10 +30,8 @@ let trending = () => {
             } 
   traer()
            
-
             }
  
-
  trending();
      
 
@@ -42,14 +40,5 @@ let trending = () => {
     //.then(gif=> console.log(gif.data[0].images.downsized_medium.url)) 
     //.then(gif=> console.log(gif.data))  --->Array with gif
     
-
-
-//
-//                        <    º  º  º   >
-//     ev.onclick`id= id+1   id1  id2   id3    ev.onclick`id= id-1  
-
-
-let backSlider = document.getElementById("backSlider");
-let nextSlider = document.getElementById("nextSlider");
 
 
