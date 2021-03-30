@@ -95,8 +95,65 @@ nav ul li {
   font-family: 'Montserrat-Medium', sans-serif;
 }
 
+.hiddenBtn {
+  display: none;
+}
+
+.tnd-ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: scroll;
+  height: 500;
+}
+
+.giphoBox {
+  width: 22.313rem;
+  height: 17.188rem;
+  padding: 0.5%;
+}
+
 .gipho {
-  width: 30%;
-  height: auto;
+  margin-top: 5%;
+  width: 320px;
+  height: 215px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.prev, .next {
+  width: 5%;
+  margin: 1%;
+}
+
+.trending {
+  background-color: #F3F5F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
