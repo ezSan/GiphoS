@@ -15,8 +15,14 @@ let trending = () => {
             createGif.classList.add("gipho")
             // asignar src imagen  = url.imagen
             createGif.src= tdnGif;
+            createGif.id=`gipho${[i+1]}`
+            // creo padre para c/gif 
+            let crearDiv = document.createElement(`div`)
+            //insert gif en div 
+            crearDiv.appendChild(createGif)
+            crearDiv.classList.add("giphoBox")
             //asignar hijo a nodo html
-            trendigContent.appendChild(createGif);
+            trendigContent.appendChild(crearDiv);
             }
 
         }
@@ -24,10 +30,8 @@ let trending = () => {
             } 
   traer()
            
-
             }
  
-
  trending();
      
 
@@ -36,3 +40,5 @@ let trending = () => {
     //.then(gif=> console.log(gif.data[0].images.downsized_medium.url)) 
     //.then(gif=> console.log(gif.data))  --->Array with gif
     
+
+
