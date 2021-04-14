@@ -1,0 +1,79 @@
+
+
+.captureBox{
+    width: 60%; height:25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border: blueviolet 3px solid; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2{
+        font-size: xx-large;
+        color: $color1;
+        span{
+            color: $color2;
+        }
+        
+    }
+    
+}
+
+.p_capturebox{
+    margin: 1px;
+}
+
+ .hiddenBox{
+     display: none;
+ }
+
+.circleWithNumber{
+    display:flex;
+    justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5%;
+
+}
+
+.num{
+    border-radius: 50%;    
+    border: 0.1em solid $color1;
+    width: 1.5em;
+    text-align: center;
+    margin: 0.3em;
+    color: $color1;
+    }
+
+.purpleLine{
+    width: 70%;
+    background-color: $color1;
+    height: 0.4em;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.1em;
+}
+
+.comenzar {
+    width: 10%;
+    height: 2em;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 1em;
+    border-radius: 50%;
+}
+
+.newStep1{
+    border-radius: 50%;    
+    border: 0.1em solid $color1;
+    width: 1.5em;
+    text-align: center;
+    margin: 0.3em;
+    color: white;
+    background-color: $color1;
+
+}

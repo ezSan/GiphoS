@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./styles/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebCAM</title>
 </head>
 <body>
+<header>
+    <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
+    <nav>
+        <ul>
+            <li><a class="anav"  href="#">MODO NOCTURNO</a></li>
+            <li><a class="anav" href="#">FAVORITOS</a></li>
+            <li><a class="anav" href="#">MIS GIFOS</a></li>                           
+        </ul>
+        <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
+    </nav>
+</header> 
+<main>
+    <section class="container">
+        <script src="./scripts/begin.js"></script>
+        <div class="captureBox" id="captureBox">
+            <div id="insideText">
+                <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
+                    <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
+                    <p class="p_capturebox">(sólo necesitas una cámara para grabar  un video)</p>
+            </div>        
+            <div id="appearBox" class="hiddenBox">
+                <h2>¿Nos das acceso a tu cámara?</h2>
+                    <p class="p_capturebox">El acceso a tu cámara será sólo</p>
+                    <p class="p_capturebox">por el tiempo que estés creando el GIFO</p>
+            </div>        
+        </div>
+        <div class="circleWithNumber">
+        <div class="num" id="step1">1</div>
+        <div class="num" id="step2">2</div>
+        <div class="num" id="step3">3</div>
+        </div>
+        <div class="purpleLine"></div>
+        <div class="camAccess">
+            <input  class="comenzar" type="button" value="COMENZAR" onclick="newColor()">
+        </div>
 
-    <!-- Stream video via webcam -->
-<div class="video-wrap">
-    <video id="video" playsinline autoplay></video>
-</div>
-
-<!-- Trigger canvas web API -->
-<div class="controller">
-    <button id="snap">Capture</button>
-</div>
-
-<!-- Webcam video snapshot -->
-<canvas id="canvas" width="640" height="480"></canvas>
-
-<script src="./scripts/webcam.js"></script>
+    </section>
+</main>  
+<footer>
+    <div class="shareBox">
+    <p>Compartir en:</p>
+        <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
+        <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
+        <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
+    </div>
+    <div class="footRights">
+        <p>© GIFOS 2020 All Rights Reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
