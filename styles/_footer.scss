@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    justify-content:flex-start
+}
+
+.shareBox{
+    display: flex;
+    // justify-content: flex-start;
+    margin-left: 1em;
+    .footImg{
+        margin: 1em;
+    }
+
+}
+
+.footRights{
+    margin-left: 60%;
+}

@@ -11,12 +11,13 @@
     <!-- Scripts -->
     <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/trendings.js"></script>
+    
     <script src="./scripts/slider.js"></script> 
     <script src="./scripts/searchbtn.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifos</title>
+    <title>GiphoS</title>
 </head>
 <body>
     <header>
@@ -45,31 +46,35 @@
         <section class="second">
             <h2>Trending:</h2>
             <p class="themes">Reactions, Entretainment, Sports, Stickers, Artist</p>
-
-            
             <div class="trending">
-                            
                 <h2>Trending GiFOS</h2>
                 <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
-            <div class="slider">
-                <div class="prev"><img src="./assets/button-slider-left.svg" alt="back_slider" id="backSlider" onclick="moveLeft()"></div>
-                <div id="trending-ctn" class="tnd-ctn"> </div>
-                <div class="next"><img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextSlider" onclick="moveRight()"></div>
-            </div>
-            
+                <div class="slider">
+                    <div class="prev"><img src="./assets/button-slider-left.svg" alt="back_slider" id="backSlider"
+                            onclick="moveLeft()"></div>
+                    <div id="trending-ctn" class="tnd-ctn"> </div>
+                    <div class="next"><img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextSlider"
+                            onclick="moveRight()"></div>
+                </div>
+        
             </div>
                 
                 
             </div>
         </section>
-         
+       
                
     </main>
     <footer>
-        <p>Compartir en:</p>
-        <img src="./assets/icon_facebook.svg" alt="face">
-        <img src="./assets/icon-twitter.svg" alt="twitter">
-        <img src="./assets/icon_instagram.svg" alt="instagram">
+        <div class="shareBox">
+            <p>Compartir en:</p>
+                <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
+                <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
+                <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
+            </div>
+            <div class="footRights">
+                <p>© GIFOS 2020 All Rights Reserved.</p>
+            </div> 
     </footer>
 </body>
 </html>
