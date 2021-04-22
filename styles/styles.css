@@ -52,6 +52,7 @@ nav ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .first h2 {
@@ -267,5 +268,20 @@ footer {
 
 .footRights {
   margin-left: 60%;
+}
+
+.hidden {
+  display: none;
+}
+
+.out {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figura {
+  width: 20%;
+  margin: 2%;
 }
 /*# sourceMappingURL=styles.css.map */
