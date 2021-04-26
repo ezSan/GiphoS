@@ -29,7 +29,17 @@ function init() {
                 out.insertAdjacentElement ("afterbegin", fig);
                 document.querySelector(`#search`).value = ' '                  
                 if (i>11){
-                        img.classList.add(`hidden`)
+                        //acá seguir //
+                        img.classList.add(`hidden`);
+                        let seeMore = document.createElement(`input`);
+                        seeMore.classList.add(`seeMore`);
+                        let buttonBox = document.querySelector(`#first`);
+                        buttonBox.appendChild(seeMore)
+                        ////
+
+
+
+                        
                 }
                   
             } 
@@ -39,6 +49,7 @@ function init() {
            
             
         )
+
         .catch(err=>{
             console.error(err);
         })
