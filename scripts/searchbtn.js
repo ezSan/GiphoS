@@ -18,10 +18,11 @@ function init() {
             // console.log(content.data);
             // console.log(`META`, content.meta);
           
-            
-
-           for(i=0; i<24; i++){
+        let removeResults = ()  =>document.getElementById("out").innerHTML="";
+        removeResults();
                 
+              
+            for(i=0; i<24; i++){                
                 fig = document.createElement("figura");
                 let img = document.createElement("img");
                 img.classList.add(`result`);                
@@ -30,31 +31,24 @@ function init() {
                 fig.appendChild(img);                
                 let out = document.querySelector("#out");
                 out.insertAdjacentElement ("afterbegin", fig);                
-                document.querySelector(`#search`).value = ' '             
-                
-                                 
-                if (i>11){                        
+                document.querySelector(`#search`).value = ' '       
+                     
+            if (i>11){                        
                         img.classList.add(`hidden`);
                         
                 }   
-                } 
+             } 
 
-            let boton = document.getElementById(`verMas`);
-            boton.classList.remove("hidden");
+
+        let boton = document.getElementById(`verMas`);
+        boton.classList.remove("hidden");
                       
             })
             
         .catch(err=>{
             console.error(err);
         })
-            
-         
-
-
-
-
-
-        
+                
 
     });
 }
