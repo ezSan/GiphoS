@@ -278,10 +278,19 @@ footer {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.figura {
-  width: 20%;
-  margin: 2%;
+.result {
+  width: 10em;
+  height: 8em;
+  margin: 0.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

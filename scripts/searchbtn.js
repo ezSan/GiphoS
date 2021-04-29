@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", init);
 
+
+let searchID = document.querySelector(`#search`).value;
+
+
 function init() {
+
     document.getElementById("btnSearch").addEventListener("click", ev => {
-        ev.preventDefault(); // dont refresh
+    ev.preventDefault(); // dont refresh
 
      
 
@@ -10,7 +15,8 @@ function init() {
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
         let str = document.getElementById(`search`).value;
         url = url.concat(str);
-        console.log(url);        
+        console.log(url); 
+               
         fetch(url)
         .then(response => response.json())
         .then(content =>{
@@ -20,9 +26,10 @@ function init() {
           
         let removeResults = ()  =>document.getElementById("out").innerHTML="";
         removeResults();
-                
+ 
+          
               
-            for(i=0; i<24; i++){                
+         for(i=0; i<24; i++){                
                 fig = document.createElement("figura");
                 let img = document.createElement("img");
                 img.classList.add(`result`);                
@@ -31,17 +38,27 @@ function init() {
                 fig.appendChild(img);                
                 let out = document.querySelector("#out");
                 out.insertAdjacentElement ("afterbegin", fig);                
-                document.querySelector(`#search`).value = ' '       
+                document.querySelector(`#search`).value = ' '   
+
                      
             if (i>11){                        
-                        img.classList.add(`hidden`);
-                        
-                }   
+                        img.classList.add(`hidden`);                        
+                } 
              } 
+
+        addTitle =(searchID)=>{             
+            let ctnBox = document.getElementById(`out`);
+            let titleBox = document.createElement(`h2`);
+            titleBox.classList.add(`searchTitle`); 
+            ctnBox.appendChild(titleBox);   
+            ctnBox.insertAdjacentElement("afterbegin", titleBox); 
+            titleBox.innerText = `${searchID}`          
+        }
+        addTitle();
 
 
         let boton = document.getElementById(`verMas`);
-        boton.classList.remove("hidden");
+        boton.classList.remove("hidden");       
                       
             })
             
@@ -71,3 +88,4 @@ seeMore = () =>{
 
 
 }
+
