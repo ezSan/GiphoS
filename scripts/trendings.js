@@ -9,7 +9,7 @@ let trending = () => {
             // url Imagen
             let tdnGif = gif.data[i].images.downsized.url 
             // Accedemos al nodo html
-            let trendigContent = document.getElementById(`trending-ctn`); 
+            let tdnCtn = document.getElementById(`trending-ctn`); 
             // crear elemento imagen
             let createGif = document.createElement(`img`);
             createGif.classList.add("gipho")
@@ -22,7 +22,7 @@ let trending = () => {
             crearDiv.appendChild(createGif)
             crearDiv.classList.add("giphoBox")
             //asignar hijo a nodo html
-            trendigContent.appendChild(crearDiv);
+            tdnCtn.appendChild(crearDiv);
             }
 
         }
