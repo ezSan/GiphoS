@@ -88,7 +88,7 @@ nav ul li {
   text-transform: capitalize;
 }
 
-.second h2 {
+.secondTitle {
   color: #572EE5;
   font-size: x-large;
   text-align: center;
@@ -296,5 +296,28 @@ footer {
   width: 10em;
   height: 8em;
   margin: 0.5rem;
+}
+
+.hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: -10;
+}
+
+.hoverIcon {
+  background-color: transparent;
+}
+
+.gipho {
+  margin: 0;
+}
+
+.cardTitle {
+  margin: 0%;
+  font-size: large;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,7 @@
 
 
 let createTools = () => {
-
+    let box = document.getElementById('giphobox');
     let hoverWithTools = document.createElement('div');
     hoverWithTools.id='tools'
     hoverWithTools.classList.add('hover')
