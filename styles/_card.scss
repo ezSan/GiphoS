@@ -1,10 +1,15 @@
 
 
 .hover{  
+
     display: flex;
     justify-content: flex-end;
-    z-index: -10;
-   
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0.6em;
+    
     
 }
 
@@ -20,4 +25,19 @@
 .cardTitle{
     margin: 0%;
     font-size:large
+}
+
+.giphoBox{
+    position: relative;
+}
+
+.dataHover{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    z-index: 10;
+}
+
+.cardUser{
+    margin: 0;
 }

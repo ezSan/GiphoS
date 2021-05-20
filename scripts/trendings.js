@@ -44,21 +44,19 @@ let trending = () => {
             mViewAdd.src="./assets/icon-max-normal.svg";
             //función title&author
             let gifTitle = gif.data[i].title;
-            let gifAuthor = gif.data[i].user.username;            
+            let gifAuthor = gif.data[i].username;            
             let dataHover = document.createElement('div');
             dataHover.id='dataHover';
             dataHover.classList.add('dataHover');
             crearDiv.appendChild(dataHover);
             let addTitle = document.createElement('h2');
             addTitle.innerText = gifTitle;
-            addTitle.classList.add('cardTitle');
-            addTitle.classList.add('cardTitle');
+            addTitle.classList.add('cardTitle');            
             dataHover.appendChild(addTitle);
             let addAuthor = document.createElement('p');
+            addAuthor.classList.add('cardUser')
             dataHover.appendChild(addAuthor);
-            dataHover.innerText = gifAuthor; 
-
-         
+            addAuthor.innerText = gifAuthor;          
             }
             
         }
