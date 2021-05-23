@@ -1,27 +1,53 @@
+let arrayGif = (gif) =>{
+    for(var i = 0; i <= 14 ; i++){
+        
+        // url Imagen
+        let tdnGif = gif.data[i].images.downsized.url 
+        // Accedemos al nodo html
+        let tdnCtn = document.getElementById(`trending-ctn`); 
+        // crear elemento imagen
+        let createGif = document.createElement(`img`);
+        createGif.classList.add("gipho");
+        // asignar src imagen  = url.imagen
+        createGif.src= tdnGif;
+        createGif.id=`gipho${[i+1]}`;
+        // creo padre para c/gif 
+        let crearDiv = document.createElement(`div`);
+        //insert gif en div 
+        crearDiv.appendChild(createGif);
+        crearDiv.classList.add("giphoBox")
+        crearDiv.id =`boxWithTitleToolsGif`;
+        //asignar hijo a nodo html
+        tdnCtn.appendChild(crearDiv);               
+        }                   
+ }
 
 // Like-Downlad y mxView --- toDo crear funcionalidad de c/input//
 
 
-let createTools = () => {
-
-    let hoverWithTools = document.createElement('div');
-    hoverWithTools.id='tools'
-    hoverWithTools.classList.add('hover')
-    crearDiv.appendChild(hoverWithTools);
+let createTools = () => {  
+    let toolsCtn = document.getElementById('boxWithTitleToolsGif');
+    let cajitaTools = document.createElement('div');    
+    cajitaTools.classList.add('cajitaTools');
+    cajitaTools.id='cajitaTools'; 
+    toolsCtn.appendChild(cajitaTools);          
     let favAdd = document.createElement('img'); 
-    favAdd.src="./assets/icon-fav.svg";   
-    hoverWithTools.appendChild(favAdd);   
+    favAdd.src="./assets/icon-fav.svg";          
     let dwlAdd = document.createElement('img');
-    dwlAdd.src ="./assets/icon-download.svg";
-    hoverWithTools.appendChild(dwlAdd);   
-    let mViewAdd = document.createElement('img'); 
-    hoverWithTools.appendChild(mViewAdd);    
-    mViewAdd.src="./assets/icon-max-normal.svg";  
+    dwlAdd.src ="./assets/icon-download.svg";       
+    let mViewAdd = document.createElement('img');       
+    mViewAdd.src="./assets/icon-max-normal.svg";     
  }
+
+ createTools();
+ 
+ 
+ 
+ 
 
 // Titulo+Autor de c/gif -- toDo consumir data de c/gif // 
 
- let titleAndAuthor = () => {
+/*  let titleAndAuthor = () => {
     let gifData = document.createElement('div');
     gifData.classList.add('gifData');
     gifData.id='gifData';
@@ -33,13 +59,14 @@ let createTools = () => {
     author.id='gifAuthor';
     gifData.appendChild(author);
 
-}
+} */
 
 
+ 
 
-
-
-
-
-
-
+/*
+boxCtc.appendChild(hoverWithTools);
+let boxCtc = document.getElementById('boxWithTitleToolsGif')
+let hoverWithTools = document.createElement('div');
+hoverWithTools.id='tools'
+hoverWithTools.classList.add('hover') */
