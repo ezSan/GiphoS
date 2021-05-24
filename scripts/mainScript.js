@@ -20,4 +20,5 @@ const toggleClass = (nodeElement, className) => {
     nodeElement.classList.toggle(className);
   }
 
-
+let cajita = document.getElementById('giphoBox');
+let cajitaTools = document.createElement('div');

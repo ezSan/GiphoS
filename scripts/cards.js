@@ -19,7 +19,7 @@ let arrayGif = (gif) =>{
         crearDiv.id =`boxWithTitleToolsGif${i+1}`;
         //asignar hijo a nodo html
         tdnCtn.appendChild(crearDiv);  
-                                   
+        createTools();                           
         } 
            
                 
