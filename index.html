@@ -7,24 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&
-    display=swap" rel="stylesheet">
-    <!-- Scripts -->
-    <script src="./scripts/mainScript.js"></script>
-    <script src="./scripts/trendings.js"></script>
-    
-    <script src="./scripts/slider.js"></script> 
-    <script src="./scripts/searchbtn.js"></script>
+    display=swap" rel="stylesheet">    
     <!-- Style -->
     <link rel="stylesheet" href="./styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiphoS</title>
 </head>
-<body>
+<body id = 'bodyDom'>
+    <script src="./scripts/darkMode.js"></script>
     <header>
         <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
             <ul>
-                <li><a class="anav"  href="#">MODO NOCTURNO</a></li>
+                <input type="button" value="MODO NOCTURNO" onclick="darkMode()">
                 <li><a class="anav" href="#">FAVORITOS</a></li>
                 <li><a class="anav" href="#">MIS GIFOS</a></li>                           
             </ul>
@@ -47,7 +42,7 @@
         <section class="second">
             <h2>Trending:</h2>
             <p class="themes">Reactions, Entretainment, Sports, Stickers, Artist</p>
-            <div class="trending">
+            <div class="trending ">
                 <h2>Trending GiFOS</h2>
                 <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
                 <div class="slider">
@@ -76,5 +71,14 @@
                 <p>© GIFOS 2020 All Rights Reserved.</p>
             </div> 
     </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/mainScript.js"></script>    
+    <script src="./scripts/trendings.js"></script>  
+    <script src="./scripts/cards.js"></script>  
+    <script src="./scripts/slider.js"></script> 
+    <script src="./scripts/searchbtn.js"></script>
+    <script src="./scripts/darkMode.js"></script>
+    
 </body>
 </html>

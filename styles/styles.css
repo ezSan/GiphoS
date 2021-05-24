@@ -297,4 +297,12 @@ footer {
   height: 8em;
   margin: 0.5rem;
 }
+
+.darkMode {
+  background-color: #37383c;
+}
+
+.tdnDark {
+  background-color: #222326;
+}
 /*# sourceMappingURL=styles.css.map */
