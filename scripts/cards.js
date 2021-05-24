@@ -1,6 +1,6 @@
 let arrayGif = (gif) =>{
     for(var i = 0; i <= 14 ; i++){
-        
+         
         // url Imagen
         let tdnGif = gif.data[i].images.downsized.url 
         // Accedemos al nodo html
@@ -16,30 +16,43 @@ let arrayGif = (gif) =>{
         //insert gif en div 
         crearDiv.appendChild(createGif);
         crearDiv.classList.add("giphoBox")
-        crearDiv.id =`boxWithTitleToolsGif`;
+        crearDiv.id =`boxWithTitleToolsGif${i+1}`;
         //asignar hijo a nodo html
-        tdnCtn.appendChild(crearDiv);               
-        }                   
+        tdnCtn.appendChild(crearDiv);  
+                                   
+        } 
+           
+                
  }
 
 // Like-Downlad y mxView --- toDo crear funcionalidad de c/input//
 
 
 let createTools = () => {  
-    let toolsCtn = document.getElementById('boxWithTitleToolsGif');
+    let toolsCtn = document.getElementById(`boxWithTitleToolsGif${i+1}`);
     let cajitaTools = document.createElement('div');    
     cajitaTools.classList.add('cajitaTools');
     cajitaTools.id='cajitaTools'; 
     toolsCtn.appendChild(cajitaTools);          
     let favAdd = document.createElement('img'); 
-    favAdd.src="./assets/icon-fav.svg";          
+    favAdd.src="./assets/icon-fav.svg";      
+    cajitaTools.appendChild(favAdd);    
     let dwlAdd = document.createElement('img');
-    dwlAdd.src ="./assets/icon-download.svg";       
+    dwlAdd.src ="./assets/icon-download.svg";   
+    cajitaTools.appendChild(dwlAdd);    
     let mViewAdd = document.createElement('img');       
-    mViewAdd.src="./assets/icon-max-normal.svg";     
+    mViewAdd.src="./assets/icon-max-normal.svg"; 
+    cajitaTools.appendChild(mViewAdd) ;
+    
+       
  }
 
- createTools();
+ 
+
+ 
+ 
+ 
+ 
  
  
  
