@@ -5,7 +5,10 @@
         .then(res => res.json())
         .then((gif)=>{
              console.log(gif.data[1].images.downsized.url);
-             arrayGif(gif);     
+            
+             arrayGif(gif);   
+             
+             
                
                                     
         })        
