@@ -1,6 +1,5 @@
-let arrayGif = (gif) =>{
-    for(var i = 0; i <= 14 ; i++){
-         
+let arrayGif = (gif,) =>{
+    for(var i = 0; i <= 14 ; i++){         
         // url Imagen
         let tdnGif = gif.data[i].images.downsized.url 
         // Accedemos al nodo html
@@ -18,14 +17,13 @@ let arrayGif = (gif) =>{
         crearDiv.classList.add("giphoBox")
         crearDiv.id =`boxWithTitleToolsGif`;
         //asignar hijo a nodo html
-        tdnCtn.appendChild(crearDiv);  
-        //        createTools()                 
-     
+        tdnCtn.appendChild(crearDiv); 
+          
         } 
 
         createTools();
-        titleAndAuthor()
-        
+        titleAndAuthor();
+                
  }
 
 // Like-Downlad y mxView --- toDo crear funcionalidad de c/input//
@@ -72,16 +70,11 @@ let titleAndAuthor = () => {
         toolsCtn[i].appendChild(gifData);
         let title = document.createElement('h2');
         title.classList.add('gifTitle');
-        gifData.appendChild(title);
-                
-                    
+        gifData.appendChild(title);                    
         let author = document.createElement('p');
         author.id='gifAuthor';
         gifData.appendChild(author);
-
-        
-
-    }
+        }
 }
 
 
