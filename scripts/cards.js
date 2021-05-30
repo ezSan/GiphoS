@@ -1,4 +1,4 @@
-let arrayGif = (gif,) =>{
+let arrayGif = (gif) =>{
     for(var i = 0; i <= 14 ; i++){         
         // url Imagen
         let tdnGif = gif.data[i].images.downsized.url 
@@ -9,7 +9,8 @@ let arrayGif = (gif,) =>{
         createGif.classList.add("gipho");
         // asignar src imagen  = url.imagen
         createGif.src= tdnGif;
-        createGif.id=`gipho${[i+1]}`;
+        /* createGif.id=`gipho${[i+1]}`; */
+        createGif.id=`gipho`;        
         // creo padre para c/gif 
         let crearDiv = document.createElement(`div`);
         //insert gif en div 
@@ -17,8 +18,7 @@ let arrayGif = (gif,) =>{
         crearDiv.classList.add("giphoBox")
         crearDiv.id =`boxWithTitleToolsGif`;
         //asignar hijo a nodo html
-        tdnCtn.appendChild(crearDiv); 
-          
+        tdnCtn.appendChild(crearDiv);           
         } 
 
         createTools();
@@ -29,7 +29,7 @@ let arrayGif = (gif,) =>{
 // Like-Downlad y mxView --- toDo crear funcionalidad de c/input//
 
 
-let createTools = () => {  
+let createTools = (likeGif) => {  
     
     let toolsCtn = document. querySelectorAll('#boxWithTitleToolsGif');
 
@@ -77,6 +77,18 @@ let titleAndAuthor = () => {
         }
 }
 
+
+//agregar gif a solapa favoritos//
+
+let likeGif = (arrayGif) => {
+
+    
+    let favBox = document.getElementsByid('favBox');
+    let likeThisGif = Event.cl
+    
+
+
+}
 
 
 
