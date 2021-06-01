@@ -5,7 +5,7 @@ function init() {
     document.getElementById("btnSearch").addEventListener("click", ev => {
     ev.preventDefault(); // dont refresh
      
-    let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=36&q=`;
     let str = document.getElementById(`search`).value;          
     url = url.concat(str);
     console.log(url); 
@@ -13,13 +13,14 @@ function init() {
     fetch(url)
         .then(response => response.json())
         .then(content =>{
-            //data, pagination, meta
-            // console.log(content.data);
-            // console.log(`META`, content.meta);          
             removeResults();            
             showResults(content); 
             addTitle(str); 
-            btnVerMas();  
+            btnVerMas(); 
+            createToolsResult();
+            
+            
+                    
                 })  
 
         .catch(err=>{
@@ -35,8 +36,9 @@ function init() {
 
 let showResults = (content) => {
 
-    for(i=0; i<24; i++){                
-        fig = document.createElement("figura");
+    for(i=0; i<36; i++){                
+        let fig = document.createElement("div");
+        fig.id= 'resultCtn';        
         let img = document.createElement("img");
         img.classList.add(`result`);                
         img.src = content.data[i].images.downsized.url;
@@ -44,16 +46,45 @@ let showResults = (content) => {
         fig.appendChild(img);                
         let out = document.querySelector("#out");
         out.insertAdjacentElement ("afterbegin", fig);                
-        document.querySelector(`#search`).value = ' '   
-
-             
-    if (i>11){                        
-                img.classList.add(`hidden`);                        
-        } 
-     }
-
+        document.querySelector(`#search`).value = ' ';
+       
+                 
+    if (i>11){    
+        fig.classList.add('hidden');                    
+                
+        }         
+     }  
     
+   
+     
 }
+
+//Insertar caja de herramientas en c/gif resultante de busqueda
+
+let createToolsResult = () => {  
+    
+    let toolsCtn = document. querySelectorAll('#resultCtn');
+    
+
+    for(i=0; i<toolsCtn.length; i++){
+        let cajitaTools = document.createElement('div');    
+        cajitaTools.classList.add('cajitaTools');
+        cajitaTools.id='cajitaTools'; 
+        toolsCtn[i].appendChild(cajitaTools);          
+        let favAdd = document.createElement('img'); 
+        favAdd.src="./assets/icon-fav.svg";      
+        cajitaTools.appendChild(favAdd);    
+        let dwlAdd = document.createElement('img');
+        dwlAdd.src ="./assets/icon-download.svg";   
+        cajitaTools.appendChild(dwlAdd);    
+        let mViewAdd = document.createElement('img');       
+        mViewAdd.src="./assets/icon-max-normal.svg"; 
+        cajitaTools.appendChild(mViewAdd);
+        
+    }
+
+       
+ } 
 
 // Si hay una búsqueda previa, eliminar los resultados de la pantalla
 
@@ -80,15 +111,16 @@ let addTitle =(str)=>{
 
 let seeMore = () =>{
        
-    let appear = document.getElementsByClassName(`result`); 
+    let appear = document.querySelectorAll(`#resultCtn`); 
     console.log(appear);
 
     for ( i=0; i<appear.length; i++){
         appear[i].classList.remove('hidden');
+       
     }
 
-     let boton = document.getElementById(`verMas`)
-     boton.classList.add("hidden");
+     /* let boton = document.getElementById(`verMas`)
+     boton.classList.add("hidden"); */
    
 
 

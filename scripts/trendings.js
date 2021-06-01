@@ -3,12 +3,17 @@ let traer = ()=> {
     .then(res => res.json())
     .then((gif)=>{
          console.log(gif.data[1].images.downsized.url);
-         arrayGif(gif);                  
+         arrayGif(gif);   
+         titleAndAuthor(gif);  
+                      
     })        
  } 
         
        
- traer();       
+ traer(); 
+ 
+ 
+ 
      
 
     // accedo al objeto, recorro sus propiedades y accedo a una en particular

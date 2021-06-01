@@ -279,7 +279,7 @@ footer {
 }
 
 .out {
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -293,8 +293,8 @@ footer {
 }
 
 .result {
-  width: 10em;
-  height: 8em;
+  width: 15em;
+  height: 12em;
   margin: 0.5rem;
 }
 

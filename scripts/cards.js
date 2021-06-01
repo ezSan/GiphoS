@@ -1,3 +1,5 @@
+//consumir datos de la promesa resultado del fetch. insertar resultados en DOM
+
 let arrayGif = (gif) =>{
     for(var i = 0; i <= 14 ; i++){         
         // url Imagen
@@ -20,18 +22,16 @@ let arrayGif = (gif) =>{
         //asignar hijo a nodo html
         tdnCtn.appendChild(crearDiv);           
         } 
-
-        createTools();
-        titleAndAuthor();
-                
+            
  }
 
 // Like-Downlad y mxView --- toDo crear funcionalidad de c/input//
 
 
-let createTools = (likeGif) => {  
+let createTools = () => {  
     
     let toolsCtn = document. querySelectorAll('#boxWithTitleToolsGif');
+    
 
     for(i=0; i<toolsCtn.length; i++){
         let cajitaTools = document.createElement('div');    
@@ -56,24 +56,29 @@ let createTools = (likeGif) => {
 
 // Titulo+Autor de c/gif -- toDo consumir data de c/gif // 
 
-let titleAndAuthor = () => {
+let titleAndAuthor = (gif) => {
       
 
-    let toolsCtn = document.querySelectorAll('#boxWithTitleToolsGif');
-     
+    let dataCtn = document.querySelectorAll('#boxWithTitleToolsGif');
+    /* console.log(gif.data[3].user); */
+    
 
-    for(i=0; i<toolsCtn.length; i++){
+    for(i=0; i<dataCtn.length; i++){
 
         let gifData = document.createElement('div');
         gifData.classList.add('gifData');
         gifData.id='gifData';
-        toolsCtn[i].appendChild(gifData);
+        dataCtn[i].appendChild(gifData);
         let title = document.createElement('h2');
         title.classList.add('gifTitle');
-        gifData.appendChild(title);                    
+        let titleCtn = gif.data[i].title;
+        gifData.appendChild(title);
+        title.innerHTML = titleCtn;                  
         let author = document.createElement('p');
         author.id='gifAuthor';
         gifData.appendChild(author);
+        let userName = gif.data[i].username;
+        author.innerHTML = userName;
         }
 }
 
