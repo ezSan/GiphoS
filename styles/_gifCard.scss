@@ -1,0 +1,21 @@
+#gifTitle {
+   width: 100%;
+   font-size: medium;
+}
+
+.gifData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0%;
+    padding: 0%;
+    z-index: 1;
+}
+
+.resultCtn {
+        width: 22.313rem;
+        height: 17.188rem;
+        padding: 0.5%;
+        display: flex;
+        flex-direction: column;
+        }

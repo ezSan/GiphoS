@@ -351,4 +351,38 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
+
+#gifTitle {
+  width: 100%;
+  font-size: medium;
+}
+
+.gifData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0%;
+  padding: 0%;
+  z-index: 1;
+}
+
+.resultCtn {
+  width: 22.313rem;
+  height: 17.188rem;
+  padding: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=styles.css.map */

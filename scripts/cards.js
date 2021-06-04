@@ -93,7 +93,11 @@ let likeGif = (arrayGif) => {
     
 
 
+
 }
+
+// preudocodigo like
+
 
 
 
