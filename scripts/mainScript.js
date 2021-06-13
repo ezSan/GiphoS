@@ -4,21 +4,21 @@ const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
 // Autocomplete endpoint
 let userSearchinput = document.getElementById(`search`);
 
-let displayAutocompleSuggestions
 
 
-// Agregar - remover clases al DOM
-const addClass = (nodeElement, className) => {
-    nodeElement.classList.add(className);
-  }
+// array provisorio que almacena resultados de busqueda
 
-const removeClass = (nodeElement, className) => {
-    nodeElement.classList.remove(className);
+let resultadosDeBusqueda = [];
+
+// Array que almacena resultados favoritos
+
+let urlFavoritos = [];
+
+
+//objeto gif 
+
+function Gif (url, title, author) {
+    this.url = url ; 
+    this.title = title; 
+    this.author = author; 
 }
-
-const toggleClass = (nodeElement, className) => {
-    nodeElement.classList.toggle(className);
-  }
-
-let cajita = document.getElementById('giphoBox');
-let cajitaTools = document.createElement('div');
