@@ -4,7 +4,8 @@ let traer = ()=> {
     .then((gif)=>{
          console.log(gif.data[1].images.downsized.url);
          arrayGif(gif);   
-         titleAndAuthor(gif);  
+         titleAndAuthor(gif);
+         
                       
     })        
  } 

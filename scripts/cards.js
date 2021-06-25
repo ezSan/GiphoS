@@ -30,7 +30,7 @@ let arrayGif = (gif) =>{
 
 let createTools = () => {  
     
-    let toolsCtn = document. querySelectorAll('#boxWithTitleToolsGif');
+    let toolsCtn = document.querySelectorAll('#boxWithTitleToolsGif');
     
 
     for(i=0; i<toolsCtn.length; i++){
@@ -83,18 +83,7 @@ let titleAndAuthor = (gif) => {
 }
 
 
-//agregar gif a solapa favoritos//
 
-let likeGif = (arrayGif) => {
-
-    
-    let favBox = document.getElementsByid('favBox');
-    let likeThisGif = Event.cl
-    
-
-
-
-}
 
 // preudocodigo like
 
