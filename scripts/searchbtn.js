@@ -9,7 +9,7 @@ function init() {
         let str = document.getElementById(`search`).value;
 
         url = url.concat(str);
-        console.log(url);
+        console.log('Búsqueda realizada: ' + str);
 
         fetch(url)
             .then(response => response.json())
@@ -59,6 +59,7 @@ let showResults = () => {
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');        
         let gif = document.createElement('img');
+        gif.id = arrayResults[i].images.downsized.url;
         gif.classList.add('result');
         let url = arrayResults[i].images.downsized.url;
         let title = arrayResults[i].title; 
@@ -92,14 +93,13 @@ let showResults = () => {
 let createToolsBusqueda = () => {  
 
     let allBoxWithGif = document.querySelectorAll('.cajaGif');
-    let nodeListArray = (Array.from(allBoxWithGif));
-    console.log(nodeListArray.length);
     
-    for (i=0; i <nodeListArray.length; i++) {          
 
+    for (i=0; i <allBoxWithGif.length; i++) {        
+        
         let cajitaTools = document.createElement('div');
-        cajitaTools.classList.add('cajitaTools'); 
-        nodeListArray[i].appendChild(cajitaTools);
+        cajitaTools.classList.add('cajitaTools[i]'); 
+        allBoxWithGif[i].appendChild(cajitaTools);
         let favAdd = document.createElement('img');
         favAdd.src = "./assets/icon-fav.svg";
         cajitaTools.appendChild(favAdd);
@@ -109,25 +109,23 @@ let createToolsBusqueda = () => {
         cajitaTools.appendChild(dwlAdd);
         let mViewAdd = document.createElement('img');
         mViewAdd.src = "./assets/icon-max-normal.svg";
-        cajitaTools.appendChild(mViewAdd);
-        
+        cajitaTools.appendChild(mViewAdd); 
+        let thisUrl = allBoxWithGif[i].childNodes[2].id
+         
         favAdd.addEventListener('click', function () {
              if (favAdd.classList.contains('inactive')) {
                  favAdd.classList.remove('inactive')
                  favAdd.classList.add('active')
-                 favAdd.src = "./assets/icon-fav-active.svg";
-                 console.log(resultadosDeBusqueda.indexOf(nodeListArray))
-                 
-                 
-        //         let dataFaveado = [url_para_favAdd , title_para_favAdd , author_para_favAdd];
-        //         urlFavoritos.push(dataFaveado);
-        //         console.log(urlFavoritos);
+                 favAdd.src = "./assets/icon-fav-active.svg"; 
+                 console.log(thisUrl);
+            //   let dataFaveado = [url_para_favAdd , title_para_favAdd , author_para_favAdd];
+            //   urlFavoritos.push(dataFaveado);
+            //   console.log(urlFavoritos);
              } else if (favAdd.classList.contains('active')) {
                  favAdd.classList.remove('active');
                  favAdd.classList.add('inactive');
-                 favAdd.src = "./assets/icon-fav.svg";
-                              
-             }
+                 favAdd.src = "./assets/icon-fav.svg";                             
+             } 
          })
         };
         
