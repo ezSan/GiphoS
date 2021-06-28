@@ -18,8 +18,6 @@ let trendingArray = (gif) => {
    console.log(arrayTrendings[0].data);
 }
 
-
-
 //consumir datos del array de trendings insertar resultados en DOM
 
 let arrayGif = (gif) =>{
@@ -47,7 +45,7 @@ let arrayGif = (gif) =>{
    let titleGif = gif.data[i].title;
    let authorGif = gif.data[i].username;
    createTools(crearDiv);   
-   titleAndAuthor(titleGif, authorGif, crearDiv)             
+   titleAndAuthor(titleGif, authorGif, crearDiv);             
    }            
 }
 
