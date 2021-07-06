@@ -8,10 +8,10 @@ let resultadosDeBusqueda = [];
 
 // Array que almacena resultados favoritos
 
-const urlFavoritos = [];
+var favoritos = [];
 
 
 //array para trendings 
 
-let arrayTrendings = [];
+var arrayTrendings = [];
 

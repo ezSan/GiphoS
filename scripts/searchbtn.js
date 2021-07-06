@@ -13,14 +13,14 @@ function init() {
 
         fetch(url)
             .then(response => response.json())
-            .then(content => {  
+            .then(content => {
 
-                intoArray(content);                
+                intoArray(content);
                 removeResults();
-                showResults(); 
+                showResults();
                 addTitle(str);
-                btnVerMas();   
-                             
+                btnVerMas();
+
             })
 
             .catch(err => {
@@ -49,23 +49,23 @@ let showResults = () => {
 
     let arrayResults = resultadosDeBusqueda[0];
 
-    for (i = 0;  i < arrayResults.length; i++){
+    for (i = 0; i < arrayResults.length; i++) {
         let cajaGif = document.createElement('div');
-        cajaGif.classList.add('cajaGif');        
+        cajaGif.classList.add('cajaGif');
         let gif = document.createElement('img');
-        gif.id = arrayResults[i].images.downsized.url;
+        /* gif.id = arrayResults[i].images.downsized.url; */
         gif.classList.add('result');
         let url = arrayResults[i].images.downsized.url;
-        let title = arrayResults[i].title; 
+        let title = arrayResults[i].title;
         let gifTitle = document.createElement('h2');
         gifTitle.classList.add('hidden');
         gifTitle.innerText = title;
         cajaGif.insertAdjacentElement("afterbegin", gifTitle);
-        let author = arrayResults[i].username;      
+        let author = arrayResults[i].username;
         let gifAuthor = document.createElement('p');
         gifAuthor.innerText = author;
-        gifTitle.insertAdjacentElement("afterend", gifAuthor); 
-        gifAuthor.classList.add('hidden'); 
+        gifTitle.insertAdjacentElement("afterend", gifAuthor);
+        gifAuthor.classList.add('hidden');
         gif.src = url;
         cajaGif.appendChild(gif);
         let out = document.getElementById('out');
@@ -73,64 +73,74 @@ let showResults = () => {
         if (i > 11) {
             cajaGif.classList.add('cajaGif');
             cajaGif.classList.add('hidden');
-        } 
+        }
 
-        createTools(cajaGif); 
-        titleAndAuthor(title,author,cajaGif);  
-             
+        createTools(cajaGif);
+        titleAndAuthor(title, author, cajaGif);
+
     }
 
-    document.querySelector(`#search`).value = ' ';        
-   
+    document.querySelector(`#search`).value = ' ';
+
 }
 
 //Insertar caja de herramientas en cada caja que contenga gif
 
 
-let createTools = (cajaGif) => {  
-       
-        let cajitaTools = document.createElement('div');
-        cajitaTools.classList.add('cajitaTools'); 
-        cajaGif.appendChild(cajitaTools);
-        let favAdd = document.createElement('img');
-        favAdd.src = "./assets/icon-fav.svg";
-        cajitaTools.appendChild(favAdd);
-        favAdd.classList.add('inactive');     
-        let dwlAdd = document.createElement('img');
-        dwlAdd.src = "./assets/icon-download.svg";
-        cajitaTools.appendChild(dwlAdd);
-        let mViewAdd = document.createElement('img');
-        mViewAdd.src = "./assets/icon-max-normal.svg";
-        cajitaTools.appendChild(mViewAdd);                 
-        favAdd.addEventListener('click', function () {
-             if (favAdd.classList.contains('inactive')) {
-                 favAdd.classList.remove('inactive')
-                 favAdd.classList.add('active')
-                 favAdd.src = "./assets/icon-fav-active.svg";           
-             } else if (favAdd.classList.contains('active')) {
-                 favAdd.classList.remove('active');
-                 favAdd.classList.add('inactive');
-                 favAdd.src = "./assets/icon-fav.svg";                             
-             } 
-         })
-        };      
+let createTools = (cajaGif) => {
+    let cajitaTools = document.createElement('div');
+    cajitaTools.classList.add('cajitaTools');
+    cajaGif.appendChild(cajitaTools);
+    let favAdd = document.createElement('img');
+    favAdd.src = "./assets/icon-fav.svg";
+    cajitaTools.appendChild(favAdd);
+    favAdd.classList.add('inactive');
+    let dwlAdd = document.createElement('img');
+    dwlAdd.src = "./assets/icon-download.svg";
+    cajitaTools.appendChild(dwlAdd);
+    let mViewAdd = document.createElement('img');
+    mViewAdd.src = "./assets/icon-max-normal.svg";
+    cajitaTools.appendChild(mViewAdd);
+    favAdd.addEventListener('click', function (favTitle, favAuthor, favImg) {
+        if (favAdd.classList.contains('inactive')) {
+            favAdd.classList.remove('inactive')
+            favAdd.classList.add('active')
+            favAdd.src = "./assets/icon-fav-active.svg";    
+            let favTitle = this.parentNode.parentNode.childNodes[0].innerText;     
+            let favAuthor = this.parentNode.parentNode.childNodes[1].innerText;     
+            let favImg = this.parentNode.parentNode.childNodes[2].src;     
+            let goToFavAdd =  {
+                title: favTitle,
+                author: favAuthor,
+                source: favImg
+            }
+            favoritos.push(goToFavAdd);
+            console.log(favoritos);
+
+        } else if (favAdd.classList.contains('active')) {
+            favAdd.classList.remove('active');
+            favAdd.classList.add('inactive');
+            favAdd.src = "./assets/icon-fav.svg";
+        }
+    })
+}
 
 //insertar gifData en cada caja que contenga gif
 
 let titleAndAuthor = (title, author, cajaGif) => {
-       
 
-        let gifData = document.createElement('div');
-        gifData.classList.add('gifData');        
-        cajaGif.appendChild(gifData);
-        let addTitle = document.createElement('p');
-        addTitle.classList.add('gifTitle');        
-        gifData.appendChild(addTitle);
-        addTitle.innerHTML = title;
-        let userName = document.createElement('p');        
-        gifData.appendChild(userName);        
-        userName.innerHTML = author;
-    }
+
+    let gifData = document.createElement('div');
+    gifData.classList.add('gifData');
+    cajaGif.appendChild(gifData);
+    let addTitle = document.createElement('p');
+    addTitle.classList.add('gifTitle');
+    gifData.appendChild(addTitle);
+    addTitle.innerHTML = title;
+    let userName = document.createElement('p');
+    gifData.appendChild(userName);
+    userName.innerHTML = author;
+}
 
 
 // Si hay una búsqueda previa, eliminar los resultados de la pantalla

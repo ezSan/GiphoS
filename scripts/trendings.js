@@ -41,12 +41,24 @@ let arrayGif = (gif) =>{
    crearDiv.id =`boxWithTitleToolsGif`;
    //asignar hijo a nodo html
    tdnCtn.appendChild(crearDiv);  
-   //capturar title+author para enviar como parameter a funcion
+   //capturar title+author para enviar a cajaContenedor de gif
+   let createTitle = document.createElement('h2');
+   crearDiv.insertAdjacentElement("afterbegin", createTitle);  
    let titleGif = gif.data[i].title;
+   createTitle.innerText = titleGif;
+   createTitle.classList.add('hidden');   
+   /* console.log(titleGif) */
+   let createAuthor = document.createElement('p');
+   createTitle.insertAdjacentElement("afterend", createAuthor);
    let authorGif = gif.data[i].username;
-   createTools(crearDiv);   
-   titleAndAuthor(titleGif, authorGif, crearDiv);             
-   }            
+   createAuthor.innerText = authorGif;
+   createAuthor.classList.add('hidden');
+   /* console.log(authorGif) */
+   titleAndAuthor(titleGif,authorGif, crearDiv); 
+   createTools(crearDiv);                  
+   } 
+   
+              
 }
 
 
