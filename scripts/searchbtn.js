@@ -55,6 +55,7 @@ let showResults = () => {
         let gif = document.createElement('img');
         /* gif.id = arrayResults[i].images.downsized.url; */
         gif.classList.add('result');
+        gif.id = arrayResults[i].id;
         let url = arrayResults[i].images.downsized.url;
         let title = arrayResults[i].title;
         let gifTitle = document.createElement('h2');
@@ -81,7 +82,7 @@ let showResults = () => {
     }
 
     document.querySelector(`#search`).value = ' ';
-
+    
 }
 
 //Insertar caja de herramientas en cada caja que contenga gif
@@ -101,27 +102,49 @@ let createTools = (cajaGif) => {
     let mViewAdd = document.createElement('img');
     mViewAdd.src = "./assets/icon-max-normal.svg";
     cajitaTools.appendChild(mViewAdd);
-    favAdd.addEventListener('click', function (favTitle, favAuthor, favImg) {
-        if (favAdd.classList.contains('inactive')) {
-            favAdd.classList.remove('inactive')
-            favAdd.classList.add('active')
-            favAdd.src = "./assets/icon-fav-active.svg";    
-            let favTitle = this.parentNode.parentNode.childNodes[0].innerText;     
-            let favAuthor = this.parentNode.parentNode.childNodes[1].innerText;     
-            let favImg = this.parentNode.parentNode.childNodes[2].src;     
-            let goToFavAdd =  {
-                title: favTitle,
-                author: favAuthor,
-                source: favImg
-            }
-            favoritos.push(goToFavAdd);
-            console.log(favoritos);
+    favAdd.addEventListener('click',function () {        
 
-        } else if (favAdd.classList.contains('active')) {
-            favAdd.classList.remove('active');
-            favAdd.classList.add('inactive');
-            favAdd.src = "./assets/icon-fav.svg";
+        let favTitle = this.parentNode.parentNode.childNodes[0].innerText;
+        let favAuthor = this.parentNode.parentNode.childNodes[1].innerText;
+        let favImg = this.parentNode.parentNode.childNodes[2].src;
+        let imgId = this.parentNode.parentNode.childNodes[2].id;
+        
+        let goToFavAdd = [
+            title = favTitle,
+            author = favAuthor,
+            source = favImg,
+            id = imgId
+        ]
+
+        favoritos.push(goToFavAdd);
+        localStorage.setItem('Favoritos', JSON.stringify(favoritos))
+        console.log(favoritos)
+
+
+        let favoritesValidation = () => {
+            if (storageFavoritos.includes('holis')){
+                console.log('esoo')
+             /*    favAdd.classList.remove('inactive')
+                favAdd.classList.add('active')
+                favAdd.src = "./assets/icon-fav-active.svg";  */       
+            } else { console.log('eso no esta amiguito')
+                    /* favAdd.classList.remove('active');
+                    favAdd.classList.add('inactive');
+                    favAdd.src = "./assets/icon-fav.svg"; */}
         }
+
+        favoritesValidation()
+        
+        // if (localStorage.Favoritos[2].includes(favImg)){
+       
+
+        // } else if (favAdd.classList.contains('active')) {
+        //     favAdd.classList.remove('active');
+        //     favAdd.classList.add('inactive');
+        //     favAdd.src = "./assets/icon-fav.svg";
+
+        //     console.log(favoritos);
+        // }
     })
 }
 

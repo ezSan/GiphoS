@@ -15,3 +15,9 @@ var favoritos = [];
 
 var arrayTrendings = [];
 
+
+//local storage
+
+let storageFavoritos = localStorage.getItem('Favoritos', favoritos);
+
+

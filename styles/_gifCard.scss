@@ -19,3 +19,16 @@
         display: flex;
         flex-direction: column;
         }
+
+
+.giphoBox{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cajitaTools{
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-start;
+}

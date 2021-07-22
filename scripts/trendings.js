@@ -32,7 +32,7 @@ let arrayGif = (gif) =>{
    // asignar src imagen  = url.imagen
    createGif.src= tdnGif;
    /* createGif.id=`gipho${[i+1]}`; */
-   createGif.id=`gipho`;        
+   createGif.id= gif.data[i].id;       
    // creo padre para c/gif 
    let crearDiv = document.createElement(`div`);
    //insert gif en div 
@@ -56,9 +56,7 @@ let arrayGif = (gif) =>{
    /* console.log(authorGif) */
    titleAndAuthor(titleGif,authorGif, crearDiv); 
    createTools(crearDiv);                  
-   } 
-   
-              
+   }               
 }
 
 
