@@ -1,7 +1,9 @@
 let traer = ()=> {
     fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`)
     .then(res => res.json())
-    .then((gif)=>{           
+    .then((gif)=>{ 
+         
+         // console.log(gif.data)
          arrayGif(gif);          
          trendingArray(gif);                      
     })     
@@ -12,10 +14,11 @@ let traer = ()=> {
  
 // crear array que contenga los gif trending resultado del fetch
 
-let trendingArray = (gif) => {
-   arrayTrendings.push(gif);
+let trendingArray = (gif) => {     
+   
+   arrayTrendings.push(gif.data);
    console.log('Estos son los Trendings!!')
-   console.log(arrayTrendings[0].data);
+   console.log(arrayTrendings);
 }
 
 //consumir datos del array de trendings insertar resultados en DOM
@@ -24,6 +27,9 @@ let arrayGif = (gif) =>{
    for(var i = 0; i <= 14 ; i++){         
    // url Imagen
    let tdnGif = gif.data[i].images.downsized.url 
+   //capturar id de c/gif & push to array id´s
+   let tdnId =  gif.data[i].id;
+   favId.push(tdnId);   
    // Accedemos al nodo html
    let tdnCtn = document.getElementById(`trending-ctn`); 
    // crear elemento imagen
@@ -55,7 +61,7 @@ let arrayGif = (gif) =>{
    createAuthor.classList.add('hidden');
    /* console.log(authorGif) */
    titleAndAuthor(titleGif,authorGif, crearDiv); 
-   createTools(crearDiv);                  
+   createTools(crearDiv, likeBtn);                  
    }               
 }
 
