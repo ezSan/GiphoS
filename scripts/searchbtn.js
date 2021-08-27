@@ -96,33 +96,51 @@ const likeBtn =(cajitaTools)=>{
     }
 
     favAdd.addEventListener('click',function (){
-        let favTitle = this.parentNode.parentNode.childNodes[0].innerText;
-        let favAuthor = this.parentNode.parentNode.childNodes[1].innerText;
-        let favImg = this.parentNode.parentNode.childNodes[2].src;
-        let imgId = this.parentNode.parentNode.childNodes[2].id;
-        
-        let goToFavAdd = 
-            {title: favTitle,
-            author: favAuthor,
-            source: favImg,
-            id: imgId}
-           
-        favoritos.push(goToFavAdd);        
-        console.log(favoritos);   
-        localStorage.setItem('Favoritos',JSON.stringify(favoritos))
+
+        if (favAdd.classList.contains('inactive')) {
+
+            let favTitle = this.parentNode.parentNode.childNodes[0].innerText;
+            let favAuthor = this.parentNode.parentNode.childNodes[1].innerText;
+            let favImg = this.parentNode.parentNode.childNodes[2].src;
+            let imgId = this.parentNode.parentNode.childNodes[2].id;
+
+            let goToFavAdd =
+            {
+                title: favTitle,
+                author: favAuthor,
+                source: favImg,
+                id: imgId
+            }
+
+            favoritos.push(goToFavAdd);
+            localStorage.setItem('Favoritos', JSON.stringify(favoritos));
+
+        }
 
     });
 
 
     favAdd.addEventListener('click', function(){
         if (favAdd.classList.contains('active')){
-            favAdd.src = "./assets/icon-fav.svg";
-        }else{
-            favAdd.src = "./assets/icon-fav-active.svg";
-        }
-        
-        
-        })
+            favAdd.src = "./assets/icon-fav.svg"; 
+            favAdd.classList.remove('active');              
+            favAdd.classList.add('inactive');  
+
+            let imgId = this.parentNode.parentNode.childNodes[2].id; 
+            let idLikedArray = favoritos.map( ids =>ids.id);
+            let indexThisGif = idLikedArray.indexOf(imgId);
+            favoritos.splice(indexThisGif,1);
+            localStorage.setItem('Favoritos', JSON.stringify(favoritos));
+
+            
+           
+                     
+        }else if(favAdd.classList.contains('inactive')){        
+            favAdd.src = "./assets/icon-fav-active.svg"; 
+            favAdd.classList.remove('inactive');        
+            favAdd.classList.add('active');        
+        }         
+    })
     
 
 
@@ -142,16 +160,6 @@ let createTools = (cajaGif,likeBtn) => {
     cajitaTools.appendChild(mViewAdd);
    }
 
-
-
-let likeIcon = () =>{
-    // let idThisElement = cajitaTools.parentElement.childNodes[2].id
-    let favoritosId = favoritos.map(idFavoritos =>{
-        /* favMapId.push(idFavoritos.id); */
-        console.log(idFavoritos.id)
-        })
-     }
-likeIcon();
 
 //insertar gifData en cada caja que contenga gif
 
