@@ -18,7 +18,6 @@ function init() {
                 intoArray(content);
                 removeResults();
                 showResults();
-                extractAndPushId();
                 addTitle(str);
                 btnVerMas();
 
@@ -81,10 +80,9 @@ let showResults = () => {
 
 //Insertar caja de herramientas en cada caja que contenga gif
 
-const likeBtn =(cajitaTools)=>{
+const likeBtn =(cajitaTools, imgId)=>{
     let favAdd = document.createElement('img'); 
     cajitaTools.appendChild(favAdd);      
-    imgId = favAdd.parentNode.parentNode.childNodes[2].id
     let mapIdfav = favoritos.map(ids => ids.id )
     
     if (mapIdfav.includes(imgId)){
@@ -130,9 +128,7 @@ const likeBtn =(cajitaTools)=>{
             let idLikedArray = favoritos.map( ids =>ids.id);
             let indexThisGif = idLikedArray.indexOf(imgId);
             favoritos.splice(indexThisGif,1);
-            localStorage.setItem('Favoritos', JSON.stringify(favoritos));
-
-            
+            localStorage.setItem('Favoritos', JSON.stringify(favoritos));           
            
                      
         }else if(favAdd.classList.contains('inactive')){        
@@ -140,6 +136,8 @@ const likeBtn =(cajitaTools)=>{
             favAdd.classList.remove('inactive');        
             favAdd.classList.add('active');        
         }         
+    
+    
     })
     
 

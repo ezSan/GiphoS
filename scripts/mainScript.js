@@ -26,10 +26,9 @@ let comprobeLs = () =>{
 
 comprobeLs()
 
-//array de id´s de favoritos//
-let favMapId = [];
 
-/* comprobeAndPushLocalStorage()  */
+
+
 
 
 
