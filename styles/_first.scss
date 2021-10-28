@@ -5,18 +5,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+}
 
-    h2 {
-        font-size: xx-large;
-        line-height:  50px;
-        font-family: 'Montserrat-Bold', sans-serif;
-        color: $color1;
-        text-align: center;
-        span{
-            color:#50E3C2;
-        }
+.mainTitle{
+    font-size: xx-large;
+    line-height:  50px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    color: $color1;
+    text-align: center;
+    span{
+        color:#50E3C2;
     }
 }
+
+
+
 
 .formulario {
     display: flex;
@@ -24,6 +27,7 @@
     justify-content: center;
     width: 38.3%;
     border: ( 1px solid #572EE5);
+    border-radius: 15px;
     margin-top: 1%;
 
     
@@ -31,10 +35,14 @@
 }
 
  .search {
-    width: 100%
+    width: 100%;
+    border-color: transparent;
+    outline: transparent;
+    
  }
 
 
  .searchTitle{
      text-transform: capitalize;
- }
+     color: $color1;
+}

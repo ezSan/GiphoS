@@ -1,6 +1,22 @@
-#gifTitle {
-   width: 100%;
-   font-size: medium;
+.cajaGif{
+    width: 19%;
+    margin: 1%;    
+    display: flex;    
+    position: relative;
+}
+
+.hiddenOverlay{
+    display: flex;
+}
+
+.gifTitle {
+   color: violet;
+   font-size:large
+   
+}
+
+.titleAndAuthorElements{
+    margin: 1%;
 }
 
 .gifData{
@@ -9,7 +25,13 @@
     justify-content: flex-start;
     margin: 0%;
     padding: 0%;
-    z-index: 1;
+    z-index: 0;
+    position: absolute;
+    margin-top: -25%;
+    width: 98%;
+    height: 30%;
+   
+    
 }
 
 .resultCtn {
@@ -25,10 +47,24 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-}
+    width: 22.313rem;
+    padding: 0.5%;
+    position: relative;
+
+        
+    }
+
 
 .cajitaTools{
     display: flex;
-    align-self: flex-end;
-    justify-content: flex-start;
+    align-self:flex-start;  
+    position: absolute;
+    margin-top: 0.5%;
+    margin-right : 0.5%;
+    
 }
+
+
+
+
+

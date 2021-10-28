@@ -12,6 +12,11 @@ consultAndClean();
 
 const printFavos =(createTools, likeBtn)=>{
     let mapFavos = favoritos.map(impFavs =>{ 
+
+        imgId = impFavs.id;
+        title = impFavs.title;
+        author = impFavs.author;
+
         let favBox = document.getElementById('favBox');
         favBox.classList.remove('solapaBox');
         favBox.classList.add('out');
@@ -21,15 +26,21 @@ const printFavos =(createTools, likeBtn)=>{
         let likedGif = document.createElement('img');
         likedGif.classList.add('result');
         boxFav.appendChild(likedGif);
-        likedGif.src = impFavs.source;
-        imgId = impFavs.id;
-        title = impFavs.title;
-        author = impFavs.author;
+        let sourceFav = impFavs.source;
+        likedGif.src = sourceFav;
+        likedGif.title = title;
+        likedGif.alt = title;
+        likedGif.id = imgId;
+        let hiddenOverlay = document.createElement('div');
+        hiddenOverlay.classList.add('hiddenOverlay');
+        likedGif.insertAdjacentElement('beforebegin', hiddenOverlay)
+        
+
 
         
 
-        createTools(boxFav, likeBtn, imgId, dwnBtn, mViewBtn);
-        titleAndAuthor(title , author , boxFav);
+        titleAndAuthor(title , author , hiddenOverlay);
+        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
         
     })
 
