@@ -32,8 +32,10 @@ const printFavos =(createTools, likeBtn)=>{
         likedGif.alt = title;
         likedGif.id = imgId;
         let hiddenOverlay = document.createElement('div');
-        hiddenOverlay.classList.add('hiddenOverlay');
-        likedGif.insertAdjacentElement('beforebegin', hiddenOverlay)
+        hiddenOverlay.classList.add('hidden');
+        likedGif.insertAdjacentElement('beforebegin', hiddenOverlay);
+        boxFav.addEventListener('mouseover', removeClassHidden);
+        boxFav.addEventListener('mouseout', addClassHidden);
         
 
 

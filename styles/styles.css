@@ -1,3 +1,11 @@
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,10 +278,6 @@ footer {
 
 .footRights {
   margin-left: 60%;
-}
-
-.hidden {
-  display: none;
 }
 
 .out {

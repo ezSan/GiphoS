@@ -39,8 +39,10 @@ let intoArray = (content) => {
 
         let favImg = printResults.images.downsized.url;
         let author = printResults.username;
+        
         let title = printResults.title;
         let imgId = printResults.id;
+       
 
 
         let cajaGif = document.createElement('div');
@@ -48,8 +50,10 @@ let intoArray = (content) => {
 
 
         let hiddenOverlay = document.createElement('div');
-        hiddenOverlay.classList.add('hiddenOverlay');
+        hiddenOverlay.classList.add('hidden');
         cajaGif.appendChild(hiddenOverlay);
+        cajaGif.addEventListener('mouseover', removeClassHidden);
+         cajaGif.addEventListener('mouseout', addClassHidden);
 
 
         let gif = document.createElement('img');
@@ -65,9 +69,6 @@ let intoArray = (content) => {
 
         titleAndAuthor(title, author, hiddenOverlay);
         createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
-            
-
-
     })
 
 }
