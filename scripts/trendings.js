@@ -14,46 +14,46 @@ let traer = ()=> {
       
 traer();  
 
-let createTrendingBar = (gif) =>{
+let createTrendingBar = (gif) => {
 
-    arrayTrendings = gif.data
+  arrayTrendings = gif.data
 
-    let mapTrendingArray = arrayTrendings.map( printResults =>{
+  let mapTrendingArray = arrayTrendings.map(printResults => {
 
-      let favImg = printResults.images.downsized.url;
-      let author = printResults.username;
-      let title = printResults.title;
-      let tdnId = printResults.id;
+    let favImg = printResults.images.downsized.url;
+    let author = printResults.username;
+    let title = printResults.title;
+    let tdnId = printResults.id;
 
-      let cajaGif = document.createElement('div');
-          cajaGif.classList.add('cajaGif');
-          cajaGif.classList.add('giphoBox')
+    let cajaGif = document.createElement('div');
+    cajaGif.classList.add('cajaGif');
+    cajaGif.classList.add('giphoBox');
 
-        let hiddenOverlay = document.createElement('div');
-        hiddenOverlay.classList.add('hiddenOverlay');
-        cajaGif.appendChild(hiddenOverlay);
+    cajaGif.addEventListener('mouseover', removeClassHidden);
+    cajaGif.addEventListener('mouseout', addClassHidden);
 
-        let gif = document.createElement('img');
-        gif.id = printResults.id; 
-        gif.src = printResults.images.downsized.url;
-        gif.title = printResults.title;       
-        gif.alt = title;
-        gif.classList.add('gipho');
-        cajaGif.appendChild(gif);
+    let hiddenOverlay = document.createElement('div');
+    hiddenOverlay.classList.add('hidden');
+    hiddenOverlay.id = 'hiddenOverlay';
+    cajaGif.appendChild(hiddenOverlay);
 
-        let tdnCtn = document.getElementById(`trending-ctn`); 
-        tdnCtn.appendChild(cajaGif);
+    let gif = document.createElement('img');
+    gif.id = printResults.id;
+    gif.src = printResults.images.downsized.url;
+    gif.title = printResults.title;
+    gif.alt = title;
+    gif.classList.add('gipho');
+    cajaGif.appendChild(gif);
 
-        titleAndAuthor( title, author, hiddenOverlay); 
-        createTools( hiddenOverlay,likeBtn,tdnId, dwnBtn, mViewBtn);  
+    let tdnCtn = document.getElementById(`trending-ctn`);
+    tdnCtn.appendChild(cajaGif);
 
-
-
-
-
-    })
+    titleAndAuthor(title, author, hiddenOverlay);
+    createTools(hiddenOverlay, likeBtn, tdnId, dwnBtn, mViewBtn);
+  })
 
 } 
+
 
 
 
