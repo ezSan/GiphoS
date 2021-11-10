@@ -2,11 +2,9 @@ let traer = ()=> {
    fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`)
    .then(res => res.json())
    .then(gif=>{ 
-        
         // console.log(gif.data)
         // arrayGif(gif);          
-        // trendingArray(gif);   
-        
+        // trendingArray(gif);         
         createTrendingBar(gif)
    })     
 } 
