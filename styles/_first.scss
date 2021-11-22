@@ -19,17 +19,15 @@
 }
 
 
-
-
 .formulario {
-    display: flex;
+    
+    
     padding: 1%;
-    justify-content: center;
+    
     width: 38.3%;
     border: ( 1px solid #572EE5);
-    border-radius: 15px;
-    margin-top: 1%;
-
+    border-radius: 2.6367188vw;
+    margin-top: 1%; 
     
 
 }
@@ -37,12 +35,40 @@
  .search {
     width: 100%;
     border-color: transparent;
-    outline: transparent;
-    
+    outline: transparent;    
  }
+ 
 
 
  .searchTitle{
      text-transform: capitalize;
      color: $color1;
+}
+
+.cajaInput{
+    display: flex;
+    width: 100%;
+}
+
+
+
+.suggestionP{
+    margin-left: 2%;
+    color:#9CAFC3;
+    :hover{
+        color: $color1 ;
+        
+
+    }
+}
+
+
+.marginTop{
+    margin-top: 1%;
+    border-top: $color3 2px solid;
+}
+
+.suggestionBox{
+    
+    display: flex;
 }
