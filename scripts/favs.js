@@ -5,7 +5,7 @@ const consultAndClean =()=>{
   };    
 }
 
-consultAndClean();
+consultAndClean()
 
 
 //consumir data de favoritos y mostrar gif en pantalla// 
@@ -36,10 +36,7 @@ const printFavos =(createTools, likeBtn)=>{
         likedGif.insertAdjacentElement('beforebegin', hiddenOverlay);
         boxFav.addEventListener('mouseover', removeClassHidden);
         boxFav.addEventListener('mouseout', addClassHidden);
-        
-
-
-        
+              
 
         titleAndAuthor(title , author , hiddenOverlay);
         createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);

@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- Google fonts -->
@@ -7,39 +8,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&
-    display=swap" rel="stylesheet">    
+    display=swap" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="./styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiphoS</title>
 </head>
-<body id = 'bodyDom'>
-    
+
+<body id='bodyDom'>
+
     <header>
         <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
             <ul>
                 <input type="button" value="MODO NOCTURNO" onclick="darkMode()">
                 <li><a class="anav" href="./favs.html">FAVORITOS</a></li>
-                <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>                           
+                <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>
             </ul>
             <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
         </nav>
     </header>
-    <main >
+    <main>
         <section class="first" id="first">
-                
+
             <h2 class="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span></h2>
-                <img src="./assets/ilustra_header.svg" alt="dibujo">
+            <img src="./assets/ilustra_header.svg" alt="dibujo">
+
+
             <form class="formulario">
-                <input id="search" class="search" type="search" />
-                <img src="./assets/icon-search.svg" alt="lupa" id="btnSearch">
+
+
+                <div class="cajaInput">
+                    <input id="search" class="search" type="search" autocomplete="off"/>
+                    <img src="./assets/icon-search.svg" alt="lupa" id="btnSearch">
+                </div>
+
                 
-            </form>
-                 
+
+                <div class="autocompleteSuggestionsBox" id = 'autocompleteSuggestionsBox'></div>
+
+                </form>        
+                
             <div class="out" id="out"></div>
-            <input type="button" id="verMas" class="hidden" value="Ver más" onclick="seeMore()">                       
-        </section>            
+            <input type="button" id="verMas" class="hidden" value="Ver más" onclick="seeMore()">
+        </section>
         <section class="second">
             <h2>Trending:</h2>
             <p class="themes">Reactions, Entretainment, Sports, Stickers, Artist</p>
@@ -53,33 +65,37 @@
                     <div class="next"><img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextSlider"
                             onclick="moveRight()"></div>
                 </div>
-        
+
             </div>
-                
-                
+
+
             </div>
         </section>
-                      
+
     </main>
+
+
     <footer>
         <div class="shareBox">
             <p>Compartir en:</p>
-                <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
-                <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
-                <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
-            </div>
-            <div class="footRights">
-                <p>© GIFOS 2020 All Rights Reserved.</p>
-            </div> 
+            <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
+            <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
+            <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
+        </div>
+        <div class="footRights">
+            <p>© GIFOS 2020 All Rights Reserved.</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="./scripts/mainScript.js"></script>    
-    <script src="./scripts/trendings.js"></script>      
-    <script src="./scripts/slider.js"></script> 
-    <script src="./scripts/searchbtn.js"></script>  
-         
-    
-    
+    <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/trendings.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src ='./scripts/autocomplete.js'></script>
+    <script src="./scripts/searchbtn.js"></script>
+
+
+
 </body>
+
 </html>

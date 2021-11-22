@@ -11,6 +11,7 @@
     //local storage
     /* let createKey = localStorage.setItem('Favoritos', JSON.stringify(favoritos)); */
     let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
+    
 
     //Comprobar LocalStorage // Pushear favs anteriores
     let comprobeLs = () => {
@@ -268,6 +269,8 @@
         gifData.appendChild(addTitle);
     }
 
+   
+   
     // remove & add hidden class in eventListener
 
     function removeClassHidden(e){ 

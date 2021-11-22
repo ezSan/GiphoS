@@ -76,16 +76,10 @@ nav ul li {
 }
 
 .formulario {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 1%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 38.3%;
   border: 1px solid #572EE5;
-  border-radius: 15px;
+  border-radius: 2.6367188vw;
   margin-top: 1%;
 }
 
@@ -98,6 +92,33 @@ nav ul li {
 .searchTitle {
   text-transform: capitalize;
   color: #572EE5;
+}
+
+.cajaInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.suggestionP {
+  margin-left: 2%;
+  color: #9CAFC3;
+}
+
+.suggestionP :hover {
+  color: #572EE5;
+}
+
+.autocompleteSuggestionsBox {
+  margin-top: 1%;
+  border-top: #9CAFC3 2px solid;
+}
+
+.suggestionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .second h2 {

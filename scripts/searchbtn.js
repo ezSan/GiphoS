@@ -20,6 +20,7 @@ function init() {
                 /* removeResults(); */
                 addTitle(str);
                 btnVerMas();
+                
 
             })
 
@@ -47,13 +48,17 @@ let intoArray = (content) => {
 
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');
+        cajaGif.classList.add('boxWithSearch');
+        
 
+
+           
 
         let hiddenOverlay = document.createElement('div');
         hiddenOverlay.classList.add('hidden');
         cajaGif.appendChild(hiddenOverlay);
         cajaGif.addEventListener('mouseover', removeClassHidden);
-         cajaGif.addEventListener('mouseout', addClassHidden);
+        cajaGif.addEventListener('mouseout', addClassHidden);
 
 
         let gif = document.createElement('img');
@@ -68,9 +73,20 @@ let intoArray = (content) => {
         out.insertAdjacentElement('afterbegin', cajaGif);
 
         titleAndAuthor(title, author, hiddenOverlay);
-        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
+        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn)      ;
+         
     })
+    
+}
 
+let addHiddenClass = ()=>{
+
+    let boxHidden = document.getElementsByClassName('boxWithSearch');
+    if(boxHidden.length>11){
+        boxHidden.classList.add('hidden');
+    }
+    
+   
 }
 
 
@@ -97,14 +113,6 @@ let addTitle = (str) => {
 
 // Luego del request con éxito, creacion del input para visualizar más resultados
 
-let seeMore = (cajaGif) => {
-
-    if(cajaGif.length>11){
-        cajaGif.classList.add('hidden')
-    }
-
-
-}
 
 //boton para ver mas resultados luego de busqueda
 
