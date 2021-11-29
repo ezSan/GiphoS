@@ -12,7 +12,12 @@ $font:  font-family 'Montserrat-Bold', sans-serif;
     visibility: hidden;
 }
 
+.none {
+    display: none;
+}
 
 .visible { 
     visibility: visible;
 }
+
+*{overflow-x:hidden}

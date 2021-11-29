@@ -2,8 +2,16 @@
   visibility: hidden;
 }
 
+.none {
+  display: none;
+}
+
 .visible {
   visibility: visible;
+}
+
+* {
+  overflow-x: hidden;
 }
 
 header {
@@ -110,7 +118,7 @@ nav ul li {
   color: #572EE5;
 }
 
-.autocompleteSuggestionsBox {
+.marginTop {
   margin-top: 1%;
   border-top: #9CAFC3 2px solid;
 }
@@ -144,8 +152,7 @@ nav ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-x: scroll;
-  height: 500;
+  overflow-y: hidden;
 }
 
 .gipho {
@@ -165,6 +172,8 @@ nav ul li {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
+  overflow: transparent;
+  scrollbar-color: transparent;
 }
 
 .prev, .next {

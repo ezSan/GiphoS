@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", init);
 
-function init() {
+function init(userSearch){
 
     document.getElementById("btnSearch").addEventListener("click", ev => {
         ev.preventDefault(); // dont refresh
 
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
         let userSearch = document.getElementById('search').value;
-        let str = document.getElementById('search').value;
+        
 
         url = url.concat(userSearch);
-        console.log('Busqueda realizada: '+ str);
+        console.log('Busqueda realizada: '+ userSearch);
 
         fetch(url)
             .then(response => response.json())
             .then(content => {
 
-                intoArray(content);
+                displayResultsInDOM(content);
                 /* removeResults(); */
-                addTitle(str);
+                addTitle(userSearch);
                 btnVerMas();
                 
 
@@ -30,9 +30,10 @@ function init() {
     });
 }
 
+
 //Almacenar los resultados de busqueda en un array provisorio
 
-let intoArray = (content) => {
+function displayResultsInDOM (content) {
 
     resultadosDeBusqueda = content.data;
 
