@@ -1,4 +1,4 @@
-
+/* cuando el usuuario  */
 
 let keyPressInSearchInput = () => {
     let searchInput = document.getElementById('search');
@@ -31,6 +31,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
         let suggestionsBox = document.createElement('div');
         suggestionsBox.classList.add('suggestionBox');
+        suggestionsBox.id ='suggestionBox';
         suggestionsBox.addEventListener('click', fetchSuggestionTerm =(e)=>{
             let termSuggestion = e.currentTarget.childNodes[1].innerText;
             console.log(termSuggestion);
@@ -44,8 +45,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
                 addTitle(termSuggestion);
             })
 
-        })
-            
+        })           
             
         
         let createSuggestion = document.createElement('p');
@@ -57,7 +57,9 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
         let lupita = document.createElement('img');
         lupita.src = 'assets/icon-search-mod-noc.svg';
+
         
+        displayCloseButton()
 
         suggestionsBox.insertAdjacentElement('afterbegin', lupita)
         autocompleteBox.insertAdjacentElement('afterbegin', suggestionsBox);
@@ -67,4 +69,13 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 }   
 
 
+
+/* close suggestion box */
+
 function closeSuggestionsBox(autocompleteBox){autocompleteBox.classList.add('none')}
+
+
+function displayCloseButton(){
+    let searchButton = document.getElementById('btnSearch');
+    searchButton.src = './assets/close.svg';        
+}
