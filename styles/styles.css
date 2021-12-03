@@ -88,13 +88,17 @@ nav ul li {
   width: 38.3%;
   border: 1px solid #572EE5;
   border-radius: 2.6367188vw;
-  margin-top: 1%;
 }
 
 .search {
   width: 100%;
   border-color: transparent;
   outline: transparent;
+  margin-left: 5%;
+}
+
+.input::-ms-clear {
+  display: none;
 }
 
 .searchTitle {
@@ -124,9 +128,14 @@ nav ul li {
 }
 
 .suggestionBox {
+  margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.lupaOrClose {
+  margin-right: 3%;
 }
 
 .second h2 {

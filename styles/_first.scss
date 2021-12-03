@@ -19,26 +19,24 @@
 }
 
 
-.formulario {
-    
-    
-    padding: 1%;
-    
+.formulario {   
+    padding: 1%;    
     width: 38.3%;
     border: ( 1px solid #572EE5);
     border-radius: 2.6367188vw;
-    margin-top: 1%; 
-    
-
 }
 
  .search {
     width: 100%;
     border-color: transparent;
-    outline: transparent;    
+    outline: transparent;   
+    margin-left: 5%; 
  }
- 
 
+
+.input::-ms-clear{
+    display: none;
+}
 
  .searchTitle{
      text-transform: capitalize;
@@ -57,8 +55,6 @@
     color:#9CAFC3;
     :hover{
         color: $color1 ;
-        
-
     }
 }
 
@@ -70,5 +66,11 @@
 
 .suggestionBox{
     
+    margin-left: 5%;
     display: flex;
+}
+
+
+.lupaOrClose{
+    margin-right: 3%;
 }
