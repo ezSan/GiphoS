@@ -75,7 +75,18 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 function closeSuggestionsBox(autocompleteBox){autocompleteBox.classList.add('none')}
 
 
-function displayCloseButton(){
+function displayCloseButton(autocompleteBox){
     let searchButton = document.getElementById('btnSearch');
-    searchButton.src = './assets/close.svg';        
+    searchButton.src = './assets/close.svg'; 
+    
+    searchButton.addEventListener('click', x=>{
+        let hideThisBox = document.getElementById('autocompleteSuggestionsBox');
+        hideThisBox.classList.add('none');
+    })
+    
+    
+    
+    
 }
+
+
