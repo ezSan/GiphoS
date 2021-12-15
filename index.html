@@ -21,7 +21,8 @@
         <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
             <ul>
-                <input type="button" value="MODO NOCTURNO" onclick="darkMode()">
+            
+                <li><a class="anav">MODO NOCTURNO</a></li>
                 <li><a class="anav" href="./favs.html">FAVORITOS</a></li>
                 <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>
             </ul>
@@ -38,9 +39,10 @@
             <form class="formulario" autocomplete="off">
 
 
-                <div class="cajaInput">
+                <div class="cajaInput" id ='cajaInput'>
                     <input id="search" class="search" type="text" autocomplete="off"  />
                     <img src="./assets/icon-search.svg" alt="lupa" class='lupaOrClose' id="btnSearch">
+                    <img src="./assets/close.svg" alt="closeButton" class='closeButton none' id="closeButton" onclick="closeSuggestionsBox()">
                 </div>
 
                 

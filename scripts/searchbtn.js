@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", init);
 
-function init(userSearch){
+function init(userSearch) {
 
     document.getElementById("btnSearch").addEventListener("click", ev => {
         ev.preventDefault(); // dont refresh
 
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
         let userSearch = document.getElementById('search').value;
-        
+
 
         url = url.concat(userSearch);
-        console.log('Busqueda realizada: '+ userSearch);
+        console.log('Busqueda realizada: ' + userSearch);
 
         fetch(url)
             .then(response => response.json())
@@ -20,7 +20,7 @@ function init(userSearch){
                 /* removeResults(); */
                 addTitle(userSearch);
                 btnVerMas();
-                
+
 
             })
 
@@ -33,7 +33,7 @@ function init(userSearch){
 
 //Almacenar los resultados de busqueda en un array provisorio
 
-function displayResultsInDOM (content) {
+function displayResultsInDOM(content) {
 
     resultadosDeBusqueda = content.data;
 
@@ -41,19 +41,19 @@ function displayResultsInDOM (content) {
 
         let favImg = printResults.images.downsized.url;
         let author = printResults.username;
-        
+
         let title = printResults.title;
         let imgId = printResults.id;
-       
+
 
 
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');
         cajaGif.classList.add('boxWithSearch');
-        
 
 
-           
+
+
 
         let hiddenOverlay = document.createElement('div');
         hiddenOverlay.classList.add('hidden');
@@ -74,20 +74,20 @@ function displayResultsInDOM (content) {
         out.insertAdjacentElement('afterbegin', cajaGif);
 
         titleAndAuthor(title, author, hiddenOverlay);
-        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn)      ;
-         
+        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
+
     })
-    
+
 }
 
-let addHiddenClass = ()=>{
+let addHiddenClass = () => {
 
     let boxHidden = document.getElementsByClassName('boxWithSearch');
-    if(boxHidden.length>11){
+    if (boxHidden.length > 11) {
         boxHidden.classList.add('hidden');
     }
-    
-   
+
+
 }
 
 

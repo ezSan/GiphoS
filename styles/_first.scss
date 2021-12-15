@@ -31,6 +31,7 @@
     border-color: transparent;
     outline: transparent;   
     margin-left: 5%; 
+    border: 1%;
  }
 
 
@@ -51,11 +52,9 @@
 
 
 .suggestionP{
+    
     margin-left: 2%;
-    color:#9CAFC3;
-    :hover{
-        color: $color1 ;
-    }
+    color:#9CAFC3;   
 }
 
 
@@ -68,9 +67,22 @@
     
     margin-left: 5%;
     display: flex;
+    margin-top: 1%;
 }
 
+
+.withSuggestions{
+    
+    border-top: 1px solid #9CAFC3  ;
+    opacity: 0.5;
+    margin-top: 2%;
+}
 
 .lupaOrClose{
     margin-right: 3%;
 }
+
+.closeButton{
+    margin-right: 3%;
+}
+

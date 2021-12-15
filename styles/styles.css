@@ -95,6 +95,7 @@ nav ul li {
   border-color: transparent;
   outline: transparent;
   margin-left: 5%;
+  border: 1%;
 }
 
 .input::-ms-clear {
@@ -118,10 +119,6 @@ nav ul li {
   color: #9CAFC3;
 }
 
-.suggestionP :hover {
-  color: #572EE5;
-}
-
 .marginTop {
   margin-top: 1%;
   border-top: #9CAFC3 2px solid;
@@ -132,9 +129,20 @@ nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 1%;
+}
+
+.withSuggestions {
+  border-top: 1px solid #9CAFC3;
+  opacity: 0.5;
+  margin-top: 2%;
 }
 
 .lupaOrClose {
+  margin-right: 3%;
+}
+
+.closeButton {
   margin-right: 3%;
 }
 
