@@ -45,6 +45,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
         let autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
         autocompleteBox.classList.add('withSuggestions');
+        
 
         let suggestionsBox = document.createElement('div');
         suggestionsBox.classList.add('suggestionBox');

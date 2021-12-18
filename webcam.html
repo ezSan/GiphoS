@@ -21,9 +21,9 @@
 </header> 
 <main>
     <section class="container">
-        <script src="./scripts/begin.js"></script>
+        
         <div class="captureBox" id="captureBox">
-            <video id='videoBox'></video>
+            <video class ='videoBox' id='videoBox'></video>
             <div id="insideText">
                 <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
                     <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
@@ -42,7 +42,7 @@
         </div>
         <div class="purpleLine"></div>
         <div class="camAccess">
-            <input  class="comenzar" type="button" value="COMENZAR" onclick="newColor()">
+            <input  class="comenzar" type="button" value="COMENZAR" id='comenzar' onclick="newColor()">
         </div>
 
     </section>
@@ -60,5 +60,7 @@
 </footer>
 
 <script src="./scripts/webcam.js"></script>
+
+
 </body>
 </html>

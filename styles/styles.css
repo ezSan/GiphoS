@@ -215,6 +215,11 @@ nav ul li {
           align-items: center;
 }
 
+.videoBox {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .captureBox {
   width: 60%;
   height: 25em;
