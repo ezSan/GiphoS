@@ -23,17 +23,18 @@
     <section class="container">
         
         <div class="captureBox" id="captureBox">
-            <video class ='videoBox' id='videoBox'></video>
+            <video class ='videoBox none' id='videoBox'></video>
             <div id="insideText">
                 <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
                     <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
                     <p class="p_capturebox">(sólo necesitas una cámara para grabar  un video)</p>
             </div>        
-            <div id="appearBox" class="hiddenBox">
+            <div id="appearBox" class="none">
                 <h2>¿Nos das acceso a tu cámara?</h2>
                     <p class="p_capturebox">El acceso a tu cámara será sólo</p>
                     <p class="p_capturebox">por el tiempo que estés creando el GIFO</p>
             </div>        
+            
         </div>
         <div class="circleWithNumber">
         <div class="num" id="step1">1</div>
@@ -41,8 +42,8 @@
         <div class="num" id="step3">3</div>
         </div>
         <div class="purpleLine"></div>
-        <div class="camAccess">
-            <input  class="comenzar" type="button" value="COMENZAR" id='comenzar' onclick="newColor()">
+        <div class="camAccess" id= 'camAccess'>
+            <input  class="inputWebcamAcces" type="button" value="Comenzar" id='comenzar' onclick="newColor()">
         </div>
 
     </section>
@@ -59,6 +60,7 @@
     </div>
 </footer>
 
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="./scripts/webcam.js"></script>
 
 

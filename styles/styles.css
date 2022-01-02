@@ -253,10 +253,6 @@ nav ul li {
   margin: 1px;
 }
 
-.hiddenBox {
-  display: none;
-}
-
 .circleWithNumber {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,7 +285,7 @@ nav ul li {
   margin-top: 0.1em;
 }
 
-.comenzar {
+.inputWebcamAcces {
   width: 10%;
   height: 2em;
   margin-left: 45%;
