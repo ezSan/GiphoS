@@ -304,6 +304,11 @@ nav ul li {
   background-color: #572EE5;
 }
 
+.uploadGipho {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
