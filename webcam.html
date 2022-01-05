@@ -24,6 +24,7 @@
         
         <div class="captureBox" id="captureBox">
             <video class ='videoBox none' id='videoBox'></video>
+            <img class ='uploadGipho none' id='uploadGipho'></img>            
             <div id="insideText">
                 <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
                     <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
@@ -44,6 +45,7 @@
         <div class="purpleLine"></div>
         <div class="camAccess" id= 'camAccess'>
             <input  class="inputWebcamAcces" type="button" value="Comenzar" id='comenzar' onclick="newColor()">
+            <input  class="inputWebcamAcces none" type="button" value="SUBIR GIFO" id='uploadGiphoButton'>
         </div>
 
     </section>
@@ -59,9 +61,9 @@
         <p>© GIFOS 2020 All Rights Reserved.</p>
     </div>
 </footer>
-
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="./scripts/mainScript.js"></script>
 <script src="./scripts/webcam.js"></script>
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 
 
 </body>

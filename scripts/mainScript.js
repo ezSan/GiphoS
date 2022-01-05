@@ -281,3 +281,9 @@
         let thisElement = e.currentTarget  
         thisElement.childNodes[0].classList.add('hidden')
       }
+
+
+    // variables for uploadGif
+    const video = document.getElementById('videoBox');
+    const uploadGipho = document.getElementById('uploadGipho');
+    const uploadGiphoButton = document.getElementById('uploadGiphoButton');
