@@ -1,4 +1,4 @@
-
+let fileToUpload;
 
 
 
@@ -92,7 +92,7 @@ function createStopButton() {
     let blobUrl =  recorder.getBlob();
     blobUrl.then(blob=>{
       let urlGiphoForUpload = URL.createObjectURL(blob)
-      let fileToUpload = new FormData();
+      fileToUpload = new FormData();
       fileToUpload.append('file' , blob, "myGif.gif");
       console.log(fileToUpload.get('file'));         
       btnStop.classList.add('none');      
@@ -108,22 +108,26 @@ function createStopButton() {
 
 
 
+uploadGiphoButton.addEventListener('click' , postGipho =>{
+  uploadToGiphy(fileToUpload)
+})
+
 
 //upload gipho endpoint
 
-
-const Giphy_uploadGipho =  "https://upload.giphy.com/v1/gifs";
-
-
 const uploadToGiphy = async (fileGif) => { 
   try {
-    let response = await fetch( Giphy_uploadGipho + apiKey, {
+    let response = await fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`,{
       method: 'POST',
       body: fileGif,
     });
     let newGif = response.json();
-    console.log(newGif);
-    return newGif;
+    newGif.then(newGif=>{
+      let idGiphoUploaded = newGif.data.id;
+      console.log(idGipho);
+    })
+    
+
   } catch(err) {
     console.log(err)
   }

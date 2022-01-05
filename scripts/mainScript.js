@@ -1,5 +1,16 @@
     //ApiKey giphy
     const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
+     // variables for uploadGif
+     const video = document.getElementById('videoBox');
+     const uploadGipho = document.getElementById('uploadGipho');
+     const uploadGiphoButton = document.getElementById('uploadGiphoButton');
+     const urlEndpointUpload = "https://upload.giphy.com/v1/gifs" ;
+
+     
+
+
+
+
     // array provisorio que almacena resultados de busqueda
     let resultadosDeBusqueda = [];
     // Array que almacena resultados favoritos
@@ -11,6 +22,8 @@
     //local storage
     /* let createKey = localStorage.setItem('Favoritos', JSON.stringify(favoritos)); */
     let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
+
+   
     
 
     //Comprobar LocalStorage // Pushear favs anteriores
@@ -283,7 +296,4 @@
       }
 
 
-    // variables for uploadGif
-    const video = document.getElementById('videoBox');
-    const uploadGipho = document.getElementById('uploadGipho');
-    const uploadGiphoButton = document.getElementById('uploadGiphoButton');
+    
