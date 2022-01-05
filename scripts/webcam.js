@@ -7,10 +7,8 @@ function webcamAccessAndStream() {
   navigator.mediaDevices.getUserMedia({
     audio: false,
     video: true
-  }
-  )
-    .then(stream => {
-      let video = document.getElementById('videoBox');
+  })
+    .then(stream => {      
       video.srcObject = stream;
       video.play()
       video.classList.remove('none');
@@ -36,7 +34,7 @@ function webcamAccessAndStream() {
       });
 
       createRecButton()
-      
+
 
     })
 }
@@ -57,7 +55,7 @@ newColor = () => {
   let comenzarBtn = document.getElementById('comenzar');
   comenzarBtn.classList.add('none');
   webcamAccessAndStream();
-  
+
 }
 
 
@@ -88,13 +86,46 @@ function createStopButton() {
   btnStop.classList.add('btnStopRec')
   let btnCtn = document.getElementById('camAccess');
   btnCtn.appendChild(btnStop);
-  btnStop.addEventListener('click', rec => {
-    recorder.stopRecording()
-    let blob = recorder.getBlob(x=> blob.then(console.log(x)));
-    console.log(blob)
-  }
-    
-    )}
   
+  btnStop.addEventListener('click', stop => {
+    recorder.stopRecording();
+    let blobUrl =  recorder.getBlob();
+    blobUrl.then(blob=>{
+      let urlGiphoForUpload = URL.createObjectURL(blob)
+      let fileToUpload = new FormData();
+      fileToUpload.append('file' , blob, "myGif.gif");
+      console.log(fileToUpload.get('file'));         
+      btnStop.classList.add('none');      
+      video.classList.add('none');      
+      uploadGiphoButton.classList.remove('none');
+      uploadGipho.classList.remove('none');      
+      uploadGipho.src = urlGiphoForUpload;
+      })    
+  })
 
+
+}
+
+
+
+
+//upload gipho endpoint
+
+
+const Giphy_uploadGipho =  "https://upload.giphy.com/v1/gifs";
+
+
+const uploadToGiphy = async (fileGif) => { 
+  try {
+    let response = await fetch( Giphy_uploadGipho + apiKey, {
+      method: 'POST',
+      body: fileGif,
+    });
+    let newGif = response.json();
+    console.log(newGif);
+    return newGif;
+  } catch(err) {
+    console.log(err)
+  }
+}
 
