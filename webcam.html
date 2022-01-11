@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./styles/styles.css">
     <meta charset="UTF-8">
@@ -7,64 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebCAM</title>
 </head>
+
 <body>
-<header>
-    <div class="logo"><a href="index.html"><img src="./assets/logo-desktop.svg" alt="logo"></a></div>
-    <nav>
-        <ul>
-            <li><a class="anav"  href="#">MODO NOCTURNO</a></li>
-            <li><a class="anav" href="#">FAVORITOS</a></li>
-            <li><a class="anav" href="#">MIS GIFOS</a></li>                           
-        </ul>
-        <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
-    </nav>
-</header> 
-<main>
-    <section class="container">
-        
-        <div class="captureBox" id="captureBox">
-            <video class ='videoBox none' id='videoBox'></video>
-            <img class ='uploadGipho none' id='uploadGipho'></img>            
-            <div id="insideText">
-                <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
-                    <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
-                    <p class="p_capturebox">(sólo necesitas una cámara para grabar  un video)</p>
-            </div>        
-            <div id="appearBox" class="none">
-                <h2>¿Nos das acceso a tu cámara?</h2>
-                    <p class="p_capturebox">El acceso a tu cámara será sólo</p>
-                    <p class="p_capturebox">por el tiempo que estés creando el GIFO</p>
-            </div>        
-            
-        </div>
+    <header>
+        <div class="logo"><a href="index.html"><img src="./assets/logo-desktop.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a class="anav" href="#">MODO NOCTURNO</a></li>
+                <li><a class="anav" href="#">FAVORITOS</a></li>
+                <li><a class="anav" href="#">MIS GIFOS</a></li>
+            </ul>
+            <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+                <div class="previewAndVideoBox none" id="previewAndVideoBox">
+                    <video class='videoBox' id='videoBox'></video>
+                    <img class='uploadGipho none' id='uploadGipho'></img>
+                    <div class="uploadingGifOverlay none">
+                        <img src="" alt="uploadGif">
+                    </div>
+                </div>           
+                <div class="slideWithInstructions" id="slideWithInstructions">
+                    <div class="slide" id="slide1">
+                        <h2 class="titleSlider">Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
+                        <p class="p_capturebox">¡Crea tu GIFO en sólo 3 pasos!</p>
+                        <p class="p_capturebox">(sólo necesitas una cámara para grabar un video)</p>
+                    </div>
+                    <div  class="none slide" id="slide2">
+                        <h2>¿Nos das acceso a tu cámara?</h2>
+                        <p class="p_capturebox">El acceso a tu cámara será sólo</p>
+                        <p class="p_capturebox">por el tiempo que estés creando el GIFO</p>
+                    </div>
+                </div>      
+        </section>
+
         <div class="circleWithNumber">
-        <div class="num" id="step1">1</div>
-        <div class="num" id="step2">2</div>
-        <div class="num" id="step3">3</div>
+            <div class="num" id="step1">1</div>
+            <div class="num" id="step2">2</div>
+            <div class="num" id="step3">3</div>
         </div>
         <div class="purpleLine"></div>
-        <div class="camAccess" id= 'camAccess'>
-            <input  class="inputWebcamAcces" type="button" value="Comenzar" id='comenzar' onclick="newColor()">
-            <input  class="inputWebcamAcces none" type="button" value="SUBIR GIFO" id='uploadGiphoButton'>
+        <div class="camAccess" id='camAccess'>
+            <input class="inputWebcamAcces" type="button" value="COMENZAR" id='comenzar'>
+            <input class="inputWebcamAcces none" type="button" value="GRABAR" id='recButton'>
+            <input class="inputWebcamAcces none" type="button" value="FINALIZAR" id='btnStopRec'>
+            <input class="inputWebcamAcces none" type="button" value="SUBIR GIFO" id='uploadGiphoButton'>
         </div>
-
-    </section>
-</main>  
-<footer>
-    <div class="shareBox">
-    <p>Compartir en:</p>
-        <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
-        <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
-        <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
-    </div>
-    <div class="footRights">
-        <p>© GIFOS 2020 All Rights Reserved.</p>
-    </div>
-</footer>
-<script src="./scripts/mainScript.js"></script>
-<script src="./scripts/webcam.js"></script>
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    </main>
+    <footer>
+        <div class="shareBox">
+            <p>Compartir en:</p>
+            <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
+            <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
+            <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
+        </div>
+        <div class="footRights">
+            <p>© GIFOS 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/webcam.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 
 
 </body>
+
 </html>

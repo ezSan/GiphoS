@@ -1,25 +1,35 @@
-let fileToUpload;
+
 
 
 
 
 function webcamAccessAndStream() {
+  step1.classList.add('newStep');
+  slide1.classList.add('none');
+  slide2.classList.remove('none');
+
   navigator.mediaDevices.getUserMedia({
     audio: false,
     video: true
   })
     .then(stream => {      
       video.srcObject = stream;
-      video.play()
-      video.classList.remove('none');
-      let step2 = document.getElementById('step2');
-      step2.classList.add('newStep1');
+      video.play();
+      
+      comenzar.classList.add('none');
 
-      let prevStep = document.getElementById('step1');
-      prevStep.classList.remove('newStep1');
+      step1.classList.remove('newStep');      
+      step2.classList.add('newStep');    
+      slide2.classList.add('none');    
+      previewAndVideoBox.classList.remove('none');
+      slideWithInstructions.classList.add('none');
+      btnRec.classList.remove('none');
+      
 
-      let appearBox = document.getElementById('appearBox');
-      appearBox.classList.add('none');
+      /* slide1.classList.add('none');
+      slide2.classList.remove('none'); */
+      
+      
 
 
       recorder = new RecordRTCPromisesHandler(stream, {
@@ -33,60 +43,29 @@ function webcamAccessAndStream() {
 
       });
 
-      createRecButton()
+      
 
 
     })
 }
 
+comenzar.addEventListener('click' , webcamAccessAndStream );
 
+uploadGiphoButton.addEventListener('click' , postGipho =>{
+  uploadToGiphy(fileToUpload)
+})
 
-
-
-
-newColor = () => {
-  //Change Color Dot
-  let n1 = document.getElementById(`step1`);
-  n1.classList.add('newStep1');
-  let insideText = document.getElementById('insideText');
-  insideText.classList.add('none');
-  let appearBox = document.getElementById('appearBox');
-  appearBox.classList.remove('none');
-  let comenzarBtn = document.getElementById('comenzar');
-  comenzarBtn.classList.add('none');
-  webcamAccessAndStream();
-
-}
-
-
-function createRecButton() {
-  let btn = document.createElement('input');
-  btn.type = 'button';
-  btn.value = 'GRABAR';
-  btn.classList.add('inputWebcamAcces')
-  btn.classList.add('recButton');
-  btn.id = 'recButton'
-  let btnCtn = document.getElementById('camAccess');
-  btnCtn.appendChild(btn);
-  btn.addEventListener('click', rec => {
+btnRec.addEventListener('click', rec => {
     recorder.startRecording()
+    btnStop.classList.remove('none')
     createStopButton()
   })
-}
 
 
 
-function createStopButton() {
-  let btnStop = document.createElement('input');
-  let btnRec = document.getElementById('recButton');
-  btnRec.classList.add('none')
-  btnStop.type = 'button';
-  btnStop.value = 'FINALIZAR';
-  btnStop.classList.add('inputWebcamAcces');
-  btnStop.classList.add('btnStopRec')
-  let btnCtn = document.getElementById('camAccess');
-  btnCtn.appendChild(btnStop);
-  
+
+function createStopButton() {  
+  btnRec.classList.add('none');  
   btnStop.addEventListener('click', stop => {
     recorder.stopRecording();
     let blobUrl =  recorder.getBlob();
@@ -102,29 +81,24 @@ function createStopButton() {
       uploadGipho.src = urlGiphoForUpload;
       })    
   })
-
-
 }
 
 
-
-uploadGiphoButton.addEventListener('click' , postGipho =>{
-  uploadToGiphy(fileToUpload)
-})
 
 
 //upload gipho endpoint
 
 const uploadToGiphy = async (fileGif) => { 
   try {
-    let response = await fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`,{
+    let response = await fetch(urlEndpointUpload,{
       method: 'POST',
       body: fileGif,
     });
     let newGif = response.json();
     newGif.then(newGif=>{
       let idGiphoUploaded = newGif.data.id;
-      console.log(idGipho);
+      uploadedGiphosId.push(idGiphoUploaded);
+      console.log(idGiphoUploaded);
     })
     
 

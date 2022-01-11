@@ -1,10 +1,4 @@
-
-.videoBox{
-    object-fit: scale-down;
-}
-
-
-.captureBox{
+.container{
     width: 60%; height:25em;
     margin-left: auto;
     margin-right: auto;
@@ -14,21 +8,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h2{
-        font-size: xx-large;
-        color: $color1;
-        span{
-            color: $color2;
-        }
-        
+    overflow-y:hidden;
+}
+
+.titleSlider{
+    font-size: xx-large;
+    color: $color1;
+    span{
+        color: $color2;
     }
     
 }
-
-.p_capturebox{
-    margin: 1px;
-}
-
 .circleWithNumber{
     display:flex;
     justify-content: center;
@@ -67,7 +57,7 @@
     border-radius: 50%;
 }
 
-.newStep1{
+.newStep{
     border-radius: 50%;    
     border: 0.1em solid $color1;
     width: 1.5em;
@@ -78,8 +68,20 @@
 
 }
 
+.videoBox{
+      object-fit:fill;  
+      padding: 0%;
+     
+      
+}
+
 
 .uploadGipho{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
+
+
+

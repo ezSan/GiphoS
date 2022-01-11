@@ -1,16 +1,33 @@
     //ApiKey giphy
-    const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
-     // variables for uploadGif
+     const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
+    // variables for uploadGif
+
+     /* const cameraBox = document.getElementById('cameraBox') */
      const video = document.getElementById('videoBox');
+     const previewAndVideoBox = document.getElementById('previewAndVideoBox');
+     const slideWithInstructions = document.getElementById('slideWithInstructions')
      const uploadGipho = document.getElementById('uploadGipho');
      const uploadGiphoButton = document.getElementById('uploadGiphoButton');
-     const urlEndpointUpload = "https://upload.giphy.com/v1/gifs" ;
+     const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
+     const btnStop = document.getElementById('btnStopRec');
+     const btnRec = document.getElementById('recButton');
+     const slide1 = document.getElementById('slide1');
+     const slide2 = document.getElementById('slide2');
+     const comenzar = document.getElementById('comenzar');
+     const step1 = document.getElementById('step1');
+     const step2 = document.getElementById('step2');
 
+
+     /* gif file ready to upload whit api endpoint */
+     let fileToUpload;
+     
+      
      
 
 
 
-
+    //array for created gif´s id
+    let uploadedGiphosId =[];
     // array provisorio que almacena resultados de busqueda
     let resultadosDeBusqueda = [];
     // Array que almacena resultados favoritos
@@ -22,6 +39,8 @@
     //local storage
     /* let createKey = localStorage.setItem('Favoritos', JSON.stringify(favoritos)); */
     let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
+
+
 
    
     

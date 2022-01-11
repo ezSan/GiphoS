@@ -10,10 +10,6 @@
   visibility: visible;
 }
 
-* {
-  overflow-x: hidden;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,7 +165,7 @@ nav ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .gipho {
@@ -215,12 +211,7 @@ nav ul li {
           align-items: center;
 }
 
-.videoBox {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-
-.captureBox {
+.container {
   width: 60%;
   height: 25em;
   margin-left: auto;
@@ -238,19 +229,16 @@ nav ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: hidden;
 }
 
-.captureBox h2 {
+.titleSlider {
   font-size: xx-large;
   color: #572EE5;
 }
 
-.captureBox h2 span {
+.titleSlider span {
   color: #50E3C2;
-}
-
-.p_capturebox {
-  margin: 1px;
 }
 
 .circleWithNumber {
@@ -294,7 +282,7 @@ nav ul li {
   border-radius: 50%;
 }
 
-.newStep1 {
+.newStep {
   border-radius: 50%;
   border: 0.1em solid #572EE5;
   width: 1.5em;
@@ -304,9 +292,17 @@ nav ul li {
   background-color: #572EE5;
 }
 
+.videoBox {
+  -o-object-fit: fill;
+     object-fit: fill;
+  padding: 0%;
+}
+
 .uploadGipho {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 footer {
