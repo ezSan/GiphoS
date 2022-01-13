@@ -9,7 +9,10 @@
     flex-direction: column;
     justify-content: center;
     overflow-y:hidden;
+    position: relative;
 }
+
+
 
 .titleSlider{
     font-size: xx-large;
@@ -68,19 +71,51 @@
 
 }
 
-.videoBox{
-      object-fit:fill;  
-      padding: 0%;
-     
-      
+.videoBox{     
+      height: 85%;    
+      position: relative;   
+      top: 7.5%;     
+}
+
+.previewAndVideoBox{
+    position: relative;
+    width: 100%;
+    height: 100%;  
+}
+
+.uploadGipho{
+    position: relative;
+    width: 50%;
+    height: 85%;
+    top: 7.5%;
+    
+    
+}
+
+.uploadingGifOverlay{
+    background-color: #4f1eff99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    
+
+}
+
+.overlayBox{
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20%;
+    height: 50%;
+    
+
 }
 
 
-.uploadGipho{
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+.uploadingGifoImg{
+    width: 8%;
 }
 
 
