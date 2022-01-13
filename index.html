@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,7 +21,7 @@
         <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
             <ul>
-            
+
                 <li><a class="anav">MODO NOCTURNO</a></li>
                 <li><a class="anav" href="./favs.html">FAVORITOS</a></li>
                 <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>
@@ -39,18 +39,19 @@
             <form class="formulario" autocomplete="off">
 
 
-                <div class="cajaInput" id ='cajaInput'>
-                    <input id="search" class="search" type="text" autocomplete="off"  />
+                <div class="cajaInput" id='cajaInput'>
+                    <input id="search" class="search" type="text" autocomplete="off" />
                     <img src="./assets/icon-search.svg" alt="lupa" class='lupaOrClose' id="btnSearch">
-                    <img src="./assets/close.svg" alt="closeButton" class='closeButton none' id="closeButton" onclick="closeSuggestionsBox()">
+                    <img src="./assets/close.svg" alt="closeButton" class='closeButton none' id="closeButton"
+                        onclick="closeSuggestionsBox()">
                 </div>
 
-                
 
-                <div class="autocompleteSuggestionsBox" id = 'autocompleteSuggestionsBox'></div>
 
-                </form>        
-                
+                <div class="autocompleteSuggestionsBox" id='autocompleteSuggestionsBox'></div>
+
+            </form>
+
             <div class="out" id="out"></div>
             <input type="button" id="verMas" class="hidden" value="Ver más" onclick="seeMore()">
         </section>
@@ -78,14 +79,16 @@
 
 
     <footer>
-        <div class="shareBox">
-            <p>Compartir en:</p>
-            <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
-            <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
-            <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
-        </div>
-        <div class="footRights">
-            <p>© GIFOS 2020 All Rights Reserved.</p>
+        <div class="footerContent">
+            <div class="shareBox">
+                <p>Compartir en:</p>
+                <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
+                <img class="footImg" src="./assets/icon-twitter.svg" alt="twitter">
+                <img class="footImg" src="./assets/icon_instagram.svg" alt="instagram">
+            </div>
+            <div class="footRights">
+                <p>© GIFOS 2020 All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -93,7 +96,7 @@
     <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/trendings.js"></script>
     <script src="./scripts/slider.js"></script>
-    <script src ='./scripts/autocomplete.js'></script>
+    <script src='./scripts/autocomplete.js'></script>
     <script src="./scripts/searchbtn.js"></script>
 
 

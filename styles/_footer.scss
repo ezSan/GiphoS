@@ -1,12 +1,13 @@
-footer{
+.footerContent{
     display: flex;
-    justify-content:flex-start
+    justify-content: center;
+    height:5% ;
 }
 
 .shareBox{
-    display: flex;
-    // justify-content: flex-start;
+    display: flex;    
     margin-left: 1em;
+    
     .footImg{
         margin: 1em;
     }

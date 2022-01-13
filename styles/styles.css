@@ -333,13 +333,14 @@ nav ul li {
   width: 8%;
 }
 
-footer {
+.footerContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5%;
 }
 
 .shareBox {
