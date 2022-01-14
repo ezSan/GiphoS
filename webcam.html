@@ -26,13 +26,14 @@
                 <div class="previewAndVideoBox none" id="previewAndVideoBox">
                     <video class='videoBox' id='videoBox'></video>
                     <img class='uploadGipho none' id='uploadGipho'></img>
-                    <div class="uploadingGifOverlay">
-                        <div class="overlayBox none">
-                            <img src="./assets/loader.svg" alt="uploadGif" class="uploadingGifoImg" id="uploadingSvg">
+                    
+                    <div class="uploadingGifOverlay none" id="uploadingGifOverlay">
+
+                        <div class="overlayBox none" id="overlayBoxPending">
+                            <img src="./assets/uploadingSvgloader.svg" alt="uploadGif" class="uploadingGifoImg" id="">
                             <h3 class="uploadOkTitle">Estamos subiento tu GIFO</h3>
                         </div>
-
-                        <div class="overlayBox">
+                        <div class="overlayBox none" id="overlayBoxOk">
                             <img src="./assets/check.svg" alt="uploadGif" class="uploadingGifoImg" id="uploadingSvgOk">
                             <h3 class="uploadOkTitle">GIFO subido con éxito!</h3>
                         </div>
