@@ -16,6 +16,9 @@
      const comenzar = document.getElementById('comenzar');
      const step1 = document.getElementById('step1');
      const step2 = document.getElementById('step2');
+     const uploadingGifOverlay = document.getElementById('uploadingGifOverlay');
+     const overlayBoxPending = document.getElementById('overlayBoxPending');
+     const overlayBoxOk = document.getElementById('overlayBoxOk');
 
 
      /* gif file ready to upload whit api endpoint */

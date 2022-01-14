@@ -45,12 +45,15 @@ const uploadToGiphy = async (fileGif) => {
     let response = await fetch(urlEndpointUpload, {
       method: 'POST',
       body: fileGif,
-    });
+      });
+    console.log(response.status)
     let newGif = response.json();
     newGif.then(newGif => {
       let idGiphoUploaded = newGif.data.id;
       uploadedGiphosId.push(idGiphoUploaded);
       console.log(idGiphoUploaded);
+      overlayBoxPending.classList.add('none');
+      overlayBoxOk.classList.remove('none');
     })
 
 
@@ -62,6 +65,8 @@ const uploadToGiphy = async (fileGif) => {
 comenzar.addEventListener('click', webcamAccessAndStream);
 
 uploadGiphoButton.addEventListener('click', postGipho => {
+  uploadingGifOverlay.classList.remove('none');
+  overlayBoxPending.classList.remove('none');
   uploadToGiphy(fileToUpload)
 })
 
