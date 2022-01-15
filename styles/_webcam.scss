@@ -126,4 +126,19 @@
     margin-left: 20%;
 }
 
+.recordAgain{
+    color: $color1;
+    
+    &:hover{
+        border-bottom: $color2 2px solid;
+    }
+}
+
+
+.hovered{
+    &:hover{
+        background-color: $color1;
+        color: white;
+    }
+}
 

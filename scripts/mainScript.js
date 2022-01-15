@@ -2,7 +2,7 @@
      const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
     // variables for uploadGif
 
-     /* const cameraBox = document.getElementById('cameraBox') */
+     /* Variables webcam page */
      const video = document.getElementById('videoBox');
      const previewAndVideoBox = document.getElementById('previewAndVideoBox');
      const slideWithInstructions = document.getElementById('slideWithInstructions')
@@ -19,10 +19,15 @@
      const uploadingGifOverlay = document.getElementById('uploadingGifOverlay');
      const overlayBoxPending = document.getElementById('overlayBoxPending');
      const overlayBoxOk = document.getElementById('overlayBoxOk');
-
-
+     const recordAgain = document.getElementById('recordAgain');
      /* gif file ready to upload whit api endpoint */
      let fileToUpload;
+
+     /* variables DOM */
+     const prev = document.getElementById('prev');
+     const next = document.getElementById('next');
+     const prevStepImg = document.getElementById('prevStepImg');
+     const nextStepImg = document.getElementById('nextStepImg');
      
       
      

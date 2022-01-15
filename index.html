@@ -62,11 +62,13 @@
                 <h2>Trending GiFOS</h2>
                 <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
                 <div class="slider">
-                    <div class="prev"><img src="./assets/button-slider-left.svg" alt="back_slider" id="backSlider"
-                            onclick="moveLeft()"></div>
+                    <div class="prev" id="prev">
+                        <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
+                            onclick="moveLeft()">
+                    </div>
                     <div id="trending-ctn" class="tnd-ctn"> </div>
-                    <div class="next"><img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextSlider"
-                            onclick="moveRight()"></div>
+                    <div class="next" id="next">
+                        <img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextStepImg" onclick="moveRight()"></div>
                 </div>
 
             </div>

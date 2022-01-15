@@ -344,6 +344,19 @@ nav ul li {
   margin-left: 20%;
 }
 
+.recordAgain {
+  color: #572EE5;
+}
+
+.recordAgain:hover {
+  border-bottom: #50E3C2 2px solid;
+}
+
+.hovered:hover {
+  background-color: #572EE5;
+  color: white;
+}
+
 .footerContent {
   display: -webkit-box;
   display: -ms-flexbox;
