@@ -22,16 +22,17 @@
      const recordAgain = document.getElementById('recordAgain');
      /* gif file ready to upload whit api endpoint */
      let fileToUpload;
-
-     /* variables DOM */
+     /* variables DOM slider trending buttons*/
      const prev = document.getElementById('prev');
      const next = document.getElementById('next');
      const prevStepImg = document.getElementById('prevStepImg');
      const nextStepImg = document.getElementById('nextStepImg');
-     
-      
-     
+     /* Endpoint Search */
 
+     /* Trending  */
+
+     const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
+    
 
 
     //array for created gif´s id
