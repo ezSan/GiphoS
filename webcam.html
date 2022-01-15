@@ -30,7 +30,7 @@
                     <div class="uploadingGifOverlay none" id="uploadingGifOverlay">
 
                         <div class="overlayBox none" id="overlayBoxPending">
-                            <img src="./assets/uploadingSvgloader.svg" alt="uploadGif" class="uploadingGifoImg" id="">
+                            <img src="./assets/loader.svg" alt="uploadGif" class="uploadingGifoImg" id="uploadingSvg">
                             <h3 class="uploadOkTitle">Estamos subiento tu GIFO</h3>
                         </div>
                         <div class="overlayBox none" id="overlayBoxOk">
@@ -56,11 +56,20 @@
                 </div>      
         </section>
 
-        <div class="circleWithNumber">
-            <div class="num" id="step1">1</div>
-            <div class="num" id="step2">2</div>
-            <div class="num" id="step3">3</div>
+
+        <div class="numbersAndMore" id="numbersAndMore">
+            <div class="circleWithNumber">
+                <div class="num" id="step1">1</div>
+                <div class="num" id="step2">2</div>
+                <div class="num" id="step3">3</div>
+            </div>
+            <div class="repeatRecord" id="repeatRecord">
+                <div class="recordAgain">
+                    <p>Repetir Captura</p>
+                </div>
+            </div>
         </div>
+        
         <div class="purpleLine"></div>
         <div class="camAccess" id='camAccess'>
             <input class="inputWebcamAcces" type="button" value="COMENZAR" id='comenzar'>

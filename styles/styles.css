@@ -249,8 +249,8 @@ nav ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60%;
-  margin-left: auto;
+  width: 50%;
+  margin-left: 25%;
   margin-right: auto;
   margin-top: 0.5%;
 }
@@ -331,6 +331,17 @@ nav ul li {
 
 .uploadingGifoImg {
   width: 8%;
+}
+
+.numbersAndMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .footerContent {
