@@ -35,9 +35,7 @@ let keyPressInSearchInput = () => {
 
 
 
-
-
-keyPressInSearchInput()
+/* keyPressInSearchInput() */
 
 let displaySuggestionsToDOM = (suggestionsData) => {
 

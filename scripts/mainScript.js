@@ -26,12 +26,14 @@
      const prev = document.getElementById('prev');
      const next = document.getElementById('next');
      const prevStepImg = document.getElementById('prevStepImg');
-     const nextStepImg = document.getElementById('nextStepImg');
-     /* Endpoint Search */
+     const nextStepImg = document.getElementById('nextStepImg');    
 
      /* Trending  */
-
      const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
+
+     /* display search results in DOM */
+
+     const searchResultsContainer = document.getElementById('searchResultsContainer');
     
 
 
