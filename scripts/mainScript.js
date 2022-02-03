@@ -283,6 +283,7 @@
 
     let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
         let cajitaTools = document.createElement('div');
+        
         cajitaTools.classList.add('cajitaTools');
         cajitaTools.classList.add('hiddenOrNot');
 

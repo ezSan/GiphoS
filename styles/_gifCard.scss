@@ -1,12 +1,12 @@
 .cajaGif{
-    width: 19%;
-    margin: 1%;    
-    display: flex;    
-    position: relative;
+  position: relative; 
 }
 
+
+
 .hiddenOverlay{
-    display: flex;
+    position: absolute;
+   
     
 }
 
@@ -20,7 +20,7 @@
     margin: 1%;
 }
 
-.gifData{
+/* .gifData{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,15 +33,8 @@
     height: 30%;
    
     
-}
+} */
 
-.resultCtn {
-        width: 22.313rem;
-        height: 17.188rem;
-        padding: 0.5%;
-        display: flex;
-        flex-direction: column;
-        }
 
 
 .giphoBox{

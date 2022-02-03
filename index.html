@@ -15,8 +15,7 @@
     <title>GiphoS</title>
 </head>
 
-<body id='bodyDom'>
-
+<body>
     <header>
         <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
         <nav>
@@ -29,7 +28,7 @@
             <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
         </nav>
     </header>
-    <main>
+    <main class="firstContainer">
         <section class="first" id="first">
 
             <h2 class="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span></h2>
@@ -53,6 +52,7 @@
             </form>
 
             <div class="searchResultsContainer" id="searchResultsContainer"></div>
+
             <input type="button" id="verMas" class="hidden" value="Ver más" onclick="seeMore()">
         </section>
         <section class="second">
@@ -68,7 +68,9 @@
                     </div>
                     <div id="trending-ctn" class="tnd-ctn"> </div>
                     <div class="next" id="next">
-                        <img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextStepImg" onclick="moveRight()"></div>
+                        <img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextStepImg"
+                            onclick="moveRight()">
+                    </div>
                 </div>
 
             </div>
@@ -76,10 +78,7 @@
 
             </div>
         </section>
-
     </main>
-
-
     <footer>
         <div class="footerContent">
             <div class="shareBox">

@@ -65,6 +65,7 @@ nav ul li {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 60%;
 }
 
 .mainTitle {
@@ -384,6 +385,7 @@ nav ul li {
 
 .searchResultsContainer {
   width: 80%;
+  height: 40%;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -396,13 +398,9 @@ nav ul li {
           justify-content: center;
 }
 
-.result {
-  width: 100%;
-  /*   width:15em;
-    height: 12em;
-    margin: 0.5rem; */
-}
-
+/* .result{
+width: 100%; 
+} */
 .solapaMain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,18 +449,11 @@ nav ul li {
 }
 
 .cajaGif {
-  width: 19%;
-  margin: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
 }
 
 .hiddenOverlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
 }
 
 .gifTitle {
@@ -474,39 +465,20 @@ nav ul li {
   margin: 1%;
 }
 
-.gifData {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 0%;
-  padding: 0%;
-  z-index: 0;
-  position: absolute;
-  margin-top: -25%;
-  width: 98%;
-  height: 30%;
-}
-
-.resultCtn {
-  width: 22.313rem;
-  height: 17.188rem;
-  padding: 0.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
+/* .gifData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0%;
+    padding: 0%;
+    z-index: 0;
+    position: absolute;
+    margin-top: -25%;
+    width: 98%;
+    height: 30%;
+   
+    
+} */
 .giphoBox {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -28,18 +28,36 @@ function init(userSearch) {
 
                         let cajaGif = document.createElement('div');
                         cajaGif.classList.add('cajaGif');
-                                                
-                        searchResultsContainer.appendChild(cajaGif);
+                        
 
-                        let gif = document.createElement('img');
-                        gif.id = 'imgId';
+                        searchResultsContainer.insertAdjacentElement('afterbegin', cajaGif)
+                                                
+                        
+                        title = resultadosDeBusqueda[i].title;
+                        author = resultadosDeBusqueda[i].username;
+                        imgId = resultadosDeBusqueda[i].id;
+
+
+                        let gif = document.createElement('img');                        
                         gif.src = resultadosDeBusqueda[i].images.downsized.url;
-                        cajaGif.appendChild(gif)
+                        gif.id = resultadosDeBusqueda[i].id;
+                        gif.title = title;
+                        gif.classList.add('result');
+                        cajaGif.appendChild(gif);                      
+                        cajaGif.addEventListener('mouseover', removeClassHidden);
+                        cajaGif.addEventListener('mouseout', addClassHidden);
+                        let hiddenOverlay = document.createElement('div');
+                        hiddenOverlay.classList.add('hiddenOverlay');
+                        hiddenOverlay.classList.add('hidden');
+                        cajaGif.insertAdjacentElement('afterbegin', hiddenOverlay)
+                        
 
                         if(i>=12){                            
                             gif.classList.add('none')
                         }
                        
+                        titleAndAuthor(title, author, hiddenOverlay);
+                        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
                         
                     }
                 } 
@@ -87,7 +105,7 @@ function init(userSearch) {
 
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');
-        cajaGif.classList.add('boxWithSearch');
+        
 
         let hiddenOverlay = document.createElement('div');
         hiddenOverlay.classList.add('hidden');
@@ -95,7 +113,7 @@ function init(userSearch) {
         cajaGif.addEventListener('mouseover', removeClassHidden);
         cajaGif.addEventListener('mouseout', addClassHidden);
 
-        let gif = document.createElement('img');
+        let gif = document.createElement('img'); 
         gif.id = imgId;
         gif.src = favImg
         gif.title = title
@@ -140,9 +158,3 @@ let btnVerMas = () => {
     boton.classList.remove("hidden");
 }
 
-
-function addHiddenClass() {
-    let boxes = document.getElementsByClassName('boxWithSearch');
-    console.log(boxes)
-
-}
