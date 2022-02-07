@@ -283,13 +283,13 @@
 
     let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
         let cajitaTools = document.createElement('div');
-        
+
         cajitaTools.classList.add('cajitaTools');
         cajitaTools.classList.add('hiddenOrNot');
 
 
-
-        hiddenOverlay.appendChild(cajitaTools);
+        hiddenOverlay.insertAdjacentElement('afterbegin', cajitaTools);
+        
         likeBtn(cajitaTools, imgId);
         dwnBtn(cajitaTools);
         mViewBtn(cajitaTools);
@@ -301,7 +301,8 @@
         let gifData = document.createElement('div');
         gifData.classList.add('gifData');
         gifData.classList.add('hiddenOrNot');
-        hiddenOverlay.appendChild(gifData);
+        hiddenOverlay.insertAdjacentElement('beforeend', gifData);
+        
         let userName = document.createElement('p');
         gifData.appendChild(userName);
         userName.innerHTML = author;
