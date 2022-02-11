@@ -33,6 +33,7 @@ let keyPressInSearchInput = () => {
 
 }
 
+keyPressInSearchInput();
 
 
 /* keyPressInSearchInput() */
@@ -54,9 +55,10 @@ let displaySuggestionsToDOM = (suggestionsData) => {
             fetch(url)
                 .then(content => content.json())
                 .then(content => {
-                    displayResultsInDOM(content);
+                    mostrarResultadosEnDOM(content.data);
                     closeSuggestionsBox();
                     addTitle(termSuggestion);
+                    verMas.classList.remove('none')
                     
                 })
         })
