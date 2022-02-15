@@ -104,45 +104,6 @@ nav ul li {
   color: #572EE5;
 }
 
-.cajaInput {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.suggestionP {
-  margin-left: 2%;
-  color: #9CAFC3;
-}
-
-.marginTop {
-  margin-top: 1%;
-  border-top: #9CAFC3 2px solid;
-}
-
-.suggestionBox {
-  margin-left: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1%;
-}
-
-.withSuggestions {
-  border-top: 1px solid #9CAFC3;
-  opacity: 0.5;
-  margin-top: 2%;
-}
-
-.lupaOrClose {
-  margin-right: 3%;
-}
-
-.closeButton {
-  margin-right: 3%;
-}
-
 .second h2 {
   color: #572EE5;
   font-size: x-large;
@@ -617,5 +578,44 @@ nav ul li {
   .modal-content {
     width: 100%;
   }
+}
+
+.cajaInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.suggestionP {
+  margin-left: 2%;
+  color: #9CAFC3;
+}
+
+.marginTop {
+  margin-top: 1%;
+  border-top: #9CAFC3 2px solid;
+}
+
+.suggestionBox {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1%;
+}
+
+.withSuggestions {
+  border-top: 1px solid #9CAFC3;
+  opacity: 0.5;
+  margin-top: 2%;
+}
+
+.lupaOrClose {
+  margin-right: 3%;
+}
+
+.closeButton {
+  margin-right: 3%;
 }
 /*# sourceMappingURL=styles.css.map */

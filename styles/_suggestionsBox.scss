@@ -1,0 +1,42 @@
+.cajaInput{
+    display: flex;
+    width: 100%;
+}
+
+
+
+.suggestionP{
+    
+    margin-left: 2%;
+    color:#9CAFC3;   
+}
+
+
+.marginTop{
+    margin-top: 1%;
+    border-top: $color3 2px solid;
+}
+
+.suggestionBox{
+    
+    margin-left: 5%;
+    display: flex;
+    margin-top: 1%;
+}
+
+
+.withSuggestions{
+    
+    border-top: 1px solid #9CAFC3  ;
+    opacity: 0.5;
+    margin-top: 2%;
+}
+
+.lupaOrClose{
+    margin-right: 3%;
+}
+
+.closeButton{
+    margin-right: 3%;
+}
+
