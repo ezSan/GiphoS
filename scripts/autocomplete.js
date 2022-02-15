@@ -50,8 +50,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
         let suggestionsBox = document.createElement('div');
         suggestionsBox.classList.add('suggestionBox');
-        suggestionsBox.id = 'suggestionBox';
-        suggestionsBox.style.cursor = 'pointer';
+        suggestionsBox.id = 'suggestionBox';        
         suggestionsBox.addEventListener('click', fetchSuggestionTerm = (e) => {
             let termSuggestion = e.currentTarget.childNodes[1].innerText;
             let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=${termSuggestion}`

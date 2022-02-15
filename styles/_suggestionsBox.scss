@@ -8,7 +8,9 @@
 .suggestionP{
     
     margin-left: 2%;
-    color:#9CAFC3;   
+    color:$suggestionsColor; 
+    font-size: smaller;
+    
 }
 
 
@@ -21,8 +23,9 @@
     
     margin-left: 5%;
     display: flex;
-    margin-top: 1%;
-}
+    cursor: pointer;   
+        }
+
 
 
 .withSuggestions{
@@ -30,6 +33,7 @@
     border-top: 1px solid #9CAFC3  ;
     opacity: 0.5;
     margin-top: 2%;
+
 }
 
 .lupaOrClose{

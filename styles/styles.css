@@ -82,7 +82,7 @@ nav ul li {
 
 .formulario {
   padding: 1%;
-  width: 38.3%;
+  width: 32%;
   border: 1px solid #572EE5;
   border-radius: 2.6367188vw;
 }
@@ -114,6 +114,12 @@ nav ul li {
   color: #572EE5;
   text-align: center;
   font-family: 'Montserrat-Medium', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hiddenBtn {
@@ -589,7 +595,8 @@ nav ul li {
 
 .suggestionP {
   margin-left: 2%;
-  color: #9CAFC3;
+  color: #9CAFC3 100%;
+  font-size: smaller;
 }
 
 .marginTop {
@@ -602,7 +609,7 @@ nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1%;
+  cursor: pointer;
 }
 
 .withSuggestions {
