@@ -8,7 +8,6 @@ const previewAndVideoBox = document.getElementById('previewAndVideoBox');
 const slideWithInstructions = document.getElementById('slideWithInstructions')
 const uploadGipho = document.getElementById('uploadGipho');
 const uploadGiphoButton = document.getElementById('uploadGiphoButton');
-const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
 const btnStop = document.getElementById('btnStopRec');
 const btnRec = document.getElementById('recButton');
 const slide1 = document.getElementById('slide1');
@@ -22,11 +21,6 @@ const overlayBoxOk = document.getElementById('overlayBoxOk');
 const recordAgain = document.getElementById('recordAgain');
 /* gif file ready to upload whit api endpoint */
 let fileToUpload;
-
-
-/* Trending  */
-const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
-
 /* display search results in DOM */
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 const verMas = document.getElementById('verMas');
@@ -35,6 +29,21 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const prevStepImg = document.getElementById('prevStepImg');
 const nextStepImg = document.getElementById('nextStepImg');
+
+/* trending Bar suggestions */
+
+const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox');
+
+
+/* endpoints giphy Api */
+const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
+const urlEndpointTermTrending =  `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
+const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
+
+
+
+
+
 
 
 //array for created gif´s id
