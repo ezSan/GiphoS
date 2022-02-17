@@ -21,7 +21,7 @@ function CreateTrendingTearm(arrayTerms){
         trendingSuggestion.classList.add('trendingSuggestion');
         trendingSuggestionsBox.appendChild(trendingSuggestion);
         let term = arrayTerms[i];
-        trendingSuggestion.innerHTML =  "-" + term + "-" ;
+        trendingSuggestion.innerHTML =  " - " + term + " - " ;
         
        /*  trendingSuggestion.addEventListener('click', searchGifos(urlEndpointSearch, term))   */  
         

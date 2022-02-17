@@ -104,6 +104,13 @@ nav ul li {
   color: #572EE5;
 }
 
+.trendingSuggestion:hover {
+  -webkit-text-decoration: underline #50E3C2;
+          text-decoration: underline #50E3C2;
+  font-size: large;
+  cursor: pointer;
+}
+
 .second h2 {
   color: #572EE5;
   font-size: x-large;
