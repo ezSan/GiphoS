@@ -26,6 +26,8 @@ const searchInput = document.querySelector('#search');
 const btnSearch = document.getElementById("btnSearch");
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 const verMas = document.getElementById('verMas');
+
+
 /* variables DOM slider trending buttons*/
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');

@@ -104,6 +104,10 @@ nav ul li {
   color: #572EE5;
 }
 
+.trendingSuggestion {
+  margin: 0.2%;
+}
+
 .trendingSuggestion:hover {
   -webkit-text-decoration: underline #50E3C2;
           text-decoration: underline #50E3C2;

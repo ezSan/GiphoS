@@ -21,15 +21,23 @@ function CreateTrendingTearm(arrayTerms){
         trendingSuggestion.classList.add('trendingSuggestion');
         trendingSuggestionsBox.appendChild(trendingSuggestion);
         let term = arrayTerms[i];
-        trendingSuggestion.innerHTML =  " - " + term + " - " ;
-        
-       /*  trendingSuggestion.addEventListener('click', searchGifos(urlEndpointSearch, term))   */  
-        
-        
-       
-    }
-
+        trendingSuggestion.innerHTML =  "" + term + "" ;      
+        }
 }
+
+
+
+trendingSuggestionsBox.addEventListener('click', captureTermAndSearch =>{
+    
+    let trendingTerm = (captureTermAndSearch.target.innerHTML);
+    let urlEndpointSearchWithTerm = urlEndpointSearch.concat(trendingTerm)
+    searchGifos(urlEndpointSearchWithTerm, trendingTerm)
+
+    })
+
+
+
+
 
 
 
