@@ -1,34 +1,44 @@
-document.addEventListener("DOMContentLoaded", init);
-
-function init() {
-
-    document.getElementById("btnSearch").addEventListener("click", ev => {
-        ev.preventDefault(); // dont refresh
-
-        let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
-        let userSearch = document.getElementById('search').value;
+/* document.addEventListener("DOMContentLoaded", init); */
 
 
-        url = url.concat(userSearch);
-        console.log('Busqueda realizada: ' + userSearch);
 
-        fetch(url)
-            .then(response => response.json())
-            .then(content => {
-                searchResultsContainer.innerHTML = ''
-                resultadosDeBusqueda.push(content.data);
-                resultadosDeBusqueda = resultadosDeBusqueda[0];
-                console.log(resultadosDeBusqueda);
-                mostrarResultadosEnDOM(resultadosDeBusqueda);
-                addTitle(userSearch);
-                resultadosDeBusqueda = [];
-                verMas.classList.remove('none');
-            })
+    searchInput.addEventListener('keydown', e => {
+        
+            if (e.keyCode === 13) {      
+                
+            let userSearch = searchInput.value    
+                  
 
-            .catch(err => {
-                console.error(err);
-            })
+            e.preventDefault(); // dont refresh
+            console.log('Busqueda realizada: ' + userSearch);
+            urlEndpointSearchWithTerm = urlEndpointSearch.concat(userSearch)
+            searchGifos(urlEndpointSearchWithTerm , userSearch);
+            closeSuggestionsBox()
+        }
     });
+
+
+
+
+function searchGifos(urlEndpointSearch , userSearch) {    
+    fetch(urlEndpointSearch)
+        .then(response => response.json())
+        .then(content => {
+            
+            searchResultsContainer.innerHTML = '';
+            resultadosDeBusqueda.push(content.data);
+            resultadosDeBusqueda = resultadosDeBusqueda[0];
+            console.log(resultadosDeBusqueda);
+            mostrarResultadosEnDOM(resultadosDeBusqueda);
+            addTitle(userSearch);
+            resultadosDeBusqueda = [];
+            verMas.classList.remove('none');           
+            
+        })
+
+        .catch(err => {
+            console.error(err);
+        })
 }
 
 
@@ -37,7 +47,7 @@ function init() {
 
 function mostrarResultadosEnDOM(resultadosDeBusqueda) {
     for (i = 0; i < resultadosDeBusqueda.length; i++) {
-        console.log(resultadosDeBusqueda[i])
+        /* console.log(resultadosDeBusqueda[i]) */
 
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');
@@ -73,7 +83,7 @@ function mostrarResultadosEnDOM(resultadosDeBusqueda) {
 
         titleAndAuthor(title, author, hiddenOverlay);
         createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
-        
+
 
 
     }
@@ -116,88 +126,3 @@ let addTitle = (userSearch) => {
     }
 }
 
-/* función antigua, borrar luego de que todo funcione ok */
-
-/*  function displayResultsInDOM(content) {
-
-                    resultadosDeBusqueda = content.data;
-
-                    let showResults = resultadosDeBusqueda.map(printResults => {
-
-                        let favImg = printResults.images.downsized.url;
-                        let author = printResults.username;
-                        let title = printResults.title;
-                        let imgId = printResults.id;
-
-                        let cajaGif = document.createElement('div');
-                        cajaGif.classList.add('cajaGif');
-                        
-
-
-                        let hiddenOverlay = document.createElement('div');
-                        hiddenOverlay.classList.add('hidden');
-                        cajaGif.appendChild(hiddenOverlay);
-                        cajaGif.addEventListener('mouseover', removeClassHidden);
-                        cajaGif.addEventListener('mouseout', addClassHidden);
-
-                        let gif = document.createElement('img');
-                        gif.id = imgId;
-                        gif.src = favImg
-                        gif.title = title;
-                        gif.author = author;
-                        gif.classList.add('result');
-                        cajaGif.appendChild(gif);
-
-                        
-                        searchResultsContainer.insertAdjacentElement('afterbegin', cajaGif);
-
-                        titleAndAuthor(title, author, hiddenOverlay);
-                        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
-
-
-                    })
-
-                }
-
-                displayResultsInDOM(content) */
-
-
-
-/* function displayResultsInDOM(content) {
-
-    resultadosDeBusqueda = content.data;
-
-    let showResults = resultadosDeBusqueda.map(printResults => {
-
-        let favImg = printResults.images.downsized.url;
-        let author = printResults.username;
-        let title = printResults.title;
-        let imgId = printResults.id;
-
-        let cajaGif = document.createElement('div');
-        cajaGif.classList.add('cajaGif');
-        
-
-        let hiddenOverlay = document.createElement('div');
-        hiddenOverlay.classList.add('hidden');
-        cajaGif.appendChild(hiddenOverlay);
-        cajaGif.addEventListener('mouseover', removeClassHidden);
-        cajaGif.addEventListener('mouseout', addClassHidden);
-
-        let gif = document.createElement('img'); 
-        gif.id = imgId;
-        gif.src = favImg
-        gif.title = title
-        gif.classList.add('result');
-        cajaGif.appendChild(gif);
-
-        let out = document.getElementById('out');
-        out.insertAdjacentElement('afterbegin', cajaGif);
-
-        titleAndAuthor(title, author, hiddenOverlay);
-        createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
-
-
-    })
-
-} */

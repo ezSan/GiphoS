@@ -1,10 +1,18 @@
 /* cuando el usuuario  */
+let searchImg = document.getElementById('btnSearch');
+let buttonClose = document.getElementById('closeButton')
+let inputValue = searchInput.value;
+let cajaInput = document.getElementById('cajaInput');
+
+
+
+
+
+
 
 let keyPressInSearchInput = () => {
-    let searchInput = document.getElementById('search');
-    searchInput.addEventListener('keyup', userKeyPress => {
-        let searchImg = document.getElementById('btnSearch');
-        let buttonClose = document.getElementById('closeButton')
+    
+    searchInput.addEventListener('keyup', userKeyPress => {                
         let inputValue = searchInput.value;
         let cajaInput = document.getElementById('cajaInput');
         let autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
@@ -64,6 +72,8 @@ let displaySuggestionsToDOM = (suggestionsData) => {
                     
                 })
         })
+
+
         let createSuggestion = document.createElement('p');
         createSuggestion.classList.add('suggestionP');
         let suggestionName = displaySugg.name;
@@ -91,7 +101,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
 function closeSuggestionsBox() {
 
-    let autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
+    
     autocompleteBox.classList.add('none');
     autocompleteBox.classList.remove('withSuggestions');
     let lupa = document.getElementById('btnSearch');
