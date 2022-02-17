@@ -47,3 +47,10 @@
      color: $color1;
 }
 
+
+.trendingSuggestion:hover{
+    text-decoration:underline $color2;
+    font-size: large;
+    cursor:pointer;   
+        
+    }
