@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,50 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Favoritos</title>
 </head>
+
 <body>
     <header>
         <div class="logo"><a href="index.html"><img src="./assets/logo-desktop.svg" alt="logo"></a></div>
         <nav>
             <ul>
-                <li><a class="anav"  href="#">MODO NOCTURNO</a></li>
+                <li><a class="anav" href="#">MODO NOCTURNO</a></li>
                 <li><a class="anav" href="./favs.html">FAVORITOS</a></li>
-                <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>                           
+                <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>
             </ul>
             <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
         </nav>
-    </header> 
+    </header>
     <main>
         <div class="solapaMain">
             <div class="solapaTitle">
                 <img src="./assets/icon-favoritos.svg" alt="corazon">
                 <h2>Favoritos</h2>
             </div>
-            <div class="solapaBox" id="favBox">
-                <img  id='favCtn' src="./assets/icon-fav-sin-contenido.svg" alt="corazontriste" id='favCtn'>
-                <div  id='favCtn' class="sinContenidoSolapa">
-                    <p>"¡Guarda tu primer GIFO en Favoritos 
+            <div class="solapaBox searchResultsContainer" id="favBox">
+                <img id='favCtn' src="./assets/icon-fav-sin-contenido.svg" alt="corazontriste" id='favCtn'>
+                <div id='favCtn' class="sinContenidoSolapa">
+                    <p>"¡Guarda tu primer GIFO en Favoritos
                         para que se muestre aquí!"</p>
                 </div>
             </div>
-            
+
         </div>
         <div class="trending ">
             <h2>Trending GiFOS</h2>
             <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
             <div class="slider">
-                <div class="prev"><img src="./assets/button-slider-left.svg" alt="back_slider" id="backSlider"
-                        onclick="moveLeft()"></div>
+                <div class="prev" id="prev">
+                    <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
+                        onclick="moveLeft()">
+                </div>
                 <div id="trending-ctn" class="tnd-ctn"> </div>
-                <div class="next"><img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextSlider"
-                        onclick="moveRight()"></div>
-            </div>    
+                <div class="next" id="next">
+                    <img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextStepImg"
+                        onclick="moveRight()">
+                </div>
+            </div>
         </div>
-              
+
     </main>
     <footer>
         <div class="footerContent">
@@ -62,12 +68,13 @@
     </footer>
 
     <!-- Scripts -->
-  <script src="./scripts/mainScript.js"></script>  
-  <script src="./scripts/trendings.js"></script>
-  <script src="./scripts/slider.js"></script>
-  <script src="scripts/favs.js"></script>
-    
-    
-    
+    <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/trendings.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="scripts/favs.js"></script>
+
+
+
 </body>
+
 </html>

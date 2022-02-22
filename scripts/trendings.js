@@ -29,7 +29,8 @@ let createTrendingBar = (gif) => {
     cajaGif.addEventListener('mouseout', addClassHidden);
 
     let hiddenOverlay = document.createElement('div');
-    hiddenOverlay.classList.add('hidden');
+    hiddenOverlay.classList.add('hidden')
+    hiddenOverlay.classList.add('hiddenOverlay');
     hiddenOverlay.id = 'hiddenOverlay';
     cajaGif.appendChild(hiddenOverlay);
 

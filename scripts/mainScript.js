@@ -107,10 +107,11 @@ const likeBtn = (cajitaTools, imgId) => {
     favAdd.addEventListener('click', function () {
 
         if (favAdd.classList.contains('inactive')) {
-            let favAuthor = this.parentNode.parentElement.childNodes[0].childNodes[0].innerText;
-            let favTitle = this.parentNode.parentElement.childNodes[0].childNodes[1].innerText;
+            let favAuthor = this.parentNode.parentElement.children[1].childNodes[1].innerText;
+            let favTitle = this.parentNode.parentElement.children[1].childNodes[0].innerText;
             let favImg = this.parentNode.parentNode.parentNode.childNodes[1].src;
             let imgId = this.parentNode.parentNode.parentNode.childNodes[1].id;
+            
 
 
             let goToFavAdd = {
@@ -119,6 +120,8 @@ const likeBtn = (cajitaTools, imgId) => {
                 source: favImg,
                 id: imgId
             }
+
+            console.log(goToFavAdd)
 
             favoritos.push(goToFavAdd);
             localStorage.setItem('Favoritos', JSON.stringify(favoritos));
@@ -319,15 +322,18 @@ let titleAndAuthor = (title, author, hiddenOverlay) => {
     gifData.classList.add('hiddenOrNot');
     hiddenOverlay.insertAdjacentElement('beforeend', gifData);
 
-    let userName = document.createElement('p');
-    gifData.appendChild(userName);
-    userName.innerHTML = author;
-    userName.classList.add('titleAndAuthorElements');
+
     let addTitle = document.createElement('h2');
     addTitle.classList.add('gifTitle');
     addTitle.classList.add('titleAndAuthorElements');
     addTitle.innerHTML = title;
     gifData.appendChild(addTitle);
+
+    let userName = document.createElement('p');
+    gifData.appendChild(userName);
+    userName.innerHTML = author;
+    userName.classList.add('titleAndAuthorElements');
+
 }
 
 // remove & add hidden class in eventListener
