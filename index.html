@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -50,23 +50,32 @@
                 <div class="autocompleteSuggestionsBox" id='autocompleteSuggestionsBox'></div>
 
             </form>
-            <div class="searchResultsContainer" id="searchResultsContainer"></div>       
+            <div class="searchResultsContainer" id="searchResultsContainer"></div>
 
-            
+
             <input type="button" id="verMas" class="none verMasButton hovered" value="Ver más" name="verMas">
         </section>
         <section class="second">
-            <h2>Trending :</h2>
-            <div class="themes" id="trendingSuggestionsBox"></div>
+            <div class="trendingBarSuggestionsBox">
+                <h2>Trending :</h2>
+                <div class="themes" id="trendingSuggestionsBox"></div>
+            </div>
+
+
             <div class="trending ">
-                <h2>Trending GiFOS</h2>
-                <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
+
+                <div class="sliderTitleAndParagraph">
+                    <h2 class="sliderTitle">Trending GiFOS</h2>
+                    <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
+                </div>
+
+
                 <div class="slider">
-                    <div class="prev" id="prev">
+                    <div class="prev leftBtn" id="prev">
                         <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
                             onclick="moveLeft()">
                     </div>
-                    <div id="trending-ctn" class="tnd-ctn"> </div>
+                    <div id="trending-ctn" class="sliderGifContainer"> </div>
                     <div class="next" id="next">
                         <img src="./assets/Button-Slider-right.svg" alt="next_slider" id="nextStepImg"
                             onclick="moveRight()">
@@ -100,6 +109,7 @@
     <script src="/scripts/trendingBar.js"></script>
     <script src='./scripts/autocomplete.js'></script>
     <script src="./scripts/searchbtn.js"></script>
+    <script src="./scripts/misGifos.js"></script>
 
 
 

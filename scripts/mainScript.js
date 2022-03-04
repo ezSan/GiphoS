@@ -1,7 +1,6 @@
 //ApiKey giphy
 const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
 
-
 /* Variables webcam page */
 const video = document.getElementById('videoBox');
 const previewAndVideoBox = document.getElementById('previewAndVideoBox');
@@ -26,16 +25,12 @@ const searchInput = document.querySelector('#search');
 const btnSearch = document.getElementById("btnSearch");
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 const verMas = document.getElementById('verMas');
-
-
 /* variables DOM slider trending buttons*/
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const prevStepImg = document.getElementById('prevStepImg');
 const nextStepImg = document.getElementById('nextStepImg');
-
 const autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
-
 /* trending Bar suggestions */
 
 const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox');
@@ -43,18 +38,11 @@ const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox')
 
 /* endpoints giphy Api */
 const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
-const urlEndpointTermTrending =  `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
+const urlEndpointTermTrending = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
 const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
-const urlEndpointSearch =  `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
+const urlEndpointSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
 
 
-
-
-
-
-
-//array for created gif´s id
-let uploadedGiphosId = [];
 // array provisorio que almacena resultados de busqueda
 let resultadosDeBusqueda = [];
 // Array que almacena resultados favoritos
@@ -64,10 +52,15 @@ let favId = [];
 //array para trendings 
 var arrayTrendings = [];
 //local storage
-/* let createKey = localStorage.setItem('Favoritos', JSON.stringify(favoritos)); */
 let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
+//array of created gif id 
 
+let gifCreatedIds = [];
+
+
+let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
+/* let storageGifosIds = JSON.parse(gifosIdsStorage); */
 
 
 
@@ -76,16 +69,24 @@ let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 let comprobeLs = () => {
     if (localStorage.length == 0) {
         localStorage.setItem('Favoritos', JSON.stringify(favoritos));
-        console.log('Se ha dado inicio al LocalStorage, key: "Favoritos" ')
+        console.log('Se ha dado inicio al LocalStorage, key: "Favoritos" ') 
     } else {
         let pushearFavAnteriores = storageFavoritos.map(oldFavs => {
-            favoritos.push(oldFavs);
+            favoritos.push(oldFavs);      
         })
     }
 };
 
 
 comprobeLs()
+
+/* push ids in local storage */
+function pushOldIds (){
+    let pushIds = gifosIdsStorage.map(x=>{
+        gifCreatedIds.push(x)
+        console.log(gifCreatedIds)
+    })
+}
 
 //Capturar data del array de busqueda y mostrar en DOM
 
@@ -107,11 +108,13 @@ const likeBtn = (cajitaTools, imgId) => {
     favAdd.addEventListener('click', function () {
 
         if (favAdd.classList.contains('inactive')) {
+
+            
             let favAuthor = this.parentNode.parentElement.children[1].childNodes[1].innerText;
             let favTitle = this.parentNode.parentElement.children[1].childNodes[0].innerText;
             let favImg = this.parentNode.parentNode.parentNode.childNodes[1].src;
             let imgId = this.parentNode.parentNode.parentNode.childNodes[1].id;
-            
+
 
 
             let goToFavAdd = {
@@ -304,7 +307,7 @@ let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
     let cajitaTools = document.createElement('div');
 
     cajitaTools.classList.add('cajitaTools');
-    cajitaTools.classList.add('hiddenOrNot');
+    /* cajitaTools.classList.add('hiddenOrNot'); */
 
 
     hiddenOverlay.insertAdjacentElement('afterbegin', cajitaTools);
@@ -319,21 +322,22 @@ let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
 let titleAndAuthor = (title, author, hiddenOverlay) => {
     let gifData = document.createElement('div');
     gifData.classList.add('gifData');
-    gifData.classList.add('hiddenOrNot');
+    /* gifData.classList.add('hiddenOrNot'); */
     hiddenOverlay.insertAdjacentElement('beforeend', gifData);
 
 
     let addTitle = document.createElement('h2');
     addTitle.classList.add('gifTitle');
-    addTitle.classList.add('titleAndAuthorElements');
+    /* addTitle.classList.add('titleAndAuthorElements'); */
     addTitle.innerHTML = title;
     gifData.appendChild(addTitle);
 
     let userName = document.createElement('p');
+    userName.classList.add('gifAuthor');
     gifData.appendChild(userName);
     userName.innerHTML = author;
-    userName.classList.add('titleAndAuthorElements');
-
+    /* userName.classList.add('titleAndAuthorElements');
+ */
 }
 
 // remove & add hidden class in eventListener

@@ -7,6 +7,7 @@ function webcamAccessAndStream() {
   slide1.classList.add('none');
   slide2.classList.remove('none');
 
+
   navigator.mediaDevices.getUserMedia({
     audio: false,
     video: true
@@ -14,6 +15,7 @@ function webcamAccessAndStream() {
     .then(stream => {
       video.srcObject = stream;
       video.play();
+      pushOldIds()
 
       comenzar.classList.add('none');
 
@@ -22,7 +24,7 @@ function webcamAccessAndStream() {
       slide2.classList.add('none');
       previewAndVideoBox.classList.remove('none');
       slideWithInstructions.classList.add('none');
-      btnRec.classList.remove('none');
+      btnRec.classList.remove('none'); 
       
       recorder = new RecordRTCPromisesHandler(stream, {
         type: 'gif',
@@ -32,12 +34,10 @@ function webcamAccessAndStream() {
         quality: 10,
         width: 360,
         hidden: 240,
-
+      
       });
     })
 }
-
-
 //upload gipho endpoint
 
 const uploadToGiphy = async (fileGif) => {
@@ -45,17 +45,28 @@ const uploadToGiphy = async (fileGif) => {
     let response = await fetch(urlEndpointUpload, {
       method: 'POST',
       body: fileGif,
-      });
-    console.log(response.status)
+    });
+
+    console.log(response.status);
+
     let newGif = response.json();
-    newGif.then(newGif => {
+
+    newGif.then(newGif => {   
+      
+      
+
       let idGiphoUploaded = newGif.data.id;
-      uploadedGiphosId.push(idGiphoUploaded);
-      console.log(idGiphoUploaded);
+
+      console.log(idGiphoUploaded);        
+      
+      gifCreatedIds.push(idGiphoUploaded);
+
+      localStorage.setItem('MyGifosIds', JSON.stringify(gifCreatedIds));
+      
       overlayBoxPending.classList.add('none');
       overlayBoxOk.classList.remove('none');
-    })
 
+    })
 
   } catch (err) {
     console.log(err)
@@ -91,5 +102,17 @@ btnStop.addEventListener('click', stop => {
     uploadGipho.src = urlGiphoForUpload;
   })
 })
+
+
+recordAgain.addEventListener('click', recordAgain => {
+  recorder.reset();
+  uploadGiphoButton.classList.add('none');
+  btnRec.classList.remove('none');
+  uploadGipho.classList.add('none');
+  video.classList.remove('none');
+  uploadingGifOverlay.classList.add('none');
+
+})
+
 
 

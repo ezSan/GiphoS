@@ -65,7 +65,7 @@ nav ul li {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 60%;
+  height: 30%;
 }
 
 .mainTitle {
@@ -115,10 +115,63 @@ nav ul li {
   cursor: pointer;
 }
 
+.second {
+  width: 100%;
+  height: 40%;
+}
+
 .second h2 {
   color: #572EE5;
-  font-size: x-large;
+  /*     font-size: x-large;
+    text-align: center; */
+  height: 50%;
+}
+
+.trendingBarSuggestionsBox {
+  height: 20%;
+}
+
+.sliderTitleAndParagraph {
+  height: 10%;
+}
+
+.sliderTitle {
+  margin-bottom: 1%;
   text-align: center;
+}
+
+.sliderP {
+  margin-top: 0%;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3%;
+  width: 90%;
+  height: 30%;
+}
+
+.sliderGifContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-x: hidden;
+  height: 20%;
+  margin-right: 2%;
+}
+
+.giphoBox {
+  position: relative;
+  min-width: 15%;
+  margin: 0.5%;
 }
 
 .themes {
@@ -135,42 +188,6 @@ nav ul li {
 
 .hiddenBtn {
   display: none;
-}
-
-.tnd-ctn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  overflow-x: hidden;
-}
-
-.gipho {
-  margin-top: 0%;
-  width: 320px;
-  height: 215px;
-}
-
-.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  overflow: transparent;
-  scrollbar-color: transparent;
-}
-
-.prev, .next {
-  width: 5%;
-  margin: 1%;
 }
 
 .trending {
@@ -190,6 +207,11 @@ nav ul li {
           align-items: center;
 }
 
+.gipho {
+  width: 100%;
+  height: 100%;
+}
+
 .searchResultsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,9 +220,8 @@ nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 60%;
@@ -212,15 +233,16 @@ nav ul li {
   margin-top: 1%;
   width: 12em;
   height: 10em;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
-.cajaGif .hiddenOverlay {
+.hiddenOverlay {
   position: absolute;
-  width: 12em;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,6 +250,9 @@ nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #4f1eff99;
 }
 
 .result {
@@ -248,38 +273,46 @@ nav ul li {
   color: #572EE5;
 }
 
-.gifTitle {
-  color: violet;
-  font-size: large;
-}
-
-.titleAndAuthorElements {
-  margin: 1%;
-}
-
-/* .giphoBox{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 22.313rem;
-    padding: 0.5%;
-    position: relative;
-
-        
-    } */
-.cajitaTools {
+.gifData {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin-top: 0.5%;
-  margin-right: 0.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: white;
+  position: relative;
+  margin-top: 15%;
+  margin-right: 1.5%;
 }
 
-.gipho {
-  width: 100%;
-  height: 100%;
+.cajitaTools {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4%;
+  margin-top: 0.5%;
+  left: 45%;
+  padding: 1%;
+}
+
+.gifTitle {
+  width: 80%;
+  font-size: medium;
+  margin-bottom: 0px;
+}
+
+.gifAuthor {
+  width: 80%;
+  margin-top: 0px;
 }
 
 .container {
@@ -426,6 +459,10 @@ nav ul li {
 .hovered:hover {
   background-color: #572EE5;
   color: white;
+}
+
+footer {
+  height: 5%;
 }
 
 .footerContent {

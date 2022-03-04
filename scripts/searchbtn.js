@@ -46,15 +46,14 @@ function searchGifos(urlEndpointSearch , userSearch) {
 
 
 function mostrarResultadosEnDOM(resultadosDeBusqueda) {
-    for (i = 0; i < resultadosDeBusqueda.length; i++) {
-        /* console.log(resultadosDeBusqueda[i]) */
+    for (i = 0; i < resultadosDeBusqueda.length; i++) {        
 
         let cajaGif = document.createElement('div');
         cajaGif.classList.add('cajaGif');
 
         if (i >= 12) {
-            cajaGif.classList.add('hiddenOnlyBoxes');
             cajaGif.classList.add('none');
+            cajaGif.classList.add('hiddenOnlyBoxes');
         }
 
 
