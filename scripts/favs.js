@@ -19,7 +19,7 @@ const printFavos =(createTools, likeBtn)=>{
 
         let favBox = document.getElementById('favBox');
         favBox.classList.remove('solapaBox');
-        favBox.classList.add('out');
+        
         let boxFav = document.createElement('div');
         boxFav.classList.add('cajaGif');
         favBox.appendChild(boxFav);

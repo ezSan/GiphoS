@@ -1,7 +1,7 @@
 
 
 
-.searchResultsContainer{
+.gifContainer{
     
  
     display: flex;
@@ -25,6 +25,13 @@
     position: relative;
 }
 
+.boxMyGifo{
+    width: 12em;
+    height: 10em; 
+    margin: 1%;
+}
+
+
 
 .hiddenOverlay{
     position: absolute;
@@ -40,6 +47,8 @@
     width: 100%;
     height: 100%;
 }
+
+
 
 
 .verMasButton{

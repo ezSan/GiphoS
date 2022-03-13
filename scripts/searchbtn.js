@@ -2,29 +2,29 @@
 
 
 
-    searchInput.addEventListener('keydown', e => {
-        
-            if (e.keyCode === 13) {      
-                
-            let userSearch = searchInput.value    
-                  
+searchInput.addEventListener('keydown', e => {
 
-            e.preventDefault(); // dont refresh
-            console.log('Busqueda realizada: ' + userSearch);
-            urlEndpointSearchWithTerm = urlEndpointSearch.concat(userSearch)
-            searchGifos(urlEndpointSearchWithTerm , userSearch);
-            closeSuggestionsBox()
-        }
-    });
+    if (e.keyCode === 13) {
+
+        let userSearch = searchInput.value
 
 
+        e.preventDefault(); // dont refresh
+        console.log('Busqueda realizada: ' + userSearch);
+        urlEndpointSearchWithTerm = urlEndpointSearch.concat(userSearch)
+        searchGifos(urlEndpointSearchWithTerm, userSearch);
+        closeSuggestionsBox()
+    }
+});
 
 
-function searchGifos(urlEndpointSearch , userSearch) {    
+
+
+function searchGifos(urlEndpointSearch, userSearch) {
     fetch(urlEndpointSearch)
         .then(response => response.json())
         .then(content => {
-            
+
             searchResultsContainer.innerHTML = '';
             resultadosDeBusqueda.push(content.data);
             resultadosDeBusqueda = resultadosDeBusqueda[0];
@@ -32,8 +32,8 @@ function searchGifos(urlEndpointSearch , userSearch) {
             mostrarResultadosEnDOM(resultadosDeBusqueda);
             addTitle(userSearch);
             resultadosDeBusqueda = [];
-            verMas.classList.remove('none');           
-            
+            verMas.classList.remove('none');
+
         })
 
         .catch(err => {
@@ -46,16 +46,14 @@ function searchGifos(urlEndpointSearch , userSearch) {
 
 
 function mostrarResultadosEnDOM(resultadosDeBusqueda) {
-    for (i = 0; i < resultadosDeBusqueda.length; i++) {        
+    for (i = 0; i < resultadosDeBusqueda.length; i++) {
 
         let cajaGif = document.createElement('div');
-        cajaGif.classList.add('cajaGif');
-
         if (i >= 12) {
             cajaGif.classList.add('none');
             cajaGif.classList.add('hiddenOnlyBoxes');
         }
-
+        cajaGif.classList.add('cajaGif');
 
         searchResultsContainer.insertAdjacentElement('afterbegin', cajaGif)
 
@@ -93,7 +91,7 @@ verMas.addEventListener('click', showMore)
 
 
 function showMore() {
-    let hiddenBoxes = document.getElementsByClassName('hiddenOnlyBoxes ');
+    let hiddenBoxes = document.getElementsByClassName('hiddenOnlyBoxes');
     hiddenBoxes.item(0).classList.remove('none');
     hiddenBoxes.item(1).classList.remove('none');
     hiddenBoxes.item(2).classList.remove('none');

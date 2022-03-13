@@ -51,7 +51,9 @@ const uploadToGiphy = async (fileGif) => {
 
     let newGif = response.json();
 
-    newGif.then(newGif => {   
+    newGif.then(newGif => { 
+      
+      console.log(gifCreatedIds)
       
       
 
@@ -61,6 +63,8 @@ const uploadToGiphy = async (fileGif) => {
       
       gifCreatedIds.push(idGiphoUploaded);
 
+
+      
       localStorage.setItem('MyGifosIds', JSON.stringify(gifCreatedIds));
       
       overlayBoxPending.classList.add('none');

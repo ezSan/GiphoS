@@ -1,3 +1,24 @@
+document.addEventListener('DOMContentLoaded', pushOldIds);
+
+
+function pushOldIds() {
+
+    if (gifosIdsStorage) {
+        let pushIds = gifosIdsStorage.map(x => {
+            gifCreatedIds.push(x)
+            console.log(gifCreatedIds);
+        })
+    } else {
+        console.log('Todavía no se ha creado ningún Gif!')
+    }
+}
+
+
+
+
+
+
+
 //ApiKey giphy
 const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
 
@@ -35,12 +56,27 @@ const autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
 
 const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox');
 
-
 /* endpoints giphy Api */
 const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
 const urlEndpointTermTrending = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
 const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
 const urlEndpointSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
+
+
+
+
+/* mis giphos variables */
+
+const misGifosContainer = document.getElementById('misGifosContainer');
+const emptyMyGifos = document.getElementById('emptyMyGifos');
+
+
+
+
+
+
+
+
 
 
 // array provisorio que almacena resultados de busqueda
@@ -69,24 +105,16 @@ let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
 let comprobeLs = () => {
     if (localStorage.length == 0) {
         localStorage.setItem('Favoritos', JSON.stringify(favoritos));
-        console.log('Se ha dado inicio al LocalStorage, key: "Favoritos" ') 
+        console.log('Se ha dado inicio al LocalStorage, key: "Favoritos" ')
     } else {
         let pushearFavAnteriores = storageFavoritos.map(oldFavs => {
-            favoritos.push(oldFavs);      
+            favoritos.push(oldFavs);
         })
     }
 };
 
 
-comprobeLs()
-
-/* push ids in local storage */
-function pushOldIds (){
-    let pushIds = gifosIdsStorage.map(x=>{
-        gifCreatedIds.push(x)
-        console.log(gifCreatedIds)
-    })
-}
+/* comprobeLs() */
 
 //Capturar data del array de busqueda y mostrar en DOM
 
@@ -109,7 +137,7 @@ const likeBtn = (cajitaTools, imgId) => {
 
         if (favAdd.classList.contains('inactive')) {
 
-            
+
             let favAuthor = this.parentNode.parentElement.children[1].childNodes[1].innerText;
             let favTitle = this.parentNode.parentElement.children[1].childNodes[0].innerText;
             let favImg = this.parentNode.parentNode.parentNode.childNodes[1].src;
