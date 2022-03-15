@@ -1,28 +1,65 @@
-header {
+
+header{
+    border-top: 4px solid #572EE5;    
+    
+}
+
+
+.headerCtn{
     display: flex;
-    justify-content: space-evenly;
+    margin-top: 1%;
+
 }
 
-.logo {
-    width: 50%;
-}
-
-nav{
-    width: 50%;
-    display: flex;    
-    justify-content: center;  
-    ul{
-        display: flex;  
-        margin-right: 5%;         
-         li{
-               list-style: none; 
-               margin: 5px;
-               font-family: 'Montserrat-Bold', sans-serif;;
-            }
-     } 
-}
-
- .anav{
-     text-decoration: none;
-
+ .logoCtn{
+     width:40%;
+     margin-right: 0%;
  }
+
+ .logo{
+     margin-left:20%;
+     width: 10%;
+ }
+
+ .navBar{
+     width: 50%;
+     display: flex;
+     align-items: center;
+     margin-left: 10%;
+ }
+
+
+ .ulNav{
+     display: flex;  
+     text-decoration: none; 
+     justify-content: space-between;
+     align-items: center; 
+     width: 60%;
+     margin-right: 5%;
+     list-style: none;     
+    
+ } 
+ 
+ li{
+    
+    color: $color1;      
+    font-family: Montserrat-bold ;
+    text-decoration: none;
+    text-transform: none;
+
+
+    :hover{
+        text-decoration:underline $color2;
+        font-size: large;
+        cursor:pointer;   
+     }
+}
+
+
+a{
+    text-decoration: none;
+    text-transform: none;
+}
+
+
+

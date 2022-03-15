@@ -17,16 +17,27 @@
 
 <body>
     <header>
-        <div class="logo"><img src="./assets/logo-desktop.svg" alt="logo"></div>
-        <nav>
-            <ul>
 
-                <li><a class="anav">MODO NOCTURNO</a></li>
-                <li><a class="anav" href="./favs.html">FAVORITOS</a></li>
-                <li><a class="anav" href="./misGiphos.html">MIS GIFOS</a></li>
-            </ul>
-            <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
-        </nav>
+        <div class="headerCtn">
+            <div class="logoCtn">
+                <img class='logo' src="./assets/logo-desktop.svg" alt="logo">
+            </div>
+            <nav class="navBar">
+                <ul class="ulNav">
+                    <li>
+                        <a class="navBarLink">MODO NOCTURNO</a>
+                    </li>
+                    <li>
+                        <a class="navBarLink" href="./favs.html">FAVORITOS</a>
+                    </li>
+                    <li>
+                        <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
+                    </li>
+                </ul>
+                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
+            </nav>
+        </div>
+
     </header>
     <main>
         <section class="first" id="first">
@@ -57,7 +68,7 @@
         </section>
         <section class="second">
             <div class="trendingBarSuggestionsBox">
-                <h2>Trending :</h2>
+                <h2 class="blueCenteredTitle">Trending :</h2>
                 <div class="themes" id="trendingSuggestionsBox"></div>
             </div>
 
@@ -109,7 +120,7 @@
     <script src="/scripts/trendingBar.js"></script>
     <script src='./scripts/autocomplete.js'></script>
     <script src="./scripts/searchbtn.js"></script>
-    
+
 
 
 
