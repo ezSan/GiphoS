@@ -1,4 +1,23 @@
+
 document.addEventListener('DOMContentLoaded', pushOldIds);
+darkModeBtn.addEventListener('click', darkMode);
+document.addEventListener('DOMContentLoaded', darkLightMode);
+
+
+
+
+
+
+function darkLightMode() {
+    if (getMode === 'true') {
+        darkMode()
+    } else {
+        localStorage.setItem('Dark Mode', false)
+    }
+}
+
+
+
 
 
 function pushOldIds() {
@@ -16,59 +35,19 @@ function pushOldIds() {
 
 
 
-
-
-
-//ApiKey giphy
-const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
-
-/* Variables webcam page */
-const video = document.getElementById('videoBox');
-const previewAndVideoBox = document.getElementById('previewAndVideoBox');
-const slideWithInstructions = document.getElementById('slideWithInstructions')
-const uploadGipho = document.getElementById('uploadGipho');
-const uploadGiphoButton = document.getElementById('uploadGiphoButton');
-const btnStop = document.getElementById('btnStopRec');
-const btnRec = document.getElementById('recButton');
-const slide1 = document.getElementById('slide1');
-const slide2 = document.getElementById('slide2');
-const comenzar = document.getElementById('comenzar');
-const step1 = document.getElementById('step1');
-const step2 = document.getElementById('step2');
-const uploadingGifOverlay = document.getElementById('uploadingGifOverlay');
-const overlayBoxPending = document.getElementById('overlayBoxPending');
-const overlayBoxOk = document.getElementById('overlayBoxOk');
-const recordAgain = document.getElementById('recordAgain');
-/* gif file ready to upload whit api endpoint */
-let fileToUpload;
-/* display search results in DOM */
-const searchInput = document.querySelector('#search');
-const btnSearch = document.getElementById("btnSearch");
-const searchResultsContainer = document.getElementById('searchResultsContainer');
-const verMas = document.getElementById('verMas');
-/* variables DOM slider trending buttons*/
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-const prevStepImg = document.getElementById('prevStepImg');
-const nextStepImg = document.getElementById('nextStepImg');
-const autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
-/* trending Bar suggestions */
-
-const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox');
-
-/* endpoints giphy Api */
-const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=15&offset=1&rating=g`;
-const urlEndpointTermTrending = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
-const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
-const urlEndpointSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
-
-
-
-
-/* mis giphos variables */
-
-const misGifosContainer = document.getElementById('misGifosContainer');
-const emptyMyGifos = document.getElementById('emptyMyGifos');
+function darkMode() {
+    
+    localStorage.setItem('Dark Mode', true);
+    darkModeBtn.innerHTML = 'MODO DIURNO';
+    main.classList.add('darkModeFirst');
+    trending.classList.add('darkModeTdn');
+    form.classList.add('darkModeForm');
+    header.classList.add('darkModeHeader');
+    search.classList.add('darkModeInput');
+    mainTitle.classList.add('darkModeTitle');
+    trendingBarSuggestionsBox.classList.add('darkModeTitle');
+    sliderTitleAndParagraph.classList.add('darkModeTitle');
+}
 
 
 
@@ -76,27 +55,6 @@ const emptyMyGifos = document.getElementById('emptyMyGifos');
 
 
 
-
-
-
-// array provisorio que almacena resultados de busqueda
-let resultadosDeBusqueda = [];
-// Array que almacena resultados favoritos
-let favoritos = [];
-//array de id´s de favoritos
-let favId = [];
-//array para trendings 
-var arrayTrendings = [];
-//local storage
-let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
-
-//array of created gif id 
-
-let gifCreatedIds = [];
-
-
-let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
-/* let storageGifosIds = JSON.parse(gifosIdsStorage); */
 
 
 
@@ -121,6 +79,7 @@ let comprobeLs = () => {
 const likeBtn = (cajitaTools, imgId) => {
 
     let favAdd = document.createElement('img');
+
     cajitaTools.appendChild(favAdd);
     let mapIdfav = favoritos.map(ids => ids.id);
 
@@ -335,7 +294,6 @@ let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
     let cajitaTools = document.createElement('div');
 
     cajitaTools.classList.add('cajitaTools');
-    /* cajitaTools.classList.add('hiddenOrNot'); */
 
 
     hiddenOverlay.insertAdjacentElement('afterbegin', cajitaTools);
@@ -378,6 +336,26 @@ function addClassHidden(e) {
     let thisElement = e.currentTarget
     thisElement.childNodes[0].classList.add('hidden')
 }
+
+
+
+
+
+/* function  setDayOrNightMode (){
+    if (ge)
+} */
+
+let getMode = localStorage.getItem('Dark Mode');
+
+
+
+
+
+
+
+
+
+
 
 
 
