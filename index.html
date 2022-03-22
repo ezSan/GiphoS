@@ -16,16 +16,15 @@
 </head>
 
 <body>
-    <header>
-
-        <div class="headerCtn">
+    <header id="header">
+        <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
                 <img class='logo' src="./assets/logo-desktop.svg" alt="logo">
             </div>
             <nav class="navBar">
                 <ul class="ulNav">
                     <li>
-                        <a class="navBarLink">MODO NOCTURNO</a>
+                        <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
                     </li>
                     <li>
                         <a class="navBarLink" href="./favs.html">FAVORITOS</a>
@@ -39,25 +38,22 @@
         </div>
 
     </header>
-    <main>
+    <main id="main">
         <section class="first" id="first">
 
-            <h2 class="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span></h2>
+            <h2 class="mainTitle" id="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span></h2>
             <img src="./assets/ilustra_header.svg" alt="dibujo">
 
 
-            <form class="formulario" autocomplete="off">
+            <form class="formulario" autocomplete="off" id="form">
 
 
                 <div class="cajaInput" id='cajaInput'>
-                    <input id="search" class="search" type="text" autocomplete="off" />
+                    <input id="search" class="search" type="text" autocomplete="off" placeholder="Busca GiFOS y más..." />
                     <img src="./assets/icon-search.svg" alt="lupa" class='lupaOrClose' id="btnSearch">
                     <img src="./assets/close.svg" alt="closeButton" class='closeButton none' id="closeButton"
                         onclick="closeSuggestionsBox()">
                 </div>
-
-
-
                 <div class="autocompleteSuggestionsBox" id='autocompleteSuggestionsBox'></div>
 
             </form>
@@ -66,17 +62,17 @@
 
             <input type="button" id="verMas" class="none verMasButton hovered" value="Ver más" name="verMas">
         </section>
-        <section class="second">
-            <div class="trendingBarSuggestionsBox">
-                <h2 class="blueCenteredTitle">Trending :</h2>
+        <section class="second" id="second">
+            <div class="trendingBarSuggestionsBox" id="trendingBarSuggestionsBox">
+                <h2 class="blueCenteredTitle">Trending:</h2>
                 <div class="themes" id="trendingSuggestionsBox"></div>
             </div>
 
 
-            <div class="trending ">
+            <div class="trending" id="trending">
 
-                <div class="sliderTitleAndParagraph">
-                    <h2 class="sliderTitle">Trending GiFOS</h2>
+                <div class="sliderTitleAndParagraph" id="sliderTitleAndParagraph">
+                    <h2 class="blueCenteredTitle" id="">Trending GiFOS</h2>
                     <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
                 </div>
 
@@ -114,6 +110,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="./scripts/variables.js"></script>
     <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/trendings.js"></script>
     <script src="./scripts/slider.js"></script>

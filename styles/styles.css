@@ -166,6 +166,7 @@ a {
 .blueCenteredTitle {
   color: #572EE5;
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .trendingBarSuggestionsBox {
@@ -197,6 +198,10 @@ a {
   height: 30%;
 }
 
+.leftBtn {
+  margin-right: 0.5%;
+}
+
 .sliderGifContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,7 +211,7 @@ a {
           justify-content: flex-start;
   overflow-x: hidden;
   height: 20%;
-  margin-right: 2%;
+  margin-right: 0.5%;
 }
 
 .giphoBox {
@@ -225,6 +230,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 1%;
 }
 
 .hiddenBtn {
@@ -342,6 +348,7 @@ a {
   margin-top: 0.5%;
   left: 45%;
   padding: 1%;
+  z-index: 10;
 }
 
 .gifTitle {
@@ -712,5 +719,44 @@ footer {
 
 .closeButton {
   margin-right: 3%;
+}
+
+.darkModeTdn {
+  background-color: #222326;
+}
+
+.darkModeFirst {
+  background-color: #37383C;
+}
+
+.darkModeHeader {
+  background-color: #37383C;
+}
+
+.darkModeForm {
+  background-color: #37383C;
+  border: 1px #fff solid;
+}
+
+.darkModeInput {
+  color: #9CAFC3;
+  background-color: #37383C;
+}
+
+.darkModeTitle {
+  color: #FFFFFF;
+  font-family: Montserrat-Bold;
+}
+
+.darkModeSecond {
+  color: #FFFFFF;
+}
+
+.darkModeTitle h2, .darkModeTitle p {
+  color: #FFFFFF;
+}
+
+.darkModeSlider h2, .darkModeSlider p {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=styles.css.map */
