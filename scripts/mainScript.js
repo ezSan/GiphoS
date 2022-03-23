@@ -1,24 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', pushOldIds);
-darkModeBtn.addEventListener('click', darkMode);
-document.addEventListener('DOMContentLoaded', darkLightMode);
-
-
-
-
-
-
-function darkLightMode() {
-    if (getMode === 'true') {
-        darkMode()
-    } else {
-        localStorage.setItem('Dark Mode', false)
-    }
-}
-
-
-
-
 
 function pushOldIds() {
 
@@ -32,33 +13,6 @@ function pushOldIds() {
     }
 }
 
-
-
-
-function darkMode() {
-    
-    localStorage.setItem('Dark Mode', true);
-    darkModeBtn.innerHTML = 'MODO DIURNO';
-    main.classList.add('darkModeFirst');
-    trending.classList.add('darkModeTdn');
-    form.classList.add('darkModeForm');
-    header.classList.add('darkModeHeader');
-    search.classList.add('darkModeInput');
-    mainTitle.classList.add('darkModeTitle');
-    trendingBarSuggestionsBox.classList.add('darkModeTitle');
-    sliderTitleAndParagraph.classList.add('darkModeTitle');
-}
-
-
-
-
-
-
-
-
-
-
-
 //Comprobar LocalStorage // Pushear favs anteriores
 let comprobeLs = () => {
     if (localStorage.length == 0) {
@@ -70,7 +24,6 @@ let comprobeLs = () => {
         })
     }
 };
-
 
 /* comprobeLs() */
 
