@@ -298,7 +298,7 @@ function addClassHidden(e) {
     if (ge)
 } */
 
-let getMode = localStorage.getItem('Dark Mode');
+
 
 
 
