@@ -1,18 +1,37 @@
-darkModeBtn.addEventListener('click', darkMode);
+
+let getMode = localStorage.getItem('Dark Mode');
 
 
 
+darkModeBtn.addEventListener('click', decideModo);
+
+document.addEventListener('DOMContentLoaded' , setDarkMode)
 
 
-function darkLightMode() {
-    if (getMode === 'true') {
+function setDarkMode(){
+    if(getMode === 'true'){
         darkMode()
-    } else {
-        localStorage.setItem('Dark Mode', false);
     }
 }
 
+let option = false;
+
+function decideModo() {
+    if (option == true) {
+        console.log("Entro al if")
+        option = false;
+        setLightMode();
+    } else {
+        console.log("Entro al else")
+        option = true;
+        darkMode();
+    }
+}
+
+
 function darkMode() {
+    console.log("Entro a la funcion")
+
     localStorage.setItem('Dark Mode', true);
     main.classList.add('darkModeFirst');
     trending.classList.add('darkModeTdn');
@@ -24,11 +43,7 @@ function darkMode() {
     sliderTitleAndParagraph.classList.add('darkModeTitle');
 
     darkModeBtn.innerHTML = 'MODO DIURNO';
-    darkModeBtn.addEventListener('click', setLightMode);
 }
-
-
-
 
 
 function setLightMode() {
@@ -47,9 +62,7 @@ function setLightMode() {
 
 
     darkModeBtn.innerHTML = 'MODO NOCTURNO';
-    darkModeBtn.addEventListener('click', darkMode)
 }
 
 
-document.addEventListener('DOMContentLoaded', darkLightMode);
 
