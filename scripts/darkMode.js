@@ -1,22 +1,25 @@
 
-let getMode = localStorage.getItem('Dark Mode');
+document.addEventListener('DOMContentLoaded', setDarkMode);
 
 
 
-darkModeBtn.addEventListener('click', decideModo);
+darkModeBtn.addEventListener('click', darkModeMain);
+lightMode.addEventListener('click', setLightMode)
 
-document.addEventListener('DOMContentLoaded' , setDarkMode)
 
 
 function setDarkMode(){
     if(getMode === 'true'){
-        darkMode()
+        
+        darkModeMain()
+    }else{
+        console.log('el sitio está en modo claro')
     }
 }
 
-let option = false;
 
-function decideModo() {
+
+/* function decideModo() {
     if (option == true) {
         console.log("Entro al if")
         option = false;
@@ -26,13 +29,15 @@ function decideModo() {
         option = true;
         darkMode();
     }
-}
+} */
 
 
-function darkMode() {
-    console.log("Entro a la funcion")
-
-    localStorage.setItem('Dark Mode', true);
+function darkModeMain() {    
+    localStorage.setItem('Dark Mode', true);    
+    logo.src="./assets/Logo-modo-noc.svg";
+    btnSearch.src = "./assets/icon-search-mod-noc.svg";
+    darkModeBtn.classList.add('none');
+    lightMode.classList.remove('none');
     main.classList.add('darkModeFirst');
     trending.classList.add('darkModeTdn');
     form.classList.add('darkModeForm');
@@ -41,15 +46,18 @@ function darkMode() {
     mainTitle.classList.add('darkModeTitle');
     trendingBarSuggestionsBox.classList.add('darkModeTitle');
     sliderTitleAndParagraph.classList.add('darkModeTitle');
-
-    darkModeBtn.innerHTML = 'MODO DIURNO';
+    
 }
+
 
 
 function setLightMode() {
 
-
     localStorage.setItem('Dark Mode', false);
+    logo.src="./assets/logo-desktop.svg";
+    btnSearch.src = "./assets/icon-search.svg";
+    lightMode.classList.add('none');
+    darkModeBtn.classList.remove('none');
 
     main.classList.remove('darkModeFirst');
     trending.classList.remove('darkModeTdn');
@@ -59,9 +67,6 @@ function setLightMode() {
     mainTitle.classList.remove('darkModeTitle');
     trendingBarSuggestionsBox.classList.remove('darkModeTitle');
     sliderTitleAndParagraph.classList.remove('darkModeTitle');
-
-
-    darkModeBtn.innerHTML = 'MODO NOCTURNO';
 }
 
 

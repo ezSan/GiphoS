@@ -19,17 +19,20 @@
     <header id="header">
         <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
-                <img class='logo' src="./assets/logo-desktop.svg" alt="logo">
+                <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
             </div>
             <nav class="navBar">
-                <ul class="ulNav">
-                    <li>
+                <ul class="ulNav" id="ulNav">
+                    <li class="liNavBar" >
+                        <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
+                    </li>
+                    <li class="liNavBar">
                         <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
                     </li>
-                    <li>
+                    <li class="liNavBar">
                         <a class="navBarLink" href="./favs.html">FAVORITOS</a>
                     </li>
-                    <li>
+                    <li class="liNavBar">
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
@@ -110,8 +113,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./scripts/variables.js"></script>
     <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/variables.js"></script>
     <script src="./scripts/trendings.js"></script>
     <script src="/scripts/darkMode.js"></script>
     <script src="./scripts/slider.js"></script>

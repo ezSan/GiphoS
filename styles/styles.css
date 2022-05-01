@@ -77,6 +77,10 @@ a {
   text-transform: none;
 }
 
+.navBarLink {
+  color: #572EE5;
+}
+
 .first {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,6 +589,10 @@ footer {
   width: 90%;
 }
 
+.gifContainer {
+  margin: 1%;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -757,6 +765,10 @@ footer {
 }
 
 .darkModeSlider h2, .darkModeSlider p {
+  color: #FFFFFF;
+}
+
+.navBarDarkMode {
   color: #FFFFFF;
 }
 /*# sourceMappingURL=styles.css.map */

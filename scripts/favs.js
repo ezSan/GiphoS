@@ -1,23 +1,44 @@
+document.addEventListener('DOMContentLoaded', pushOldFavosToArray);
+document.addEventListener('DOMContentLoaded', favsMode);
 
-const consultAndClean =()=>{
-    if(favoritos.length != 0){
-        document.getElementsByClassName('solapaMain')[0].childNodes[3].innerHTML = '';
-  };    
+
+
+
+
+
+
+const mainFavoritos = document.getElementsByClassName('solapaMain')[0].childNodes[3];
+
+
+function favsMode(){
+    if(getMode === 'true'){
+        darkModeFavs()
+    }
 }
 
-consultAndClean()
 
 
+function pushOldFavosToArray(){
+    if(storageFavoritos){
+        favoritos = [...storageFavoritos];
+        printFavos()
+    }
+}
 //consumir data de favoritos y mostrar gif en pantalla// 
 
-const printFavos =(createTools, likeBtn)=>{
+const printFavos =()=>{
+
+    const mainFavoritos = document.getElementsByClassName('solapaMain')[0].childNodes[3];
+
+    mainFavoritos.innerHTML= '' ;
+
     let mapFavos = favoritos.map(impFavs =>{ 
 
         imgId = impFavs.id;
         title = impFavs.title;
         author = impFavs.author;
 
-        let favBox = document.getElementById('favBox');
+        
         favBox.classList.remove('solapaBox');
         
         let boxFav = document.createElement('div');
@@ -47,4 +68,36 @@ const printFavos =(createTools, likeBtn)=>{
         
 }
 
-printFavos(createTools, likeBtn);
+
+
+
+/* DarkMode FAVORITOS    */
+
+darkModeBtn.addEventListener('click', darkModeFavs);
+lightMode.addEventListener('click', lightModeFavs)
+
+
+function darkModeFavs(){    
+    localStorage.setItem('Dark Mode', true);
+    logo.src="./assets/Logo-modo-noc.svg";
+    darkModeBtn.classList.add('none');    
+    lightMode.classList.remove('none');
+    header.classList.add('darkModeHeader');
+    trending.classList.add('darkModeTdn');
+    sliderTitleAndParagraph.classList.add('darkModeTitle');
+    favoritosTitle.style.color = '#ffffff';   
+    solapaMain.style.background = '#37383C';
+}
+
+
+function lightModeFavs(){
+    localStorage.setItem('Dark Mode', false);
+    logo.src="./assets/logo-desktop.svg";
+    lightMode.classList.add('none');
+    darkModeBtn.classList.remove('none');
+    header.classList.remove('darkModeHeader');
+    trending.classList.remove('darkModeTdn');
+    sliderTitleAndParagraph.classList.remove('darkModeTitle');
+    favoritosTitle.style.color = '#572EE5';   
+    solapaMain.style.background = '#ffffff';
+}

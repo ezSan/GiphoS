@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', pushOldIds);
 
+
 function pushOldIds() {
 
     if (gifosIdsStorage) {
@@ -24,6 +25,8 @@ let comprobeLs = () => {
         })
     }
 };
+
+
 
 /* comprobeLs() */
 
@@ -244,8 +247,8 @@ let mViewBtn = (cajitaTools,) => {
 //Insertar caja de herramientas en cada caja que contenga gif
 
 let createTools = (hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn) => {
+    
     let cajitaTools = document.createElement('div');
-
     cajitaTools.classList.add('cajitaTools');
 
 
@@ -294,9 +297,6 @@ function addClassHidden(e) {
 
 
 
-/* function  setDayOrNightMode (){
-    if (ge)
-} */
 
 
 

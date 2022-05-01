@@ -10,32 +10,36 @@
 </head>
 
 <body>
-    <header>
-        <div class="headerCtn">
+    <header id="header">
+        <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
-                <img class='logo' src="./assets/logo-desktop.svg" alt="logo">
+               <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
             </div>
             <nav class="navBar">
-                <ul class="ulNav">
-                    <li>
-                        <a class="navBarLink">MODO NOCTURNO</a>
+                <ul class="ulNav" id="ulNav">
+                    <li class="liNavBar" >
+                        <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
                     </li>
-                    <li>
+                    <li class="liNavBar">
+                        <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
+                    </li>
+                    <li class="liNavBar">
                         <a class="navBarLink" href="./favs.html">FAVORITOS</a>
                     </li>
-                    <li>
+                    <li class="liNavBar">
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
                 <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
             </nav>
         </div>
-    </header>
+
+    </header> 
     <main>
-        <div class="solapaMain">
+        <div class="solapaMain" id = 'solapaMain'>
             <div class="solapaTitle">
-                <img src="./assets/icon-favoritos.svg" alt="corazon">
-                <h2>Favoritos</h2>
+                <img src="./assets/icon-favoritos.svg" alt="corazon" id="heartFavs">
+                <h2 id="favoritosTitle">Favoritos</h2>
             </div>
             <div class="solapaBox gifContainer" id="favBox">
                 <div class="withoutGifs"><img id='favCtn' src="./assets/icon-fav-sin-contenido.svg" alt="corazontriste" id='favCtn'>
@@ -46,11 +50,16 @@
             </div>
 
         </div>
-        <div class="trending ">
-            <h2>Trending GiFOS</h2>
-            <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
+        <div class="trending" id="trending">
+
+            <div class="sliderTitleAndParagraph" id="sliderTitleAndParagraph">
+                <h2 class="blueCenteredTitle" id="">Trending GiFOS</h2>
+                <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
+            </div>
+
+
             <div class="slider">
-                <div class="prev" id="prev">
+                <div class="prev leftBtn" id="prev">
                     <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
                         onclick="moveLeft()">
                 </div>
@@ -60,6 +69,7 @@
                         onclick="moveRight()">
                 </div>
             </div>
+
         </div>
 
     </main>
@@ -79,9 +89,10 @@
 
     <!-- Scripts -->
     <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/variables.js"></script>
     <script src="./scripts/trendings.js"></script>
-    <script src="./scripts/slider.js"></script>
-    <script src="scripts/favs.js"></script>
+    <script src="./scripts/slider.js"></script>    
+    <script src="./scripts/favs.js"></script>
 
 
 

@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded' , trendingSearchBar)
+
+
+
 function trendingSearchBar() {
     fetch(urlEndpointTermTrending)
         .then(trendingTerms => trendingTerms.json())
@@ -9,7 +13,7 @@ function trendingSearchBar() {
         )
 }
 
-trendingSearchBar()
+
 
 
 
@@ -34,7 +38,7 @@ trendingSuggestionsBox.addEventListener('click', captureTermAndSearch => {
 
 })
 
-console.log('ok')
+console.log('ok');
 
 
 

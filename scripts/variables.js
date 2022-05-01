@@ -1,5 +1,6 @@
 //ApiKey giphy
 const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb"; 
+let getMode = localStorage.getItem('Dark Mode');
 
 
 //DarkMode
@@ -12,7 +13,10 @@ const trending = document.getElementById('trending');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const mainTitle = document.getElementById('mainTitle');
+const logo = document.getElementById('logo')
 const sliderTitleAndParagraph = document.getElementById('sliderTitleAndParagraph');
+const liNavBar = document.getElementsByClassName('liNavBar');  
+const lightMode = document.getElementById('lightMode');
 /* Variables webcam page */
 const video = document.getElementById('videoBox');
 const previewAndVideoBox = document.getElementById('previewAndVideoBox');
@@ -50,6 +54,11 @@ const urlEndpointTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${ap
 const urlEndpointTermTrending = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
 const urlEndpointUpload = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
 const urlEndpointSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=24&q=`;
+
+/* Favoritos */
+const favoritosTitle = document.getElementById('favoritosTitle');
+const favBox = document.getElementById('favBox');
+const solapaMain = document.getElementById('solapaMain');
 
 
 
