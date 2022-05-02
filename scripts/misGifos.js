@@ -1,4 +1,11 @@
-window.addEventListener('DOMContentLoaded', requestGifData)
+window.addEventListener('DOMContentLoaded', requestGifData);
+window.addEventListener('DOMContentLoaded', misGifosMode)
+
+function misGifosMode(){
+    if(getMode === 'true'){
+        darkModeMisGifos()
+    }
+}
 
 function requestGifData() {
 
@@ -13,15 +20,6 @@ function requestGifData() {
 
 }
 
-
-
-
-
-
-
-
-
-
 function searchId(gifId) {
 
     const urlEndpointIdSearch = `https://api.giphy.com/v1/gifs/${gifId}?api_key=${apiKey}`
@@ -35,12 +33,6 @@ function searchId(gifId) {
         })
 
 }
-
-
-
-
-
-
 
 function showCreatedGifos(gifoUrl) {
 
@@ -60,18 +52,30 @@ function showCreatedGifos(gifoUrl) {
 
 }
 
+function darkModeMisGifos(){
+    localStorage.setItem('Dark Mode', true);    
+    logo.src="./assets/Logo-modo-noc.svg";
+    darkModeBtn.classList.add('none');
+    lightMode.classList.remove('none');
+    trending.classList.add('darkModeTdn');
+    header.classList.add('darkModeHeader');
+    sliderTitleAndParagraph.classList.add('darkModeTitle');
+    favoritosTitle.style.color = '#ffffff'; 
+    solapaMain.style.background = '#37383C';
+}
+
+function lightModeMisGifos(){
+    localStorage.setItem('Dark Mode', false);    
+    logo.src="./assets/logo-desktop.svg";
+    lightMode.classList.add('none');
+    darkModeBtn.classList.remove('none');
+    header.classList.remove('darkModeHeader');
+    trending.classList.remove('darkModeTdn');
+    sliderTitleAndParagraph.classList.remove('darkModeTitle');
+    favoritosTitle.style.color = '#572EE5';   
+    solapaMain.style.background = '#ffffff';
+}
 
 
-
-
-/* function misGifosEmpty(){
-    if(gifosIdsStorage){       
-        emptyMyGifos.classList.add('none');
-        emptyMyGifos.classList.remove('withoutGifs');
-        requestGifData()        
-    } else{
-        console.log('Creá un Gif así aparece en éste solapa :)')
-    }
-} */
-
-/* push ids in local storage */
+darkModeBtn.addEventListener('click', darkModeMisGifos);
+lightMode.addEventListener('click', lightModeMisGifos);

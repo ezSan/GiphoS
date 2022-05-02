@@ -593,6 +593,10 @@ footer {
   margin: 1%;
 }
 
+.favoritosTitle {
+  color: #572EE5;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;

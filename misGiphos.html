@@ -11,32 +11,37 @@
 
 <body>
     <header>
-        <div class="headerCtn">
-            <div class="logoCtn">
-                <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
+        <header id="header">
+            <div class="headerCtn" id="headerCtn">
+                <div class="logoCtn">
+                    <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
+                </div>
+                <nav class="navBar">
+                    <ul class="ulNav" id="ulNav">
+                        <li class="liNavBar" >
+                            <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
+                        </li>
+                        <li class="liNavBar">
+                            <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
+                        </li>
+                        <li class="liNavBar">
+                            <a class="navBarLink" href="./favs.html">FAVORITOS</a>
+                        </li>
+                        <li class="liNavBar">
+                            <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
+                        </li>
+                    </ul>
+                    <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
+                </nav>
             </div>
-            <nav class="navBar">
-                <ul class="ulNav">
-                    <li>
-                        <a class="navBarLink">MODO NOCTURNO</a>
-                    </li>
-                    <li>
-                        <a class="navBarLink" href="./favs.html">FAVORITOS</a>
-                    </li>
-                    <li>
-                        <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
-                    </li>
-                </ul>
-                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
-            </nav>
-        </div>
-    </header>
+    
+        </header>
     <main>
         
-        <div class="solapaMain">
+        <div class="solapaMain" id = 'solapaMain'>
             <div class="solapaTitle">
                 <img src="./assets/icon-mis-gifos.svg" alt="Icono Mis gifos">
-                <h2>Mis GIFOS</h2>
+                <h2 class="blueCenteredTitle" id="favoritosTitle">Mis GIFOS</h2>
                 <div class="withoutGifs" id="emptyMyGifos">
                     <img src="./assets/icon-mis-gifos-sin-contenido.svg" alt="">
                     <p>¡Anímate a crear tu primer GIFO!</p>
@@ -50,12 +55,18 @@
             </div>
         </div>
 
-        <div class="trending ">
-            <h2>Trending GiFOS</h2>
-            <p class="themes">Mira los últimos Gifo de nuestra comunidad.</p>
+        <div class="trending" id="trending">
+
+            <div class="sliderTitleAndParagraph" id="sliderTitleAndParagraph">
+                <h2 class="blueCenteredTitle" id="">Trending GiFOS</h2>
+                <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
+            </div>
+
+
             <div class="slider">
                 <div class="prev leftBtn" id="prev">
-                    <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg" onclick="moveLeft()">
+                    <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
+                        onclick="moveLeft()">
                 </div>
                 <div id="trending-ctn" class="sliderGifContainer"> </div>
                 <div class="next" id="next">
@@ -63,6 +74,7 @@
                         onclick="moveRight()">
                 </div>
             </div>
+
         </div>
     </main>
     <footer>
