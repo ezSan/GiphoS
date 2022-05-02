@@ -58,7 +58,6 @@ function setLightMode() {
     btnSearch.src = "./assets/icon-search.svg";
     lightMode.classList.add('none');
     darkModeBtn.classList.remove('none');
-
     main.classList.remove('darkModeFirst');
     trending.classList.remove('darkModeTdn');
     form.classList.remove('darkModeForm');
