@@ -1,7 +1,6 @@
 
-header{
-    border-top: 4px solid $color1;    
-    
+body{
+    border-top: 4px solid $color1;        
 }
 
 
@@ -43,14 +42,15 @@ header{
  li{
     
     color: $color1;      
-    font-family: Montserrat-bold ;
+   
     text-decoration: none;
     text-transform: none; 
 
 
     :hover{
         text-decoration:underline $color2;
-        font-size: large;
+        
+      /*   font-size: large; */
         cursor:pointer;   
      }
 }
@@ -59,6 +59,8 @@ header{
 a{
     text-decoration: none;
     text-transform: none;
+    font-size: calc(11px + 0.13888889vw);
+   
 }
 
 

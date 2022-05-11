@@ -1,27 +1,29 @@
 .container{
-    width: 60%; height:25em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    border: blueviolet 3px solid; 
+    width: 55%; height:25em;
+   /*  margin-left: auto;
+    margin-right: auto; */
+    margin-top: 2%;
+    /* margin-bottom: 5%; */
+    border: $color1 3px solid; 
     text-align: center; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-y:hidden;
-    position: relative;
+    position: relative;    
+}
+
+.slideParagraph{
+    font-size: x-large;
 }
 
 
+.darkModeContainer{
+    border-color: #ffffff;
+    color:#ffff;
 
-.titleSlider{
-    font-size: xx-large;
-    color: $color1;
-    span{
-        color: $color2;
-    }
-    
 }
+
 .circleWithNumber{
     display:flex;
     justify-content: center;
@@ -34,12 +36,29 @@
 
 .num{
     border-radius: 50%;    
-    border: 0.1em solid $color1;
+    border: 0.13em solid $color1;
     width: 1.5em;
-    text-align: center;
+    height: 1.5em;
+    margin: 0.5%;
     margin: 0.3em;
     color: $color1;
+    text-align: center;
+    font-size:1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
+
+
+.darkModeNum{
+    color: #ffffff;
+    border: 0.13em solid #ffffff;
+}    
+
+.darkModeNumActive{
+    color:$bgColorDark1;
+    background-color: #ffffff;
+}
 
 .purpleLine{
     width: 70%;
@@ -51,13 +70,46 @@
     margin-top: 0.1em;
 }
 
+.darkLine{
+    background-color: #ffffff;
+}
+
 .inputWebcamAcces {
-    width: 10%;
-    height: 2em;
-    margin-left: 45%;
-    margin-right: 45%;
+    width: 12%;
+    height: 3.5em;
+    margin-left: 44%;
+    margin-right: 44%;
     margin-top: 1em;
-    border-radius: 50%;
+    border-radius: 12em;
+    border-color: $color1;
+    color: $color1;
+    
+    
+    
+    &:hover{
+        background-color: $color1;
+        color: white;
+    }
+}
+
+
+.buttonDarkMode{
+    background-color:$bgColorDark1;
+    color:#ffffff;
+    border-color: #ffffff;
+    &:hover{
+        background-color: #ffffff;
+        color:$bgColorDark1;
+
+    }
+}
+
+.recAgain{
+    color:#ffffff;
+    &:hover{
+        border-bottom: $color2 2px solid;
+        cursor: pointer;
+    }
 }
 
 .newStep{
@@ -134,11 +186,33 @@
     }
 }
 
-
-.hovered{
-    &:hover{
-        background-color: $color1;
-        color: white;
-    }
+.principalMisGifos{
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.leftBoxWithCamera{
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+
+.luzCamara{
+   position: relative;
+   margin-bottom: 7%;
+}
+
+.rightBoxWithFilm{
+   align-self: flex-end;
+   margin: 0.8em;
+   
+   
+}
+
+
+/* DarkMode */
 

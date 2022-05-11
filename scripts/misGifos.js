@@ -57,8 +57,9 @@ function darkModeMisGifos(){
     logo.src="./assets/Logo-modo-noc.svg";
     darkModeBtn.classList.add('none');
     lightMode.classList.remove('none');
+    body.classList.add('darkMode');
     trending.classList.add('darkModeTdn');
-    header.classList.add('darkModeHeader');
+    /* header.classList.add('darkModeHeader'); */
     sliderTitleAndParagraph.classList.add('darkModeTitle');
     favoritosTitle.style.color = '#ffffff'; 
     solapaMain.style.background = '#37383C';
@@ -69,7 +70,7 @@ function lightModeMisGifos(){
     logo.src="./assets/logo-desktop.svg";
     lightMode.classList.add('none');
     darkModeBtn.classList.remove('none');
-    header.classList.remove('darkModeHeader');
+    body.classList.remove('darkMode')
     trending.classList.remove('darkModeTdn');
     sliderTitleAndParagraph.classList.remove('darkModeTitle');
     favoritosTitle.style.color = '#572EE5';   

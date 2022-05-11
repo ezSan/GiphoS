@@ -1,3 +1,8 @@
+* {
+  font-family: 'Montserrat-Bold', sans-serif;
+  letter-spacing: 0;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -10,7 +15,25 @@
   visibility: visible;
 }
 
-header {
+main {
+  margin-bottom: 2%;
+}
+
+.darkMode {
+  background-color: #37383C;
+  color: #ffffff;
+  border-top: 4px solid #222326;
+}
+
+.darkMode a {
+  color: #FFFFFF;
+}
+
+.darkMode li {
+  color: #ffffff;
+}
+
+body {
   border-top: 4px solid #572EE5;
 }
 
@@ -60,7 +83,6 @@ header {
 
 li {
   color: #572EE5;
-  font-family: Montserrat-bold;
   text-decoration: none;
   text-transform: none;
 }
@@ -68,13 +90,14 @@ li {
 li :hover {
   -webkit-text-decoration: underline #50E3C2;
           text-decoration: underline #50E3C2;
-  font-size: large;
+  /*   font-size: large; */
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
   text-transform: none;
+  font-size: calc(11px + 0.13888889vw);
 }
 
 .navBarLink {
@@ -100,9 +123,8 @@ a {
 }
 
 .mainTitle {
-  font-size: xx-large;
+  font-size: 2.5rem;
   line-height: 50px;
-  font-family: 'Montserrat-Bold', sans-serif;
   color: #572EE5;
   text-align: center;
 }
@@ -227,7 +249,6 @@ a {
 .themes {
   color: #572EE5;
   text-align: center;
-  font-family: 'Montserrat-Medium', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,7 +342,6 @@ a {
   height: 3.4722222vw;
   border: 1px solid #572EE5;
   border-radius: 19.685039vw;
-  font-family: "Montserrat-Bold", sans-serif;
   font-size: calc(12px + 0.27777778vw);
   color: #572EE5;
 }
@@ -368,12 +388,13 @@ a {
 }
 
 .container {
-  width: 60%;
+  width: 55%;
   height: 25em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  border: blueviolet 3px solid;
+  /*  margin-left: auto;
+    margin-right: auto; */
+  margin-top: 2%;
+  /* margin-bottom: 5%; */
+  border: #572EE5 3px solid;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,13 +410,13 @@ a {
   position: relative;
 }
 
-.titleSlider {
-  font-size: xx-large;
-  color: #572EE5;
+.slideParagraph {
+  font-size: x-large;
 }
 
-.titleSlider span {
-  color: #50E3C2;
+.darkModeContainer {
+  border-color: #ffffff;
+  color: #ffff;
 }
 
 .circleWithNumber {
@@ -413,11 +434,33 @@ a {
 
 .num {
   border-radius: 50%;
-  border: 0.1em solid #572EE5;
+  border: 0.13em solid #572EE5;
   width: 1.5em;
-  text-align: center;
+  height: 1.5em;
+  margin: 0.5%;
   margin: 0.3em;
   color: #572EE5;
+  text-align: center;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.darkModeNum {
+  color: #ffffff;
+  border: 0.13em solid #ffffff;
+}
+
+.darkModeNumActive {
+  color: #37383C;
+  background-color: #ffffff;
 }
 
 .purpleLine {
@@ -430,13 +473,44 @@ a {
   margin-top: 0.1em;
 }
 
+.darkLine {
+  background-color: #ffffff;
+}
+
 .inputWebcamAcces {
-  width: 10%;
-  height: 2em;
-  margin-left: 45%;
-  margin-right: 45%;
+  width: 12%;
+  height: 3.5em;
+  margin-left: 44%;
+  margin-right: 44%;
   margin-top: 1em;
-  border-radius: 50%;
+  border-radius: 12em;
+  border-color: #572EE5;
+  color: #572EE5;
+}
+
+.inputWebcamAcces:hover {
+  background-color: #572EE5;
+  color: white;
+}
+
+.buttonDarkMode {
+  background-color: #37383C;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.buttonDarkMode:hover {
+  background-color: #ffffff;
+  color: #37383C;
+}
+
+.recAgain {
+  color: #ffffff;
+}
+
+.recAgain:hover {
+  border-bottom: #50E3C2 2px solid;
+  cursor: pointer;
 }
 
 .newStep {
@@ -508,11 +582,36 @@ a {
   border-bottom: #50E3C2 2px solid;
 }
 
-.hovered:hover {
-  background-color: #572EE5;
-  color: white;
+.principalMisGifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+.leftBoxWithCamera {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.luzCamara {
+  position: relative;
+  margin-bottom: 7%;
+}
+
+.rightBoxWithFilm {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0.8em;
+}
+
+/* DarkMode */
 footer {
   height: 5%;
 }
@@ -741,10 +840,12 @@ footer {
   background-color: #37383C;
 }
 
-.darkModeHeader {
-  background-color: #37383C;
-}
-
+/* .darkModeHeader{
+    background-color: $bgColorDark1;
+    a{
+        color:#FFFFFF
+    }
+} */
 .darkModeForm {
   background-color: #37383C;
   border: 1px #fff solid;
@@ -757,7 +858,6 @@ footer {
 
 .darkModeTitle {
   color: #FFFFFF;
-  font-family: Montserrat-Bold;
 }
 
 .darkModeSecond {
@@ -769,10 +869,6 @@ footer {
 }
 
 .darkModeSlider h2, .darkModeSlider p {
-  color: #FFFFFF;
-}
-
-.navBarDarkMode {
   color: #FFFFFF;
 }
 /*# sourceMappingURL=styles.css.map */

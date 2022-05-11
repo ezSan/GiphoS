@@ -1,9 +1,20 @@
+window.addEventListener('DOMContentLoaded', webcamMode)
 
+
+function webcamMode(){
+  if(getMode === 'true'){
+      darkModeWebcam()
+  }
+}
 
 /* request permission to access the media stream */
 
 function webcamAccessAndStream() {
-  step1.classList.add('newStep');
+
+  if (step1.classList.contains('darkModeNum')) {
+    step1.classList.add('darkModeNumActive')
+  } else { step1.classList.add('newStep') }
+
   slide1.classList.add('none');
   slide2.classList.remove('none');
 
@@ -19,13 +30,20 @@ function webcamAccessAndStream() {
 
       comenzar.classList.add('none');
 
-      step1.classList.remove('newStep');
-      step2.classList.add('newStep');
+
+      if (step1.classList.contains('darkModeNumActive')) {
+        step1.classList.remove('darkModeNumActive')
+      } else { step1.classList.remove('newStep') }
+
+      if (step2.classList.contains('darkModeNum')) {
+        step2.classList.add('darkModeNumActive')
+      } else { step2.classList.add('newStep'); }
+
       slide2.classList.add('none');
       previewAndVideoBox.classList.remove('none');
       slideWithInstructions.classList.add('none');
-      btnRec.classList.remove('none'); 
-      
+      btnRec.classList.remove('none');
+
       recorder = new RecordRTCPromisesHandler(stream, {
         type: 'gif',
         mimeType: 'video/webm',
@@ -34,7 +52,7 @@ function webcamAccessAndStream() {
         quality: 10,
         width: 360,
         hidden: 240,
-      
+
       });
     })
 }
@@ -51,24 +69,32 @@ const uploadToGiphy = async (fileGif) => {
 
     let newGif = response.json();
 
-    newGif.then(newGif => { 
-      
+    newGif.then(newGif => {
+
       console.log(gifCreatedIds)
-      
-      
+
+
 
       let idGiphoUploaded = newGif.data.id;
 
-      console.log(idGiphoUploaded);        
-      
+      console.log(idGiphoUploaded);
+
       gifCreatedIds.push(idGiphoUploaded);
 
 
-      
+
       localStorage.setItem('MyGifosIds', JSON.stringify(gifCreatedIds));
-      
+
       overlayBoxPending.classList.add('none');
       overlayBoxOk.classList.remove('none');
+
+      if (step3.classList.contains('darkModeNum')) {
+        step3.classList.add('darkModeNumActive');
+        step2.classList.remove('darkModeNumActive')
+      } else {
+        step3.classList.add('newStep');
+        step2.classList.remove('newStep')
+      }
 
     })
 
@@ -117,6 +143,58 @@ recordAgain.addEventListener('click', recordAgain => {
   uploadingGifOverlay.classList.add('none');
 
 })
+
+/* darkmode */
+
+darkModeBtn.addEventListener('click', darkModeWebcam);
+lightMode.addEventListener('click', lightModeWebcam)
+
+
+function darkModeWebcam() {
+  localStorage.setItem('Dark Mode', true);
+  logo.src = "./assets/Logo-modo-noc.svg";  
+  mainTitle.classList.add('darkModeTitle');  
+  lightMode.classList.remove('none');
+  darkModeBtn.classList.add('none');
+  cameraImg.src = "./assets/camara-modo-noc.svg";
+  peliculaImg.src = './assets/pelicula-modo-noc.svg';
+  container.classList.add('darkModeContainer');
+  comenzar.classList.add('buttonDarkMode');
+  btnRec.classList.add('buttonDarkMode');
+  btnStop.classList.add('buttonDarkMode');
+  uploadGiphoButton.classList.add('buttonDarkMode');
+  body.classList.add('darkMode');
+  purpleLine.classList.add('darkLine');
+  step1.classList.add('darkModeNum');
+  step2.classList.add('darkModeNum');
+  step3.classList.add('darkModeNum');
+  recordAgain.classList.remove('recordAgain');
+  recordAgain.classList.add('recAgain');
+  
+}
+
+
+function lightModeWebcam(){
+  localStorage.setItem('Dark Mode', false);
+  logo.src="./assets/logo-desktop.svg";
+  mainTitle.classList.remove('darkModeTitle');
+  cameraImg.src = "./assets/camara.svg";
+  peliculaImg.src = './assets/pelicula.svg';
+  lightMode.classList.add('none');
+  darkModeBtn.classList.remove('none');
+  container.classList.remove('darkModeContainer');
+  comenzar.classList.remove('buttonDarkMode');
+  btnRec.classList.remove('buttonDarkMode');
+  btnStop.classList.remove('buttonDarkMode');
+  uploadGiphoButton.classList.remove('buttonDarkMode');
+  body.classList.remove('darkMode');
+  purpleLine.classList.remove('darkLine');
+  step1.classList.remove('darkModeNum');
+  step2.classList.remove('darkModeNum');
+  step3.classList.remove('darkModeNum');
+  recordAgain.classList.add('recordAgain');
+  recordAgain.classList.remove('recAgain');
+}
 
 
 

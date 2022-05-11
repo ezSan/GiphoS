@@ -7,24 +7,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&
-    display=swap" rel="stylesheet">
+
+    <link>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="./styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiphoS</title>
 </head>
 
-<body>
+<body id="body">
     <header id="header">
         <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
-               <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
+                <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo"></a>
             </div>
             <nav class="navBar">
                 <ul class="ulNav" id="ulNav">
-                    <li class="liNavBar" >
-                        <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
+                    <li class="liNavBar">
+                        <a class="navBarLink none" id="lightMode">MODO DIURNO</a>
                     </li>
                     <li class="liNavBar">
                         <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
@@ -36,15 +41,17 @@
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
-                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a></div>
+                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"></a>
+                </div>
             </nav>
         </div>
 
-    </header> 
+    </header>
     <main id="main">
         <section class="first" id="first">
 
-            <h2 class="mainTitle" id="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span></h2>
+            <h2 class="mainTitle" id="mainTitle">Inspirate, busca, guarda, y crea <br> los mejores <span>GIFOS</span>
+            </h2>
             <img src="./assets/ilustra_header.svg" alt="dibujo">
 
 
@@ -52,7 +59,8 @@
 
 
                 <div class="cajaInput" id='cajaInput'>
-                    <input id="search" class="search" type="text" autocomplete="off" placeholder="Busca GiFOS y más..." />
+                    <input id="search" class="search" type="text" autocomplete="off"
+                        placeholder="Busca GiFOS y más..." />
                     <img src="./assets/icon-search.svg" alt="lupa" class='lupaOrClose' id="btnSearch">
                     <img src="./assets/close.svg" alt="closeButton" class='closeButton none' id="closeButton"
                         onclick="closeSuggestionsBox()">
@@ -77,8 +85,8 @@
                     <h2 class="blueCenteredTitle" id="">Trending GiFOS</h2>
                     <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
                 </div>
-    
-    
+
+
                 <div class="slider">
                     <div class="prev leftBtn" id="prev">
                         <img src="./assets/button-slider-left.svg" alt="back_slider" id="prevStepImg"
@@ -90,7 +98,7 @@
                             onclick="moveRight()">
                     </div>
                 </div>
-    
+
             </div>
 
 
@@ -121,6 +129,7 @@
     <script src="/scripts/trendingBar.js"></script>
     <script src='./scripts/autocomplete.js'></script>
     <script src="./scripts/searchbtn.js"></script>
+
 
 
 

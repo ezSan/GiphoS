@@ -1,14 +1,17 @@
 .darkModeTdn{
-    background-color: $bgColorDark2;
+    background-color: $bgColorDarkTrending;
 }  
 
 .darkModeFirst{
     background-color: $bgColorDark1;   
 }
 
-.darkModeHeader{
+/* .darkModeHeader{
     background-color: $bgColorDark1;
-}
+    a{
+        color:#FFFFFF
+    }
+} */
 
 .darkModeForm {
     background-color: $bgColorDark1;
@@ -21,8 +24,7 @@
 }
 
 .darkModeTitle{
-    color: #FFFFFF;
-    font-family: Montserrat-Bold;
+    color: #FFFFFF;   
 }
 
 
@@ -42,6 +44,3 @@
     }
 }
 
-.navBarDarkMode{
-    color:#FFFFFF;
-}

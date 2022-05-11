@@ -4,6 +4,7 @@ let getMode = localStorage.getItem('Dark Mode');
 
 
 //DarkMode
+const body = document.getElementById('body');
 const first = document.getElementById('first');
 const darkModeBtn = document.getElementById('darkMode');
 const headerCtn = document.getElementById('headerCtn');
@@ -17,6 +18,13 @@ const logo = document.getElementById('logo')
 const sliderTitleAndParagraph = document.getElementById('sliderTitleAndParagraph');
 const liNavBar = document.getElementsByClassName('liNavBar');  
 const lightMode = document.getElementById('lightMode');
+const cameraImg = document.getElementById('cameraImg')
+const peliculaImg = document.getElementById('peliculaImg');
+const container = document.getElementById('container');
+const purpleLine = document.getElementById('purpleLine');
+
+
+
 /* Variables webcam page */
 const video = document.getElementById('videoBox');
 const previewAndVideoBox = document.getElementById('previewAndVideoBox');
@@ -30,10 +38,13 @@ const slide2 = document.getElementById('slide2');
 const comenzar = document.getElementById('comenzar');
 const step1 = document.getElementById('step1');
 const step2 = document.getElementById('step2');
+const step3 = document.getElementById('step3');
 const uploadingGifOverlay = document.getElementById('uploadingGifOverlay');
 const overlayBoxPending = document.getElementById('overlayBoxPending');
 const overlayBoxOk = document.getElementById('overlayBoxOk');
 const recordAgain = document.getElementById('recordAgain');
+const inputWebcamAcces = document.getElementsByClassName('inputWebcamAcces');
+const buttonCamera = document.getElementsByName('webcamButton');
 /* gif file ready to upload whit api endpoint */
 let fileToUpload;
 /* display search results in DOM */
