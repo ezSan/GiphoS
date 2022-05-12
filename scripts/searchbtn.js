@@ -17,6 +17,8 @@ searchInput.addEventListener('keydown', e => {
     }
 });
 
+verMas.addEventListener('click', showMoreGifs)
+
 
 
 
@@ -49,13 +51,13 @@ function mostrarResultadosEnDOM(resultadosDeBusqueda) {
     for (i = 0; i < resultadosDeBusqueda.length; i++) {
 
         let cajaGif = document.createElement('div');
-        if (i >= 12) {
-            cajaGif.classList.add('none');
-            cajaGif.classList.add('hiddenOnlyBoxes');
-        }
         cajaGif.classList.add('cajaGif');
 
-        searchResultsContainer.insertAdjacentElement('afterbegin', cajaGif)
+
+        if (i >= 12) {
+            searchResultsContainerHidden.insertAdjacentElement('afterbegin', cajaGif)
+        } else { searchResultsContainer.insertAdjacentElement('afterbegin', cajaGif); }
+
 
 
         title = resultadosDeBusqueda[i].title;
@@ -73,6 +75,7 @@ function mostrarResultadosEnDOM(resultadosDeBusqueda) {
         cajaGif.appendChild(gif);
         cajaGif.addEventListener('mouseover', removeClassHidden);
         cajaGif.addEventListener('mouseout', addClassHidden);
+
         let hiddenOverlay = document.createElement('div');
         hiddenOverlay.classList.add('hiddenOverlay');
         hiddenOverlay.classList.add('hidden');
@@ -82,32 +85,7 @@ function mostrarResultadosEnDOM(resultadosDeBusqueda) {
         createTools(hiddenOverlay, likeBtn, imgId, dwnBtn, mViewBtn);
 
 
-
     }
-}
-
-
-verMas.addEventListener('click', showMore)
-
-
-function showMore() {
-    let hiddenBoxes = document.getElementsByClassName('hiddenOnlyBoxes');
-    hiddenBoxes.item(0).classList.remove('none');
-    hiddenBoxes.item(1).classList.remove('none');
-    hiddenBoxes.item(2).classList.remove('none');
-    hiddenBoxes.item(3).classList.remove('none');
-    hiddenBoxes.item(4).classList.remove('none');
-    hiddenBoxes.item(5).classList.remove('none');
-    hiddenBoxes.item(6).classList.remove('none');
-    hiddenBoxes.item(7).classList.remove('none');
-    hiddenBoxes.item(8).classList.remove('none');
-    hiddenBoxes.item(9).classList.remove('none');
-    hiddenBoxes.item(10).classList.remove('none');
-    hiddenBoxes.item(11).classList.remove('none');
-
-    verMas.classList.add('none');
-    window.scrollTo(200, 450);
-
 }
 
 let addTitle = (userSearch) => {
@@ -123,3 +101,10 @@ let addTitle = (userSearch) => {
     }
 }
 
+
+
+function showMoreGifs(){
+    searchResultsContainerHidden.classList.add('gifContainer');
+    searchResultsContainerHidden.classList.remove('noneMode');
+    verMas.classList.add('none');
+}

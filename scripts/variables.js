@@ -51,6 +51,7 @@ let fileToUpload;
 const searchInput = document.querySelector('#search');
 const btnSearch = document.getElementById("btnSearch");
 const searchResultsContainer = document.getElementById('searchResultsContainer');
+const searchResultsContainerHidden = document.getElementById('searchResultsContainerHidden');
 const verMas = document.getElementById('verMas');
 /* variables DOM slider trending buttons*/
 const prev = document.getElementById('prev');

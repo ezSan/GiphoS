@@ -3,6 +3,10 @@
   letter-spacing: 0;
 }
 
+.noneMode {
+  display: none;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -299,6 +303,7 @@ a {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
+  margin-top: 0.2%;
 }
 
 .cajaGif {
@@ -686,10 +691,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-}
-
-.gifContainer {
-  margin: 1%;
 }
 
 .favoritosTitle {
