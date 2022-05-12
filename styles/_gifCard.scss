@@ -2,8 +2,7 @@
 
 
 .gifContainer{
-    
- 
+     
     display: flex;
     flex-direction: row;
     justify-content: space-around;   
@@ -11,18 +10,17 @@
     width: 60%;
     margin-left:20%;
     margin-right: 20%;
+    margin-top: 0.2%;
       
   }
 
 
 .cajaGif{
-    margin-top: 1%;
-    
-  
+    margin-top: 1%;  
     width: 12em;
     height: 10em;  
     display: flex;
-    position: relative;
+    position: relative;   
 }
 
 .boxMyGifo{
