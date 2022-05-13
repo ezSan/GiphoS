@@ -87,14 +87,14 @@ body {
 
 li {
   color: #572EE5;
+  font-weight: 700;
   text-decoration: none;
   text-transform: none;
 }
 
 li :hover {
-  -webkit-text-decoration: underline #50E3C2;
-          text-decoration: underline #50E3C2;
-  /*   font-size: large; */
+  -webkit-text-decoration: underline #50E3C2 0.2em;
+          text-decoration: underline #50E3C2 0.2em;
   cursor: pointer;
 }
 
@@ -166,8 +166,8 @@ a {
 }
 
 .trendingSuggestion:hover {
-  -webkit-text-decoration: underline #50E3C2;
-          text-decoration: underline #50E3C2;
+  -webkit-text-decoration: underline #50E3C2 0.2em;
+          text-decoration: underline #50E3C2 0.2em;
   font-size: large;
   cursor: pointer;
 }
@@ -186,6 +186,19 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.verMasButton {
+  margin-top: 20px;
+  min-width: 115px;
+  width: 8.8194444vw;
+  min-height: 40px;
+  height: 3.4722222vw;
+  border: 1px solid #572EE5;
+  border-radius: 19.685039vw;
+  font-size: calc(12px + 0.27777778vw);
+  color: #572EE5;
+  font-weight: 700;
 }
 
 .second {
@@ -337,18 +350,6 @@ a {
 .result {
   width: 100%;
   height: 100%;
-}
-
-.verMasButton {
-  margin-top: 20px;
-  min-width: 115px;
-  width: 8.8194444vw;
-  min-height: 40px;
-  height: 3.4722222vw;
-  border: 1px solid #572EE5;
-  border-radius: 19.685039vw;
-  font-size: calc(12px + 0.27777778vw);
-  color: #572EE5;
 }
 
 .gifData {

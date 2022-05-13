@@ -7,7 +7,6 @@ body{
 .headerCtn{
     display: flex;
     margin-top: 1%;
-
 }
 
  .logoCtn{
@@ -35,22 +34,20 @@ body{
      align-items: center; 
      width: 60%;
      margin-right: 5%;
-     list-style: none;     
+     list-style: none;   
+
     
  } 
  
  li{
     
-    color: $color1;      
-   
+    color: $color1;     
+    font-weight: 700;    
     text-decoration: none;
     text-transform: none; 
 
-
     :hover{
-        text-decoration:underline $color2;
-        
-      /*   font-size: large; */
+        text-decoration:underline $color2 0.2em;     
         cursor:pointer;   
      }
 }
