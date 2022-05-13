@@ -65,6 +65,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
             fetch(url)
                 .then(content => content.json())
                 .then(content => {
+                    searchResultsContainer.innerHTML = '';
                     mostrarResultadosEnDOM(content.data);
                     closeSuggestionsBox();
                     addTitle(termSuggestion);
@@ -83,7 +84,7 @@ let displaySuggestionsToDOM = (suggestionsData) => {
 
         let lupita = document.createElement('img');
         lupita.src = 'assets/icon-search-mod-noc.svg';
-        suggestionsBox.insertAdjacentElement('afterbegin', lupita)
+        suggestionsBox.insertAdjacentElement('afterbegin', lupita);
 
 
         /*  displayCloseButton()*/

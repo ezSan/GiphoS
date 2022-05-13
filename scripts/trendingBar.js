@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded' , trendingSearchBar)
+document.addEventListener('DOMContentLoaded', trendingSearchBar);
 
 
 
@@ -6,7 +6,6 @@ function trendingSearchBar() {
     fetch(urlEndpointTermTrending)
         .then(trendingTerms => trendingTerms.json())
         .then(trendingTerms => {
-
             let arrayTerms = trendingTerms.data;
             CreateTrendingTearm(arrayTerms);
         }
@@ -24,7 +23,7 @@ function CreateTrendingTearm(arrayTerms) {
         trendingSuggestion.classList.add('trendingSuggestion');
         trendingSuggestionsBox.appendChild(trendingSuggestion);
         let term = arrayTerms[i];
-        trendingSuggestion.innerHTML = "" + term + "";
+        trendingSuggestion.innerHTML = "-" + term + "-";
     }
 }
 
