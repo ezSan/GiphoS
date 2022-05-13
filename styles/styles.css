@@ -189,6 +189,7 @@ a {
 }
 
 .verMasButton {
+  background-color: #ffffff;
   margin-top: 20px;
   min-width: 115px;
   width: 8.8194444vw;
@@ -199,6 +200,12 @@ a {
   font-size: calc(12px + 0.27777778vw);
   color: #572EE5;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.verMasButton:hover {
+  background-color: #572EE5;
+  color: #ffffff;
 }
 
 .second {
@@ -483,20 +490,13 @@ a {
   background-color: #ffffff;
 }
 
-.inputWebcamAcces {
-  width: 12%;
-  height: 3.5em;
-  margin-left: 44%;
-  margin-right: 44%;
-  margin-top: 1em;
-  border-radius: 12em;
-  border-color: #572EE5;
-  color: #572EE5;
-}
-
-.inputWebcamAcces:hover {
-  background-color: #572EE5;
-  color: white;
+.camAccess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .buttonDarkMode {
@@ -658,6 +658,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 1em;
 }
 
 .solapaTitle {

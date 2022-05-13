@@ -50,15 +50,19 @@ let fileToUpload;
 /* display search results in DOM */
 const searchInput = document.querySelector('#search');
 const btnSearch = document.getElementById("btnSearch");
+const searchTitle = document.getElementById('searchTitle');
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 const searchResultsContainerHidden = document.getElementById('searchResultsContainerHidden');
 const verMas = document.getElementById('verMas');
+const verMenos = document.getElementById('verMenos');
+
 /* variables DOM slider trending buttons*/
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const prevStepImg = document.getElementById('prevStepImg');
 const nextStepImg = document.getElementById('nextStepImg');
 const autocompleteBox = document.getElementById('autocompleteSuggestionsBox');
+
 /* trending Bar suggestions */
 const trendingSuggestionsBox = document.getElementById('trendingSuggestionsBox');
 const trendingBarSuggestionsBox = document.getElementById('trendingBarSuggestionsBox');/* endpoints giphy Api */

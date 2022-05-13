@@ -26,7 +26,7 @@ let keyPressInSearchInput = () => {
 
                 autocompleteBox.innerHTML = ''; 
                 if(autocompleteBox.classList.contains('none')){
-                    autocompleteBox.classList.remove('none')
+                    autocompleteBox.classList.remove('none');
                 }            
 
 

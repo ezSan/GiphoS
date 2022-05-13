@@ -32,7 +32,9 @@ function darkModeMain() {
     mainTitle.classList.add('darkModeTitle');
     trendingBarSuggestionsBox.classList.add('darkModeTitle');
     sliderTitleAndParagraph.classList.add('darkModeTitle');
-    changeTrendingControls()
+     verMas.classList.add('buttonDarkMode'); 
+    /* searchTitle.classList.add('darkModeTitle'); */
+   
     
 }
 

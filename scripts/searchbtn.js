@@ -94,6 +94,12 @@ let addTitle = (userSearch) => {
     } else {
         let titleBox = document.createElement(`h2`);
         titleBox.classList.add(`searchTitle`);
+
+        if (getMode === 'true') {
+            titleBox.classList.add('darkModeTitle');
+        }
+
+
         titleBox.id = `searchTitle`;
         titleBox.innerText = userSearch;
 
@@ -103,8 +109,9 @@ let addTitle = (userSearch) => {
 
 
 
-function showMoreGifs(){
+function showMoreGifs() {
     searchResultsContainerHidden.classList.add('gifContainer');
     searchResultsContainerHidden.classList.remove('noneMode');
     verMas.classList.add('none');
+   
 }

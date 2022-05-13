@@ -74,22 +74,10 @@
     background-color: #ffffff;
 }
 
-.inputWebcamAcces {
-    width: 12%;
-    height: 3.5em;
-    margin-left: 44%;
-    margin-right: 44%;
-    margin-top: 1em;
-    border-radius: 12em;
-    border-color: $color1;
-    color: $color1;
-    
-    
-    
-    &:hover{
-        background-color: $color1;
-        color: white;
-    }
+
+.camAccess{
+    display: flex;
+    justify-content: center;
 }
 
 
