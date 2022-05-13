@@ -53,14 +53,13 @@
 
 
 .trendingSuggestion{
-    margin: 0.2%;    
+    margin: 0.2%;      
 }
 
 .trendingSuggestion:hover{
     text-decoration:underline $color2 0.2em;
     font-size: large;
-    cursor:pointer;   
-        
+    cursor:pointer;       
     }
 
 
@@ -73,6 +72,7 @@
 }
 
 .verMasButton{
+    background-color: #ffffff;
     margin-top: 20px;
     min-width: 115px;
     width: 8.8194444vw;
@@ -83,4 +83,11 @@
     font-size: calc(12px + 0.27777778vw);
     color: #572EE5;
     font-weight: 700;
+    cursor: pointer;
+    &:hover{
+        background-color: $color1;
+        color: #ffffff;
+        
+
+    }
 }
