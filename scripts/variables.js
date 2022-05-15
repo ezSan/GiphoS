@@ -103,6 +103,6 @@ let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
 let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
 /* let storageGifosIds = JSON.parse(gifosIdsStorage); */
-
+let gifCreatedIds = [...gifosIdsStorage];
 
 

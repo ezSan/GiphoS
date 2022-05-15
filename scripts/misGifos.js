@@ -27,7 +27,7 @@ function searchId(gifId) {
     fetch(urlEndpointIdSearch)
         .then(x => x.json())
         .then(response => {
-            console.log(response.data)
+            
             let gifoUrl = response.data.images.downsized.url;
             showCreatedGifos(gifoUrl);
         })

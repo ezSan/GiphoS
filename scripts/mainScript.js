@@ -9,7 +9,7 @@ function pushOldIds() {
         let pushIds = gifosIdsStorage.map(x => {
             let gifCreatedIds = [...gifosIdsStorage];
             gifCreatedIds.push(x)
-            console.log(gifCreatedIds);
+            
         })
     } else {
         console.log('Todavía no se ha creado ningún Gif!')

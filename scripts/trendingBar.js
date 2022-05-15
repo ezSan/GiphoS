@@ -37,7 +37,7 @@ trendingSuggestionsBox.addEventListener('click', captureTermAndSearch => {
 
 })
 
-console.log('ok');
+
 
 
 
