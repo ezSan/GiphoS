@@ -97,9 +97,12 @@ let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
 //array of created gif id 
 
-let gifCreatedIds = [];
+
+
 
 
 let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
 /* let storageGifosIds = JSON.parse(gifosIdsStorage); */
+
+let gifCreatedIds = [...gifosIdsStorage]
 

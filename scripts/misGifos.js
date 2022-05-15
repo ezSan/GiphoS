@@ -45,11 +45,6 @@ function showCreatedGifos(gifoUrl) {
     gipho.classList.add('result');
     gipho.src = gifoUrl;
     cajaGif.appendChild(gipho);
-
-
-
-
-
 }
 
 function darkModeMisGifos(){
