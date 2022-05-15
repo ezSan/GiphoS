@@ -7,6 +7,7 @@ function pushOldIds() {
     if (gifosIdsStorage) {
         
         let pushIds = gifosIdsStorage.map(x => {
+            let gifCreatedIds = [...gifosIdsStorage];
             gifCreatedIds.push(x)
             console.log(gifCreatedIds);
         })
