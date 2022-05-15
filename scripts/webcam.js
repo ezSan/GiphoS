@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', webcamMode)
 
 
-function webcamMode(){
-  if(getMode === 'true'){
-      darkModeWebcam()
+function webcamMode() {
+  if (getMode === 'true') {
+    darkModeWebcam()
   }
 }
 
@@ -71,7 +71,8 @@ const uploadToGiphy = async (fileGif) => {
 
     newGif.then(newGif => {
 
-      console.log(gifCreatedIds)
+
+      console.log(gifCreatedIds);
 
 
 
@@ -80,6 +81,8 @@ const uploadToGiphy = async (fileGif) => {
       console.log(idGiphoUploaded);
 
       gifCreatedIds.push(idGiphoUploaded);
+
+      console.log(gifCreatedIds);
 
 
 
@@ -104,6 +107,9 @@ const uploadToGiphy = async (fileGif) => {
 }
 
 comenzar.addEventListener('click', webcamAccessAndStream);
+darkModeBtn.addEventListener('click', darkModeWebcam);
+lightMode.addEventListener('click', lightModeWebcam)
+
 
 uploadGiphoButton.addEventListener('click', postGipho => {
   uploadingGifOverlay.classList.remove('none');
@@ -146,14 +152,10 @@ recordAgain.addEventListener('click', recordAgain => {
 
 /* darkmode */
 
-darkModeBtn.addEventListener('click', darkModeWebcam);
-lightMode.addEventListener('click', lightModeWebcam)
-
-
 function darkModeWebcam() {
   localStorage.setItem('Dark Mode', true);
-  logo.src = "./assets/Logo-modo-noc.svg";  
-  mainTitle.classList.add('darkModeTitle');  
+  logo.src = "./assets/Logo-modo-noc.svg";
+  mainTitle.classList.add('darkModeTitle');
   lightMode.classList.remove('none');
   darkModeBtn.classList.add('none');
   cameraImg.src = "./assets/camara-modo-noc.svg";
@@ -170,13 +172,12 @@ function darkModeWebcam() {
   step3.classList.add('darkModeNum');
   recordAgain.classList.remove('recordAgain');
   recordAgain.classList.add('recAgain');
-  
+
 }
 
-
-function lightModeWebcam(){
+function lightModeWebcam() {
   localStorage.setItem('Dark Mode', false);
-  logo.src="./assets/logo-desktop.svg";
+  logo.src = "./assets/logo-desktop.svg";
   mainTitle.classList.remove('darkModeTitle');
   cameraImg.src = "./assets/camara.svg";
   peliculaImg.src = './assets/pelicula.svg';
