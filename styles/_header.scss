@@ -1,12 +1,14 @@
 
 body{
-    border-top: 4px solid $color1;        
+    border-top: 0.38em solid $color1;        
 }
 
 
 .headerCtn{
     display: flex;
     margin-top: 1%;
+    justify-content: space-around;
+    align-items: center;
 }
 
  .logoCtn{
@@ -15,20 +17,22 @@ body{
  }
 
  .navBar{
-     width: 60%;
      display: flex;
+     width: 60%;    
+     justify-content: center;
      align-items: center;
-     
  }
 
 
  .ulNav{
      display: flex;  
      text-decoration: none; 
-     justify-content: space-between;
-     align-items: center; 
-     width: 60%;
-     margin-right: 5%;
+     justify-content: space-around;
+     
+     
+     
+     width: 80%;
+     
      list-style: none;       
  } 
  
@@ -49,13 +53,11 @@ body{
 a{
     text-decoration: none;
     text-transform: none;
-    font-size: calc(11px + 0.13888889vw);
-   
-}
-
-.navBarLink{
+    font-size: calc(11px + 0.13888889vw);  
     color: $color1;
 }
+
+
 
 .setModeBox{
     display: flex;
@@ -67,4 +69,5 @@ a{
    .oval{
        display: none;
    }
+
   } 

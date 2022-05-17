@@ -16,7 +16,7 @@ const search = document.getElementById('search');
 const mainTitle = document.getElementById('mainTitle');
 const logo = document.getElementById('logo')
 const sliderTitleAndParagraph = document.getElementById('sliderTitleAndParagraph');
-const liNavBar = document.getElementsByClassName('liNavBar');  
+ 
 const lightMode = document.getElementById('lightMode');
 const cameraImg = document.getElementById('cameraImg')
 const peliculaImg = document.getElementById('peliculaImg');

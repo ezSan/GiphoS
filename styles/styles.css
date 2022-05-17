@@ -26,7 +26,7 @@ main {
 .darkMode {
   background-color: #37383C;
   color: #ffffff;
-  border-top: 4px solid #222326;
+  border-top: 0.38em solid #222326;
 }
 
 .darkMode a {
@@ -38,7 +38,7 @@ main {
 }
 
 body {
-  border-top: 4px solid #572EE5;
+  border-top: 0.38em solid #572EE5;
 }
 
 .headerCtn {
@@ -46,6 +46,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 1%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logoCtn {
@@ -54,10 +59,13 @@ body {
 }
 
 .navBar {
-  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -68,14 +76,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60%;
-  margin-right: 5%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
   list-style: none;
 }
 
@@ -96,9 +99,6 @@ a {
   text-decoration: none;
   text-transform: none;
   font-size: calc(11px + 0.13888889vw);
-}
-
-.navBarLink {
   color: #572EE5;
 }
 
