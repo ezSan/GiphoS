@@ -59,6 +59,8 @@ function darkModeMisGifos(){
     sliderTitleAndParagraph.classList.add('darkModeTitle');
     favoritosTitle.style.color = '#ffffff'; 
     solapaMain.style.background = '#37383C';
+    crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
 }
 
 function lightModeMisGifos(){
@@ -72,6 +74,10 @@ function lightModeMisGifos(){
     sliderTitleAndParagraph.classList.remove('darkModeTitle');
     favoritosTitle.style.color = '#572EE5';   
     solapaMain.style.background = '#ffffff';
+
+    crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/button-crear-gifo.svg");
+    
 }
 
 

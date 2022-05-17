@@ -173,6 +173,8 @@ function darkModeWebcam() {
   step3.classList.add('darkModeNum');
   recordAgain.classList.remove('recordAgain');
   recordAgain.classList.add('recAgain');
+  crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
 
 }
 
@@ -197,6 +199,8 @@ function lightModeWebcam() {
   step3.classList.remove('darkModeNum');
   recordAgain.classList.add('recordAgain');
   recordAgain.classList.remove('recAgain');
+  crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/button-crear-gifo.svg");
 }
 
 

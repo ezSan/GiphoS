@@ -17,9 +17,6 @@ function pushOldIds() {
 }
 
 
-
-
-
 //Comprobar LocalStorage // Pushear favs anteriores
 let comprobeLs = () => {
     if (localStorage.length == 0) {
@@ -299,6 +296,9 @@ function addClassHidden(e) {
     thisElement.childNodes[0].classList.add('hidden')
 }
 
+
+crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
+crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/button-crear-gifo.svg");
 
 
 

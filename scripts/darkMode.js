@@ -10,7 +10,7 @@ darkModeBtn.addEventListener('click', darkModeMain);
 lightMode.addEventListener('click', setLightMode)
 
 function setDarkMode(){
-    if(getMode === 'true'){        
+    if(getMode === 'true'){                
         darkModeMain()
     }else{
         console.log('el sitio está en modo claro')
@@ -33,8 +33,9 @@ function darkModeMain() {
     mainTitle.classList.add('darkModeTitle');
     trendingBarSuggestionsBox.classList.add('darkModeTitle');
     sliderTitleAndParagraph.classList.add('darkModeTitle');
-     verMas.classList.add('buttonDarkMode'); 
-    /* searchTitle.classList.add('darkModeTitle'); */
+    verMas.classList.add('buttonDarkMode'); 
+    crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
    
     
 }
@@ -57,17 +58,19 @@ function setLightMode() {
     mainTitle.classList.remove('darkModeTitle');
     trendingBarSuggestionsBox.classList.remove('darkModeTitle');
     sliderTitleAndParagraph.classList.remove('darkModeTitle');
+    crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
+    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/button-crear-gifo.svg");
+    
 }
 
 
 
 /* changeImage in controls of trendings-bar IN DARKMODE */
 
-function changeTrendingControls(){
-    prev.addEventListener('mouseover', x=>prevStepImg.src = "./assets/Button-close-hover-modo-noc.svg")
-    prev.addEventListener('mouseout', x=> prevStepImg.src = "./assets/button-slider-left-md-noct.svg")
-    
-    next.addEventListener('mouseover', x=>nextStepImg.src = "./assets/Button-close-hover-modo-noc.svg")
-    next.addEventListener('mouseout', x=>nextStepImg.src = "./assets/button-slider-right-md-noct.svg");
+function changeCreateGifosButton(){
+    if(getMode === 'true'){
+        crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
+        crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
+    } 
     
 }
