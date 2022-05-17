@@ -49,24 +49,18 @@ body {
 }
 
 .logoCtn {
-  width: 40%;
-  margin-right: 0%;
-}
-
-.logo {
-  margin-left: 20%;
-  width: 10%;
+  margin-left: 1%;
+  width: 39%;
 }
 
 .navBar {
-  width: 50%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 10%;
 }
 
 .ulNav {
@@ -106,6 +100,22 @@ a {
 
 .navBarLink {
   color: #572EE5;
+}
+
+.setModeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 378px) {
+  .oval {
+    display: none;
+  }
 }
 
 .first {
