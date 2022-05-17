@@ -154,6 +154,7 @@ recordAgain.addEventListener('click', recordAgain => {
 
 function darkModeWebcam() {
   localStorage.setItem('Dark Mode', true);
+  crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
   logo.src = "./assets/Logo-modo-noc.svg";
   mainTitle.classList.add('darkModeTitle');
   lightMode.classList.remove('none');
@@ -177,6 +178,7 @@ function darkModeWebcam() {
 
 function lightModeWebcam() {
   localStorage.setItem('Dark Mode', false);
+  crearGifoImg.src="./assets/button-crear-gifo.svg";
   logo.src = "./assets/logo-desktop.svg";
   mainTitle.classList.remove('darkModeTitle');
   cameraImg.src = "./assets/camara.svg";

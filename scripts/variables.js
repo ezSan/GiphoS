@@ -4,6 +4,7 @@ let getMode = localStorage.getItem('Dark Mode');
 
 
 //DarkMode
+const crearGifoImg = document.getElementById('crearGifoImg');
 const body = document.getElementById('body');
 const first = document.getElementById('first');
 const darkModeBtn = document.getElementById('darkMode');

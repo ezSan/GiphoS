@@ -49,6 +49,7 @@ function showCreatedGifos(gifoUrl) {
 
 function darkModeMisGifos(){
     localStorage.setItem('Dark Mode', true);    
+    crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
     logo.src="./assets/Logo-modo-noc.svg";
     darkModeBtn.classList.add('none');
     lightMode.classList.remove('none');
@@ -61,7 +62,8 @@ function darkModeMisGifos(){
 }
 
 function lightModeMisGifos(){
-    localStorage.setItem('Dark Mode', false);    
+    localStorage.setItem('Dark Mode', false);
+    crearGifoImg.src="./assets/button-crear-gifo.svg";    
     logo.src="./assets/logo-desktop.svg";
     lightMode.classList.add('none');
     darkModeBtn.classList.remove('none');
