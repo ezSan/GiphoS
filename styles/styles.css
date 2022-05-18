@@ -56,6 +56,20 @@ body {
 .logoCtn {
   margin-left: 1%;
   width: 39%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.burgerTools {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .navBar {
@@ -112,8 +126,52 @@ a {
           flex-direction: column;
 }
 
-@media screen and (max-width: 378px) {
+@media screen and (max-width: 767px) {
+  header {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
   .oval {
+    display: none;
+  }
+  .headerCtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .logoCtn {
+    width: 98%;
+    margin: 2%;
+  }
+  .ulNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 98%;
+    margin: 2%;
+    padding: 0%;
+  }
+  li {
+    margin: 3%;
+  }
+  main {
+    display: none;
+  }
+  footer {
     display: none;
   }
 }
