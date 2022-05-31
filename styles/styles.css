@@ -21,6 +21,20 @@
 
 main {
   margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trending {
+  width: 100%;
 }
 
 .darkMode {
@@ -126,11 +140,22 @@ a {
           flex-direction: column;
 }
 
+.burgerButtonsInactive {
+  visibility: hidden;
+}
+
 @media screen and (max-width: 767px) {
-  header {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+  body {
+    height: auto;
+  }
+  .ulNav {
+    width: 100%;
+  }
+  .menuBurgerDark {
+    background-color: #222326;
+  }
+  .burger {
+    visibility: visible;
   }
   .oval {
     display: none;
@@ -149,6 +174,14 @@ a {
     margin: 2%;
   }
   .ulNav {
+    display: none;
+  }
+  .mainTitle {
+    width: 90%;
+    line-height: 0;
+    font-size: 0.2rem;
+  }
+  .burgerMenuOpen {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,11 +201,8 @@ a {
   li {
     margin: 3%;
   }
-  main {
-    display: none;
-  }
-  footer {
-    display: none;
+  .navBar {
+    width: 100%;
   }
 }
 
@@ -645,7 +675,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 60%;
-  margin-left: 20%;
 }
 
 .recordAgain {

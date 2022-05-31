@@ -13,28 +13,33 @@
     <header id="header">
         <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
-               <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
+                <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo"></a>
+                <div class="burguerToolsBox">
+                    <img src="./assets/close.svg" alt="closBurguerMenu" class="burgerButtonsInactive" id="closeBurger">
+                    <img src="./assets/burger.svg" alt="burguerMenu" class="burgerButtonsInactive burger"id="burgerButton">
+                </div>
+
             </div>
-            <nav class="navBar">
+            <nav class="navBar" id="navBar">
                 <ul class="ulNav" id="ulNav">
-                    <li class="liNavBar" >
-                        <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
+                    <li class="liNavBar setModeBox">
+                        <a class="navBarLink none" id="lightMode">MODO DIURNO</a>
                         <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
-                    </li>               
+                    </li>
                     <li class="liNavBar">
                         <a class="navBarLink" href="./favs.html">FAVORITOS</a>
                     </li>
-                    <li class="liNavBar">
+                    <li class="liNavBar misGiphos">
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
-                <div class="oval"><a href="./webcam.html">                    
-                    <img src="./assets/button-crear-gifo.svg" alt="boton" id="crearGifoImg"></a></div>
+                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"
+                            id="crearGifoImg"></a>
+                </div>
             </nav>
         </div>
-
-    </header> 
-    <main>
+    </header>
+    <main id="main">
         <div class="solapaMain" id = 'solapaMain'>
             <div class="solapaTitle">
                 <img src="./assets/icon-favoritos.svg" alt="corazon" id="heartFavs">
@@ -52,7 +57,7 @@
         <div class="trending" id="trending">
 
             <div class="sliderTitleAndParagraph" id="sliderTitleAndParagraph">
-                <h2 class="blueCenteredTitle" id="">Trending GiFOS</h2>
+                <h2 class="blueCenteredTitle">Trending GiFOS</h2>
                 <p class="sliderP">Mira los últimos Gifo de nuestra comunidad</p>
             </div>
 
@@ -72,8 +77,8 @@
         </div>
 
     </main>
-    <footer>
-        <div class="footerContent">
+    <footer id="footerContent">
+        <div class="footerContent" >
             <div class="shareBox">
                 <p>Compartir en:</p>
                 <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
@@ -90,6 +95,7 @@
     <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/variables.js"></script>
     <script src="./scripts/trendings.js"></script>
+    <script src="./scripts/burgerMenu.js"></script>
     <script src="./scripts/slider.js"></script>    
     <script src="./scripts/favs.js"></script>
 

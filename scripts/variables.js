@@ -3,6 +3,16 @@ const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb";
 let getMode = localStorage.getItem('Dark Mode');
 
 
+/* Burger menu */
+
+const burgerButton = document.getElementById('burgerButton');
+const footerContent = document.getElementById('footerContent');
+const closeBurger = document.getElementById('closeBurger');
+const ulNav = document.getElementById('ulNav');
+const navBar = document.getElementById('navBar');
+
+
+
 //DarkMode
 const crearGifoImg = document.getElementById('crearGifoImg');
 const body = document.getElementById('body');

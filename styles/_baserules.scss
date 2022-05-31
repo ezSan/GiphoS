@@ -39,8 +39,16 @@ $bgColorDarkTrending: #222326;
 
 main{
     margin-bottom: 2%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
+
+.trending{
+    width:100%;
+}
+
+
 
 
 .darkMode{

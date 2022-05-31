@@ -19,6 +19,8 @@ function setDarkMode(){
  
 function darkModeMain() {    
 
+    closeBurger.src = './assets/close-modo-noct.svg';
+    burgerButton.src = './assets/burger-modo-noct.svg';
     localStorage.setItem('Dark Mode', true);   
     crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
     logo.src="./assets/Logo-modo-noc.svg";
@@ -45,6 +47,9 @@ function darkModeMain() {
 function setLightMode() {
 
     localStorage.setItem('Dark Mode', false);
+    navBar.classList.remove('menuBurgerDark');
+    closeBurger.src = './assets/close.svg';
+    burgerButton.src = './assets/burger.svg';
     crearGifoImg.src="./assets/button-crear-gifo.svg";
     logo.src="./assets/logo-desktop.svg";
     btnSearch.src = "./assets/icon-search.svg";

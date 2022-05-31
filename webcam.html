@@ -13,27 +13,32 @@
     <header id="header">
         <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
-               <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo" ></a>
+                <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo"></a>
+                <div class="burguerToolsBox">
+                    <img src="./assets/close.svg" alt="closBurguerMenu" class="burgerButtonsInactive" id="closeBurger">
+                    <img src="./assets/burger.svg" alt="burguerMenu" class="burgerButtonsInactive burger"id="burgerButton">
+                </div>
+
             </div>
-            <nav class="navBar">
+            <nav class="navBar" id="navBar">
                 <ul class="ulNav" id="ulNav">
-                    <li class="liNavBar" >
-                        <a class="navBarLink none" id="lightMode" >MODO DIURNO</a>
+                    <li class="liNavBar setModeBox">
+                        <a class="navBarLink none" id="lightMode">MODO DIURNO</a>
                         <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
                     </li>
                     <li class="liNavBar">
                         <a class="navBarLink" href="./favs.html">FAVORITOS</a>
                     </li>
-                    <li class="liNavBar">
+                    <li class="liNavBar misGiphos">
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
-                <div class="oval"><a href="./webcam.html">
-                    <img src="./assets/button-crear-gifo.svg" id="crearGifoImg" alt="boton"></a></div>
+                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"
+                            id="crearGifoImg"></a>
+                </div>
             </nav>
         </div>
-
-    </header> 
+    </header>
     <main id="main">
 
         <div class="principalMisGifos">
@@ -127,6 +132,7 @@
     </footer>
     <script src="./scripts/variables.js"></script>
     <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/burgerMenu.js"></script>
     <script src="./scripts/webcam.js"></script>
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 

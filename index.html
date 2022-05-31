@@ -21,15 +21,15 @@
         <div class="headerCtn" id="headerCtn">
             <div class="logoCtn">
                 <a href="./index.html"> <img class='logo' src="./assets/logo-desktop.svg" alt="logo" id="logo"></a>
-                <div class="burguerTools">
-                    <img src="./assets/close.svg" alt="closBurguerMenu" class="burguerTool none">
-                    <img src="./assets/burger.svg" alt="burguerMenu" class="burguerTool">
+                <div class="burguerToolsBox">
+                    <img src="./assets/close.svg" alt="closBurguerMenu" class="burgerButtonsInactive" id="closeBurger">
+                    <img src="./assets/burger.svg" alt="burguerMenu" class="burgerButtonsInactive burger"id="burgerButton">
                 </div>
-                
+
             </div>
-            <nav class="navBar">
+            <nav class="navBar" id="navBar">
                 <ul class="ulNav" id="ulNav">
-                    <li class="liNavBar setModeBox" >
+                    <li class="liNavBar setModeBox">
                         <a class="navBarLink none" id="lightMode">MODO DIURNO</a>
                         <a class="navBarLink" id="darkMode">MODO NOCTURNO</a>
                     </li>
@@ -40,13 +40,12 @@
                         <a class="navBarLink" href="./misGiphos.html">MIS GIFOS</a>
                     </li>
                 </ul>
-                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton" id="crearGifoImg"></a>
+                <div class="oval"><a href="./webcam.html"><img src="./assets/button-crear-gifo.svg" alt="boton"
+                            id="crearGifoImg"></a>
                 </div>
             </nav>
         </div>
-
     </header>
-
 
     <main id="main">
         <section class="first" id="first">
@@ -74,7 +73,7 @@
 
 
             <input type="button" id="verMas" class="none verMasButton" value="Ver más" name="verMas">
-            
+
         </section>
         <section class="second" id="second">
             <div class="trendingBarSuggestionsBox" id="trendingBarSuggestionsBox">
@@ -102,11 +101,12 @@
                     </div>
                 </div>
 
-            </div>            
+            </div>
         </section>
     </main>
-    <footer>
-        <div class="footerContent">
+
+    <footer id="footerContent">
+        <div class="footerContent" >
             <div class="shareBox">
                 <p>Compartir en:</p>
                 <img class="footImg" src="./assets/icon_facebook.svg" alt="face">
@@ -120,14 +120,17 @@
     </footer>
 
     <!-- Scripts -->
+    
     <script src="./scripts/mainScript.js"></script>
     <script src="./scripts/variables.js"></script>
+    <script src="./scripts/burgerMenu.js"></script>
     <script src="./scripts/trendings.js"></script>
     <script src="/scripts/darkMode.js"></script>
     <script src="./scripts/slider.js"></script>
     <script src="/scripts/trendingBar.js"></script>
     <script src='./scripts/autocomplete.js'></script>
     <script src="./scripts/searchbtn.js"></script>
+
 
 </body>
 

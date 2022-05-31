@@ -69,17 +69,40 @@ a {
 
 
 
+
+
 .setModeBox {
     display: flex;
     flex-direction: column;
 }
 
+.burgerButtonsInactive{
+    visibility: hidden;
+}
+
+
 
 @media screen and (max-width: 767px) {
-    header{
-        height: max-content;
+
+
+    body{
+        height: auto;
     }
 
+    .ulNav{
+        width: 100%;
+    }
+
+    .menuBurgerDark{
+        background-color: $bgColorDarkTrending;
+    }
+
+
+    .burger{
+        visibility: visible;
+        }  
+
+    
     .oval {
         display: none;
     }
@@ -95,7 +118,20 @@ a {
         margin: 2%;
     }
 
-    .ulNav {
+    .ulNav{
+        display: none;
+    }
+
+    .mainTitle{
+        width: 90%;
+        line-height: 0;
+        font-size: 0.2rem;        
+    }
+
+
+
+
+    .burgerMenuOpen {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,20 +139,18 @@ a {
         width: 98%;
         margin: 2%;
         padding: 0%;
-       
-        
-
-    }
+        }
 
     li{
         margin: 3%;
     }
 
-    main{
-        display: none;
+    .navBar{
+        width: 100%;
     }
 
-    footer{
-        display: none;
-    }
+
+        
+
+
 }

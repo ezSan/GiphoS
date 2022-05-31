@@ -79,6 +79,8 @@ lightMode.addEventListener('click', lightModeFavs)
 
 function darkModeFavs(){    
     localStorage.setItem('Dark Mode', true);
+    closeBurger.src = './assets/close-modo-noct.svg';
+    burgerButton.src = './assets/burger-modo-noct.svg';
     crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
     logo.src="./assets/Logo-modo-noc.svg";
     darkModeBtn.classList.add('none');    
@@ -95,6 +97,8 @@ function darkModeFavs(){
 
 function lightModeFavs(){
     localStorage.setItem('Dark Mode', false);
+    closeBurger.src = './assets/close.svg';
+    burgerButton.src = './assets/burger.svg';
     logo.src="./assets/logo-desktop.svg";
     crearGifoImg.src="./assets/button-crear-gifo.svg";
     lightMode.classList.add('none');
