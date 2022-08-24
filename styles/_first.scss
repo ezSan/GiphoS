@@ -91,3 +91,47 @@
 
     }
 }
+
+
+@media screen and (max-width: 767px){
+
+    .first{
+        h2{
+            width: 80%;
+            font-size:1.2em;
+            line-height: 1.2;
+        }
+
+    }
+
+    img{
+        width: 80%;
+    }
+
+
+    .formulario{
+        width: 90%;
+        
+    }
+
+    .cajaInput{
+        height: 1.2em;
+        text-align: center;
+        input{
+            width: 80%;
+        }        
+
+        img{
+            width: 5%;
+        }
+    }
+
+
+
+    .suggestionBox{
+        img{
+            width: 5%;
+        }
+    }
+    
+}

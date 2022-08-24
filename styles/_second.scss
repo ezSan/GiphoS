@@ -18,10 +18,6 @@
     height: 20%;
 }
 
-
-
-
-
 .sliderTitleAndParagraph{
     height: 10%;
 }
@@ -63,8 +59,7 @@
 
 .themes {
     color: $color1;
-    text-align: center;
-   
+    text-align: center;   
     display: flex;
     justify-content: center;
     margin-bottom: 1%;
@@ -90,6 +85,51 @@
 }
 
 
+@media screen and (max-width: 767px){
 
+
+    .trendingBarSuggestionsBox{
+        width: 80%;
+        margin: 0 10% 2% 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .themes{
+       
+        width: 90%;
+        margin: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        p{
+            margin: 1%;            
+        }
+
+    }
+
+
+    p::after{
+        content: ",";
+    }
+
+
+    .sliderTitleAndParagraph{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    .netx .prev{
+        display: none;
+    }
+    
+
+    
+}
 
 

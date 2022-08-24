@@ -170,8 +170,7 @@ a {
             flex-direction: column;
   }
   .logoCtn {
-    width: 98%;
-    margin: 2%;
+    width: 90%;
   }
   .ulNav {
     display: none;
@@ -203,6 +202,21 @@ a {
   }
   .navBar {
     width: 100%;
+  }
+  .buruerToolsBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 10%;
+  }
+  #closeBurger {
+    position: absolute;
+    top: 5%;
+    width: 5%;
   }
 }
 
@@ -306,6 +320,33 @@ a {
   color: #ffffff;
 }
 
+@media screen and (max-width: 767px) {
+  .first h2 {
+    width: 80%;
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+  img {
+    width: 80%;
+  }
+  .formulario {
+    width: 90%;
+  }
+  .cajaInput {
+    height: 1.2em;
+    text-align: center;
+  }
+  .cajaInput input {
+    width: 80%;
+  }
+  .cajaInput img {
+    width: 5%;
+  }
+  .suggestionBox img {
+    width: 5%;
+  }
+}
+
 .second {
   width: 100%;
   height: 40%;
@@ -406,6 +447,54 @@ a {
   height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .trendingBarSuggestionsBox {
+    width: 80%;
+    margin: 0 10% 2% 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .themes {
+    width: 90%;
+    margin: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .themes p {
+    margin: 1%;
+  }
+  p::after {
+    content: ",";
+  }
+  .sliderTitleAndParagraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .netx .prev {
+    display: none;
+  }
+}
+
 .gifContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,7 +569,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 4%;
-  margin-top: 0.5%;
+  margin-top: 1%;
   left: 45%;
   padding: 1%;
   z-index: 10;
@@ -931,6 +1020,7 @@ footer {
 
 .closeButton {
   margin-right: 3%;
+  width: 1;
 }
 
 .darkModeTdn {

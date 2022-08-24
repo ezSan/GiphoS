@@ -114,8 +114,8 @@ a {
     }
 
     .logoCtn {
-        width: 98%;
-        margin: 2%;
+        width: 90%
+        
     }
 
     .ulNav{
@@ -147,6 +147,20 @@ a {
 
     .navBar{
         width: 100%;
+    }
+
+
+    .buruerToolsBox{
+        display: flex;
+        flex-direction: row;
+        width: 10%;
+    }
+
+
+    #closeBurger{
+        position: absolute;
+        top:5%;
+        width:5%;
     }
 
 
