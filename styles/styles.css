@@ -405,7 +405,7 @@ a {
 
 .giphoBox {
   position: relative;
-  min-width: 15%;
+  min-width: 200px;
   margin: 0.5%;
 }
 
@@ -477,6 +477,9 @@ a {
   p::after {
     content: ",";
   }
+  .sliderGifContainer {
+    overflow-x: scroll;
+  }
   .sliderTitleAndParagraph {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -536,8 +539,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  /* justify-content: space-around; */
   background-color: #4f1eff99;
 }
 
@@ -568,9 +570,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 4%;
+  width: 50%;
   margin-top: 1%;
-  left: 45%;
+  margin-left: 45%;
   padding: 1%;
   z-index: 10;
 }

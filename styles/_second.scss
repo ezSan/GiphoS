@@ -53,7 +53,7 @@
 
 .giphoBox{
     position: relative;
-    min-width: 15%;   
+    min-width: 200px;
     margin: 0.5%;
  }
 
@@ -112,6 +112,11 @@
 
     p::after{
         content: ",";
+    }
+
+
+    .sliderGifContainer{
+        overflow-x: scroll;
     }
 
 
