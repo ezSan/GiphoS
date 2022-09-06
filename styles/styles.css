@@ -3,6 +3,11 @@
   letter-spacing: 0;
 }
 
+.result {
+  height: 100%;
+  width: 100%;
+}
+
 .noneMode {
   display: none;
 }
