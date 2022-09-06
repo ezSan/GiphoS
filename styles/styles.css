@@ -820,25 +820,55 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 5%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .shareBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.shareBox .footImg {
-  margin: 1em;
+.footerIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.footRights {
-  margin-left: 60%;
+.footImg {
+  margin: 10%;
+}
+
+@media screen and (max-width: 767px) {
+  .footerContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rightsFoot::after {
+    content: ' ';
+  }
 }
 
 .solapaMain {
