@@ -67,8 +67,12 @@
 .withoutGifs{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+    justify-content: space-around;
+    align-items: center; 
+    text-align: center;  
+    img{
+        padding: 10%;
+    } 
 }
 
 .verMasButton{

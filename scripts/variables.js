@@ -87,9 +87,6 @@ const favoritosTitle = document.getElementById('favoritosTitle');
 const favBox = document.getElementById('favBox');
 const solapaMain = document.getElementById('solapaMain');
 
-
-
-
 /* mis giphos */
 
 const misGifosContainer = document.getElementById('misGifosContainer');
@@ -108,12 +105,23 @@ let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
 //array of created gif id 
 
+let myGifosIds = localStorage.setItem('myGifosIds', []);
+let isEmpty = localStorage.getItem('MyGifosIds').length
+
+function setMyGifos(){
+    isEmpty === 0 
+    ? console.log('Todavía no creaste ningún Gifo!')
+    :  console.log('hola')
+}
+
+
+
+function pushOldIds(){
+
+    let oldIds = [];
 
 
 
 
-let gifosIdsStorage = JSON.parse(localStorage.getItem('MyGifosIds'))
-/* let storageGifosIds = JSON.parse(gifosIdsStorage); */
-let gifCreatedIds = [...gifosIdsStorage]; 
-
+}
 

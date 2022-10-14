@@ -26,7 +26,7 @@ function webcamAccessAndStream() {
     .then(stream => {
       video.srcObject = stream;
       video.play();
-      pushOldIds()
+     
 
       comenzar.classList.add('none');
 
@@ -67,26 +67,13 @@ const uploadToGiphy = async (fileGif) => {
 
     console.log(response.status);
 
+    
+
     let newGif = response.json();
 
     newGif.then(newGif => {
 
-
-      console.log(gifCreatedIds);
-
-
-
-      let idGiphoUploaded = newGif.data.id;
-
-      console.log(idGiphoUploaded);
-
-      gifCreatedIds.push(idGiphoUploaded);
-
-      console.log(gifCreatedIds);
-
-
-
-      localStorage.setItem('MyGifosIds', JSON.stringify(gifCreatedIds));
+      localStorage.setItem('MyGifosIds', JSON.stringify(newGif.data.id));
 
       overlayBoxPending.classList.add('none');
       overlayBoxOk.classList.remove('none');
@@ -108,7 +95,7 @@ const uploadToGiphy = async (fileGif) => {
 
 comenzar.addEventListener('click', webcamAccessAndStream);
 darkModeBtn.addEventListener('click', darkModeWebcam);
-lightMode.addEventListener('click', lightModeWebcam)
+lightMode.addEventListener('click', lightModeWebcam);
 
 
 uploadGiphoButton.addEventListener('click', postGipho => {
@@ -149,6 +136,10 @@ recordAgain.addEventListener('click', recordAgain => {
   uploadingGifOverlay.classList.add('none');
 
 })
+
+
+
+
 
 /* darkmode */
 

@@ -1,22 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', pushOldIds);
-
-
-function pushOldIds() {
-
-    if (gifosIdsStorage) {
-        
-        let pushIds = gifosIdsStorage.map(x => {
-            let gifCreatedIds = [...gifosIdsStorage];
-            gifCreatedIds.push(x)
-            
-        })
-    } else {
-        console.log('Todavía no se ha creado ningún Gif!')
-    }
-}
-
-
 //Comprobar LocalStorage // Pushear favs anteriores
 let comprobeLs = () => {
     if (localStorage.length == 0) {
