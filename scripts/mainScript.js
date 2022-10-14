@@ -1,19 +1,21 @@
-
-//Comprobar LocalStorage // Pushear favs anteriores
-let comprobeLs = () => {
-    if (localStorage.length == 0) {
-        localStorage.setItem('Favoritos', JSON.stringify(favoritos));
-        console.log('Se ha dado inicio al LocalStorage, key: "Favoritos" ')
-    } else {
-        let pushearFavAnteriores = storageFavoritos.map(oldFavs => {
-            favoritos.push(oldFavs);
-        })
-    }
-};
+document.addEventListener('DOMContentLoaded' , lsConstult);
 
 
+let newArray = [];
 
-/* comprobeLs() */
+
+function lsConstult() {
+    itsEmpty
+      ? getDataAndPushInArray()
+      : console.log('Aún no has creado tu primer Gifo!')
+  }
+  
+  function getDataAndPushInArray() {    
+    let oldIds = JSON.parse(localStorage.getItem('myGifos'))
+    newArray = [...oldIds]    
+    console.log(newArray)
+  }
+  
 
 //Capturar data del array de busqueda y mostrar en DOM
 

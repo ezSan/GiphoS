@@ -1,3 +1,4 @@
+
 //ApiKey giphy
 const apiKey = "2F7Zwq8U9gs2PssCkAKfR65Ned1IPdpb"; 
 let getMode = localStorage.getItem('Dark Mode');
@@ -100,11 +101,19 @@ let favoritos = [];
 let favId = [];
 //array para trendings 
 var arrayTrendings = [];
+// arrray para gifs creados
+
+let createdGifosIds = [];
+
 //local storage
+
+
+
+let itsEmpty = localStorage.getItem('myGifos');
 let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
 //array of created gif id 
-
+/* 
 let myGifosIds = localStorage.setItem('myGifosIds', []);
 let isEmpty = localStorage.getItem('MyGifosIds').length
 
@@ -123,5 +132,5 @@ function pushOldIds(){
 
 
 
-}
+} */
 

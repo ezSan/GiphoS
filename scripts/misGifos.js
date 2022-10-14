@@ -1,5 +1,8 @@
 window.addEventListener('DOMContentLoaded', requestGifData);
-window.addEventListener('DOMContentLoaded', misGifosMode)
+window.addEventListener('DOMContentLoaded', misGifosMode);
+
+
+
 
 function misGifosMode(){
     if(getMode === 'true'){
@@ -27,7 +30,7 @@ function searchId(gifId) {
     fetch(urlEndpointIdSearch)
         .then(x => x.json())
         .then(response => {
-            
+                        
             let gifoUrl = response.data.images.downsized.url;
             showCreatedGifos(gifoUrl);
         })
@@ -35,12 +38,9 @@ function searchId(gifId) {
 }
 
 function showCreatedGifos(gifoUrl) {
-
     let cajaGif = document.createElement('div');
-
     cajaGif.classList.add('boxMyGifo');
-    misGifosContainer.insertAdjacentElement('afterbegin', cajaGif)
-
+    misGifosContainer.insertAdjacentElement('afterbegin', cajaGif);
     let gipho = document.createElement('img');
     gipho.classList.add('result');
     gipho.src = gifoUrl;
@@ -48,8 +48,7 @@ function showCreatedGifos(gifoUrl) {
 }
 
 function darkModeMisGifos(){
-    localStorage.setItem('Dark Mode', true);    
-   
+    localStorage.setItem('Dark Mode', true);       
     crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
     logo.src="./assets/Logo-modo-noc.svg";
     darkModeBtn.classList.add('none');

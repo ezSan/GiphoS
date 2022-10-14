@@ -1,4 +1,5 @@
-window.addEventListener('DOMContentLoaded', webcamMode)
+window.addEventListener('DOMContentLoaded', webcamMode);
+
 
 
 function webcamMode() {
@@ -26,7 +27,7 @@ function webcamAccessAndStream() {
     .then(stream => {
       video.srcObject = stream;
       video.play();
-     
+
 
       comenzar.classList.add('none');
 
@@ -67,13 +68,18 @@ const uploadToGiphy = async (fileGif) => {
 
     console.log(response.status);
 
-    
-
     let newGif = response.json();
 
     newGif.then(newGif => {
 
-      localStorage.setItem('MyGifosIds', JSON.stringify(newGif.data.id));
+      newArray.push(newGif.data.id);
+      console.log(newArray);
+
+      localStorage.setItem('myGifos', JSON.stringify(newArray) )
+
+
+      // enviar el gif al LS
+      /* localStorage.setItem('MyGifosIds', JSON.stringify(newGif.data.id)); */
 
       overlayBoxPending.classList.add('none');
       overlayBoxOk.classList.remove('none');
@@ -145,7 +151,7 @@ recordAgain.addEventListener('click', recordAgain => {
 
 function darkModeWebcam() {
   localStorage.setItem('Dark Mode', true);
-  crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg"; 
+  crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg";
   logo.src = "./assets/Logo-modo-noc.svg";
   mainTitle.classList.add('darkModeTitle');
   lightMode.classList.remove('none');
@@ -164,14 +170,14 @@ function darkModeWebcam() {
   step3.classList.add('darkModeNum');
   recordAgain.classList.remove('recordAgain');
   recordAgain.classList.add('recAgain');
-  crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
-    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
+  crearGifoImg.addEventListener('mouseover', x => crearGifoImg.src = "./assets/CTA-crear-gifo-hover-modo-noc.svg");
+  crearGifoImg.addEventListener('mouseout', x => crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg");
 
 }
 
 function lightModeWebcam() {
   localStorage.setItem('Dark Mode', false);
-  crearGifoImg.src="./assets/button-crear-gifo.svg";
+  crearGifoImg.src = "./assets/button-crear-gifo.svg";
   logo.src = "./assets/logo-desktop.svg";
   mainTitle.classList.remove('darkModeTitle');
   cameraImg.src = "./assets/camara.svg";
@@ -190,8 +196,8 @@ function lightModeWebcam() {
   step3.classList.remove('darkModeNum');
   recordAgain.classList.add('recordAgain');
   recordAgain.classList.remove('recAgain');
-  crearGifoImg.addEventListener('mouseover', x=>crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
-    crearGifoImg.addEventListener('mouseout', x=> crearGifoImg.src = "./assets/button-crear-gifo.svg");
+  crearGifoImg.addEventListener('mouseover', x => crearGifoImg.src = "./assets/CTA-crear-gifo-hover.svg");
+  crearGifoImg.addEventListener('mouseout', x => crearGifoImg.src = "./assets/button-crear-gifo.svg");
 }
 
 
