@@ -12,8 +12,8 @@ function misGifosMode(){
 
 function requestGifData() {
 
-    if(gifosIdsStorage){
-        let arrayGifMap = gifCreatedIds.map(gifData => {
+    if(newArray){
+        let arrayGifMap = newArray.map(gifData => {
             searchId(gifData);
             emptyMyGifos.innerHTML = ' ';
         })

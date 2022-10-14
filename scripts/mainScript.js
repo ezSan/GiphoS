@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded' , lsConstult);
 
-
-let newArray = [];
-
+/* Consultar en el LocalStorage si ya has creado Gifos */
 
 function lsConstult() {
     itsEmpty
@@ -12,12 +10,12 @@ function lsConstult() {
   
   function getDataAndPushInArray() {    
     let oldIds = JSON.parse(localStorage.getItem('myGifos'))
-    newArray = [...oldIds]    
+    newArray = [...oldIds];
+    
+    console.log('Tus Gifos creados en "Mis Gifos" ')
     console.log(newArray)
   }
-  
 
-//Capturar data del array de busqueda y mostrar en DOM
 
 const likeBtn = (cajitaTools, imgId) => {
 
