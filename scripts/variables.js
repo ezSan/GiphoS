@@ -57,8 +57,10 @@ const overlayBoxOk = document.getElementById('overlayBoxOk');
 const recordAgain = document.getElementById('recordAgain');
 const inputWebcamAcces = document.getElementsByClassName('inputWebcamAcces');
 const buttonCamera = document.getElementsByName('webcamButton');
+
 /* gif file ready to upload whit api endpoint */
 let fileToUpload;
+
 /* display search results in DOM */
 const searchInput = document.querySelector('#search');
 const btnSearch = document.getElementById("btnSearch");
@@ -102,8 +104,7 @@ let favId = [];
 //array para trendings 
 var arrayTrendings = [];
 // arrray para gifs creados
-
-let createdGifosIds = [];
+let newArray = [];
 
 //local storage
 
@@ -112,25 +113,4 @@ let createdGifosIds = [];
 let itsEmpty = localStorage.getItem('myGifos');
 let storageFavoritos = JSON.parse(localStorage.getItem('Favoritos'));
 
-//array of created gif id 
-/* 
-let myGifosIds = localStorage.setItem('myGifosIds', []);
-let isEmpty = localStorage.getItem('MyGifosIds').length
-
-function setMyGifos(){
-    isEmpty === 0 
-    ? console.log('Todavía no creaste ningún Gifo!')
-    :  console.log('hola')
-}
-
-
-
-function pushOldIds(){
-
-    let oldIds = [];
-
-
-
-
-} */
 
