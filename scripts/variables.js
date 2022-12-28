@@ -26,6 +26,7 @@ const trending = document.getElementById('trending');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const mainTitle = document.getElementById('mainTitle');
+const mainTitle2 = document.getElementById('mainTitle2');
 const logo = document.getElementById('logo')
 const sliderTitleAndParagraph = document.getElementById('sliderTitleAndParagraph');
  

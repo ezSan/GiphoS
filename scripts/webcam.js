@@ -154,6 +154,7 @@ function darkModeWebcam() {
   crearGifoImg.src = "./assets/CTA-crear-gifo-modo-noc.svg";
   logo.src = "./assets/Logo-modo-noc.svg";
   mainTitle.classList.add('darkModeTitle');
+  mainTitle2.classList.add('darkModeTitle');
   lightMode.classList.remove('none');
   darkModeBtn.classList.add('none');
   cameraImg.src = "./assets/camara-modo-noc.svg";
@@ -180,6 +181,7 @@ function lightModeWebcam() {
   crearGifoImg.src = "./assets/button-crear-gifo.svg";
   logo.src = "./assets/logo-desktop.svg";
   mainTitle.classList.remove('darkModeTitle');
+  mainTitle2.classList.remove('darkModeTitle');
   cameraImg.src = "./assets/camara.svg";
   peliculaImg.src = './assets/pelicula.svg';
   lightMode.classList.add('none');
